@@ -1,0 +1,716 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>면탐정 Color Concept</title>
+  <style>
+    :root {
+      --page: #fffbf5;
+      --card: #ffffff;
+      --card2: #fdf8f2;
+      --chip: #f2ebe0;
+      --chip-hover: #eae0d4;
+      --deep: #ede5d8;
+      --accent: #e87c2a;
+      --accent-soft: #f0a050;
+      --accent-glow: rgba(232,124,42,.25);
+      --accent-glow-strong: rgba(232,124,42,.45);
+      --title: #2c1a0e;
+      --sub: #7a4f30;
+      --muted: #b08060;
+      --label: #ffffff;
+      --border: rgba(180,130,90,.22);
+      --shadow: rgba(120,70,20,.10);
+      --green: #4f7f3b;
+      --cream: #fff2d6;
+      --broth: #d7aa74;
+      --wood: #3a2114;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at 85% 4%, rgba(232,124,42,.18), transparent 280px),
+        radial-gradient(circle at 10% 18%, rgba(240,160,80,.20), transparent 280px),
+        linear-gradient(180deg, #efe6d9 0, var(--page) 300px);
+      color: var(--title);
+      font-family: "Pretendard", "Apple SD Gothic Neo", "Malgun Gothic", Arial, sans-serif;
+    }
+
+    .page {
+      width: min(100%, 1680px);
+      margin: 0 auto;
+      padding: 44px 36px 70px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 28px;
+      align-items: stretch;
+      margin-bottom: 28px;
+    }
+
+    .intro,
+    .mood-card,
+    .panel {
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,.72);
+      box-shadow: 0 22px 60px var(--shadow);
+      backdrop-filter: blur(10px);
+    }
+
+    .intro {
+      min-height: 420px;
+      padding: 40px;
+      border-radius: 34px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .intro::after {
+      content: "";
+      position: absolute;
+      right: -130px;
+      top: -120px;
+      width: 380px;
+      height: 380px;
+      border-radius: 50%;
+      background: rgba(232,124,42,.13);
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      position: relative;
+      z-index: 1;
+      margin: 18px 0 0;
+      max-width: 760px;
+      font-size: clamp(44px, 5vw, 76px);
+      line-height: 1.02;
+      letter-spacing: -2.5px;
+      font-weight: 950;
+    }
+
+    .concept {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      margin: 18px 0 0;
+      color: var(--sub);
+      font-size: 18px;
+      line-height: 1.7;
+    }
+
+    .keywords {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 28px;
+    }
+
+    .keyword {
+      height: 36px;
+      display: inline-flex;
+      align-items: center;
+      padding: 0 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(232,124,42,.30);
+      background: rgba(232,124,42,.08);
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 850;
+    }
+
+    .mood-card {
+      border-radius: 34px;
+      padding: 18px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1.2fr .8fr;
+      gap: 14px;
+      min-height: 420px;
+    }
+
+    .tile {
+      position: relative;
+      overflow: hidden;
+      border-radius: 24px;
+      background: var(--deep);
+      border: 1px solid var(--border);
+    }
+
+    .tile img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .tile.large { grid-row: span 2; }
+
+    .tile.logo {
+      display: grid;
+      place-items: center;
+      background:
+        radial-gradient(circle at 50% 44%, rgba(255,255,255,.40), transparent 150px),
+        linear-gradient(135deg, var(--accent-soft), var(--accent));
+    }
+
+    .tile.logo img {
+      width: 76%;
+      height: 76%;
+      object-fit: contain;
+      filter: drop-shadow(0 18px 24px rgba(70,34,10,.20));
+    }
+
+    .tile.wood {
+      padding: 24px;
+      background:
+        linear-gradient(135deg, rgba(58,33,20,.92), rgba(122,79,48,.86)),
+        repeating-linear-gradient(90deg, rgba(255,255,255,.07) 0 1px, transparent 1px 42px);
+      color: var(--cream);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      gap: 10px;
+    }
+
+    .tile.wood strong {
+      font-size: 28px;
+      line-height: 1.15;
+      letter-spacing: -.8px;
+    }
+
+    .tile.wood span {
+      color: rgba(255,242,214,.74);
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    .caption {
+      position: absolute;
+      left: 16px;
+      right: 16px;
+      bottom: 16px;
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      align-items: center;
+      padding: 12px 14px;
+      border-radius: 16px;
+      background: rgba(44,26,14,.70);
+      color: var(--label);
+      font-size: 13px;
+      font-weight: 800;
+      backdrop-filter: blur(8px);
+    }
+
+    .section {
+      margin-top: 28px;
+    }
+
+    .section-head {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 20px;
+      margin: 0 0 16px;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 34px;
+      letter-spacing: -1.1px;
+      font-weight: 950;
+    }
+
+    .section-head span {
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: .16em;
+    }
+
+    .palette {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .color-card {
+      min-height: 270px;
+      border-radius: 26px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      background: var(--card);
+      box-shadow: 0 18px 44px var(--shadow);
+    }
+
+    .swatch {
+      height: 148px;
+    }
+
+    .color-info {
+      padding: 16px;
+    }
+
+    .color-info strong {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 18px;
+      letter-spacing: -.4px;
+    }
+
+    .hex {
+      display: inline-flex;
+      height: 28px;
+      align-items: center;
+      padding: 0 10px;
+      border-radius: 999px;
+      background: var(--chip);
+      color: var(--sub);
+      font-size: 12px;
+      font-weight: 850;
+      letter-spacing: .04em;
+    }
+
+    .usage {
+      margin: 10px 0 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    .system {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 18px;
+    }
+
+    .panel {
+      border-radius: 28px;
+      padding: 24px;
+    }
+
+    .panel-title {
+      margin: 0 0 16px;
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 950;
+      letter-spacing: .16em;
+    }
+
+    .ratio {
+      display: grid;
+      gap: 12px;
+    }
+
+    .ratio-row {
+      display: grid;
+      grid-template-columns: 86px 1fr 54px;
+      gap: 12px;
+      align-items: center;
+      color: var(--sub);
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .bar {
+      height: 24px;
+      overflow: hidden;
+      border-radius: 999px;
+      background: var(--chip);
+      border: 1px solid var(--border);
+    }
+
+    .bar span {
+      display: block;
+      height: 100%;
+      border-radius: 999px;
+    }
+
+    .mock {
+      display: grid;
+      grid-template-columns: 270px 1fr;
+      gap: 22px;
+      align-items: center;
+    }
+
+    .phone {
+      width: 270px;
+      min-height: 540px;
+      padding: 18px;
+      border-radius: 36px;
+      background: var(--page);
+      border: 1px solid var(--border);
+      box-shadow: 0 26px 60px var(--shadow);
+    }
+
+    .topbar {
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      font-size: 22px;
+      font-weight: 950;
+      color: var(--accent);
+    }
+
+    .icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      box-shadow: 0 8px 20px var(--shadow);
+    }
+
+    .hero-card {
+      margin-top: 18px;
+      padding: 22px;
+      border-radius: 24px;
+      background: var(--deep);
+      border: 1px solid var(--border);
+      min-height: 210px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .hero-card small {
+      color: var(--accent);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: .12em;
+    }
+
+    .hero-card h3 {
+      margin: 12px 0 0;
+      font-size: 26px;
+      line-height: 1.18;
+      letter-spacing: -1px;
+      font-weight: 950;
+    }
+
+    .btn {
+      height: 52px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--label);
+      font-size: 15px;
+      font-weight: 900;
+      background: linear-gradient(135deg, var(--accent-soft), var(--accent));
+      box-shadow: 0 10px 26px var(--accent-glow);
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 18px;
+    }
+
+    .chip {
+      padding: 8px 12px;
+      border-radius: 999px;
+      color: var(--sub);
+      background: var(--chip);
+      border: 1px solid var(--border);
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .chip.active {
+      color: var(--label);
+      background: var(--accent);
+      border-color: var(--accent);
+    }
+
+    .notes {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .note {
+      padding: 16px;
+      border-radius: 18px;
+      background: var(--card2);
+      border: 1px solid var(--border);
+    }
+
+    .note strong {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 17px;
+      letter-spacing: -.4px;
+    }
+
+    .note p {
+      margin: 0;
+      color: var(--sub);
+      font-size: 14px;
+      line-height: 1.55;
+    }
+
+    .rationale {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+
+    .rationale .panel {
+      min-height: 190px;
+      box-shadow: 0 14px 34px var(--shadow);
+    }
+
+    .rationale strong {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 19px;
+      letter-spacing: -.5px;
+    }
+
+    .rationale p {
+      margin: 0;
+      color: var(--sub);
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 1180px) {
+      .hero,
+      .system,
+      .mock,
+      .rationale {
+        grid-template-columns: 1fr;
+      }
+
+      .palette {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media print {
+      body { background: #fff; }
+      .page { width: 1680px; padding: 24px; }
+      .intro, .mood-card, .panel, .color-card { box-shadow: none; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <article class="intro">
+        <div>
+          <div class="eyebrow">Color Concept · Mood Board & Palette</div>
+          <h1>따뜻한 국물처럼 편안한<br />로컬 라멘 탐색 경험</h1>
+          <p class="concept">
+            면탐정의 색상 콘셉트는 “숨은 로컬 라멘집을 찾는 탐정”이라는 기능적 정체성과
+            “따뜻한 한 그릇”의 감각을 결합한다. 밝은 크림 배경으로 부담을 낮추고,
+            주황색 포인트로 라멘 국물의 온기와 CTA의 방향성을 만든다.
+          </p>
+        </div>
+        <div class="keywords">
+          <span class="keyword">Warm Broth</span>
+          <span class="keyword">Local Shop</span>
+          <span class="keyword">Detective Note</span>
+          <span class="keyword">Cozy Archive</span>
+          <span class="keyword">Trustful Guide</span>
+        </div>
+      </article>
+
+      <aside class="mood-card" aria-label="무드보드">
+        <div class="tile large">
+          <img src="src/imports/취향선택홈/711a0dd0e9ed3b4ddb2e3a5db68c1756b4149c8d.png" alt="따뜻한 라멘 사진" />
+          <div class="caption">
+            <span>따뜻한 국물</span>
+            <span>Ramen Warmth</span>
+          </div>
+        </div>
+        <div class="tile logo">
+          <img src="src/imports/_______.png" alt="면탐정 로고" />
+        </div>
+        <div class="tile wood">
+          <strong>로컬 가게의<br />나무 테이블과 기록감</strong>
+          <span>광고보다 신뢰도 높은 취향 기반 정보, 직접 먹고 남기는 수첩의 분위기</span>
+        </div>
+      </aside>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>Color Palette</h2>
+        <span>ACTUAL APP TOKENS</span>
+      </div>
+      <div class="palette">
+        <article class="color-card">
+          <div class="swatch" style="background:#FFFBF5"></div>
+          <div class="color-info">
+            <strong>Ramen Cream</strong>
+            <span class="hex">#FFFBF5</span>
+            <p class="usage">앱 전체 배경. 밝고 따뜻한 여백으로 정보량을 부드럽게 받쳐준다.</p>
+          </div>
+        </article>
+        <article class="color-card">
+          <div class="swatch" style="background:#E87C2A"></div>
+          <div class="color-info">
+            <strong>Broth Orange</strong>
+            <span class="hex">#E87C2A</span>
+            <p class="usage">핵심 CTA, 선택 완료 상태, 브랜드 포인트. 화면에서 가장 강한 행동 색.</p>
+          </div>
+        </article>
+        <article class="color-card">
+          <div class="swatch" style="background:#F0A050"></div>
+          <div class="color-info">
+            <strong>Soft Flame</strong>
+            <span class="hex">#F0A050</span>
+            <p class="usage">주황 그라데이션의 시작점. 눌러보고 싶은 따뜻한 버튼감을 만든다.</p>
+          </div>
+        </article>
+        <article class="color-card">
+          <div class="swatch" style="background:#F2EBE0"></div>
+          <div class="color-info">
+            <strong>Noodle Chip</strong>
+            <span class="hex">#F2EBE0</span>
+            <p class="usage">보조 버튼, 필터 칩, 입력 배경. 선택 전 상태를 차분하게 표현한다.</p>
+          </div>
+        </article>
+        <article class="color-card">
+          <div class="swatch" style="background:#2C1A0E"></div>
+          <div class="color-info">
+            <strong>Deep Soy Ink</strong>
+            <span class="hex">#2C1A0E</span>
+            <p class="usage">제목과 핵심 텍스트. 라멘 타레처럼 진한 정보 위계를 만든다.</p>
+          </div>
+        </article>
+        <article class="color-card">
+          <div class="swatch" style="background:#7A4F30"></div>
+          <div class="color-info">
+            <strong>Wood Brown</strong>
+            <span class="hex">#7A4F30</span>
+            <p class="usage">본문, 보조 설명, 아이콘 기본색. 로컬 가게의 나무 톤을 연결한다.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section system">
+      <article class="panel">
+        <p class="panel-title">COLOR RATIO</p>
+        <div class="ratio">
+          <div class="ratio-row">
+            <span>Base</span>
+            <div class="bar"><span style="width:62%; background:#FFFBF5"></span></div>
+            <span>62%</span>
+          </div>
+          <div class="ratio-row">
+            <span>Surface</span>
+            <div class="bar"><span style="width:20%; background:#F2EBE0"></span></div>
+            <span>20%</span>
+          </div>
+          <div class="ratio-row">
+            <span>Text</span>
+            <div class="bar"><span style="width:12%; background:#2C1A0E"></span></div>
+            <span>12%</span>
+          </div>
+          <div class="ratio-row">
+            <span>Accent</span>
+            <div class="bar"><span style="width:6%; background:#E87C2A"></span></div>
+            <span>6%</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="panel">
+        <p class="panel-title">COLOR IN UI</p>
+        <div class="mock">
+          <div class="phone" aria-label="앱 색상 적용 예시">
+            <div class="topbar">
+              <div class="brand">면탐정</div>
+              <div class="icon"></div>
+            </div>
+            <div class="hero-card">
+              <div>
+                <small>로컬 라멘 찾기</small>
+                <h3>취향으로 찾는<br />울산 로컬 라멘</h3>
+              </div>
+              <div class="btn">취향에 맞게 찾기</div>
+            </div>
+            <div class="chips">
+              <span class="chip active">돈코츠</span>
+              <span class="chip">가는 면</span>
+              <span class="chip">진한 국물</span>
+              <span class="chip">웨이팅 없음</span>
+            </div>
+          </div>
+          <div class="notes">
+            <div class="note">
+              <strong>주황색은 행동을 이끈다</strong>
+              <p>CTA와 선택 완료 상태에만 사용해 사용자가 “다음에 무엇을 해야 하는지” 즉시 알게 한다.</p>
+            </div>
+            <div class="note">
+              <strong>크림색은 탐색 피로를 낮춘다</strong>
+              <p>지도, 상세 정보, 리뷰처럼 정보량이 많은 화면에서 흰색보다 따뜻하고 부드러운 인상을 준다.</p>
+            </div>
+            <div class="note">
+              <strong>브라운은 신뢰감을 만든다</strong>
+              <p>검정 대신 진한 갈색을 사용해 음식 앱의 온도를 유지하면서도 텍스트 가독성을 확보한다.</p>
+            </div>
+            <div class="note">
+              <strong>칩 배경은 선택 전 상태다</strong>
+              <p>필터와 보조 버튼은 베이지 칩으로 두고, 선택되면 주황색 채움으로 명확히 전환한다.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>Mood Rationale</h2>
+        <span>WHY THIS CONCEPT</span>
+      </div>
+      <div class="rationale">
+        <article class="panel">
+          <strong>라멘의 온기</strong>
+          <p>따뜻한 주황과 크림색은 라멘 국물, 반숙란, 조명 아래 놓인 그릇의 이미지를 연상시킨다.</p>
+        </article>
+        <article class="panel">
+          <strong>로컬 가게</strong>
+          <p>브라운 계열은 체인점 광고보다 작은 가게의 나무 테이블, 카운터석, 손맛의 분위기를 만든다.</p>
+        </article>
+        <article class="panel">
+          <strong>탐정수첩</strong>
+          <p>강한 색을 줄이고 종이 같은 배경을 사용해 사용자의 기록이 쌓이는 아카이브 느낌을 살린다.</p>
+        </article>
+        <article class="panel">
+          <strong>신뢰 가능한 추천</strong>
+          <p>전체 색상은 과장된 이벤트 앱보다 차분하며, 정보 구조와 버튼 위계를 선명하게 보여준다.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

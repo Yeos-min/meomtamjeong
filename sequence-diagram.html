@@ -1,0 +1,451 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>면탐정 사용자 시퀀스 다이어그램</title>
+  <style>
+    :root {
+      --page: #fffbf5;
+      --card: #ffffff;
+      --chip: #f2ebe0;
+      --deep: #ede5d8;
+      --accent: #e87c2a;
+      --accent-soft: #f0a050;
+      --green: #087a5a;
+      --ink: #2c1a0e;
+      --sub: #7a4f30;
+      --muted: #9b765c;
+      --line: rgba(180,130,90,.42);
+      --gray: #a8a29a;
+      --shadow: rgba(120,70,20,.12);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: linear-gradient(180deg, #efe7dc 0, var(--page) 220px);
+      color: var(--ink);
+      font-family: "Pretendard", "Apple SD Gothic Neo", "Malgun Gothic", Arial, sans-serif;
+    }
+
+    .page {
+      width: min(100%, 1760px);
+      margin: 0 auto;
+      padding: 34px 32px 56px;
+    }
+
+    .header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 24px;
+      margin-bottom: 22px;
+    }
+
+    .eyebrow {
+      margin-bottom: 8px;
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: .18em;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(32px, 4vw, 56px);
+      line-height: 1.05;
+      letter-spacing: -1.8px;
+      font-weight: 950;
+    }
+
+    .desc {
+      margin: 12px 0 0;
+      color: var(--sub);
+      font-size: 17px;
+      line-height: 1.6;
+    }
+
+    .legend {
+      min-width: 370px;
+      padding: 16px 18px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: rgba(255,255,255,.72);
+      box-shadow: 0 12px 30px var(--shadow);
+    }
+
+    .legend-title {
+      margin-bottom: 10px;
+      font-size: 13px;
+      color: var(--muted);
+      font-weight: 800;
+      letter-spacing: .12em;
+    }
+
+    .legend-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 8px;
+      color: var(--sub);
+      font-size: 14px;
+      white-space: nowrap;
+    }
+
+    .sample {
+      width: 54px;
+      height: 0;
+      border-top: 4px solid var(--green);
+    }
+
+    .sample.gray { border-color: var(--gray); }
+    .sample.dashed { border-style: dashed; border-color: var(--gray); }
+
+    .canvas {
+      overflow: auto;
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      background:
+        radial-gradient(circle at 92% 4%, rgba(232,124,42,.16), transparent 230px),
+        linear-gradient(180deg, rgba(255,255,255,.82), rgba(255,255,255,.58)),
+        var(--page);
+      box-shadow: 0 22px 60px var(--shadow);
+    }
+
+    svg {
+      display: block;
+      width: 100%;
+      min-width: 1500px;
+      height: auto;
+    }
+
+    .participant {
+      fill: var(--ink);
+      font-size: 42px;
+      font-weight: 950;
+      letter-spacing: -1.2px;
+    }
+
+    .participant-sub {
+      fill: var(--muted);
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: .14em;
+    }
+
+    .lifeline {
+      stroke: rgba(120,90,65,.45);
+      stroke-width: 6;
+      stroke-linecap: round;
+    }
+
+    .lifeline.user {
+      stroke: var(--green);
+      stroke-width: 7;
+    }
+
+    .lifeline.server {
+      stroke: rgba(120,90,65,.45);
+      stroke-width: 6;
+      stroke-dasharray: 1 18;
+    }
+
+    .phase {
+      fill: rgba(237,229,216,.72);
+      stroke: rgba(180,130,90,.22);
+      stroke-width: 1;
+    }
+
+    .phase-text {
+      fill: var(--accent);
+      font-size: 14px;
+      font-weight: 900;
+      letter-spacing: .16em;
+    }
+
+    .msg-user {
+      stroke: var(--green);
+      stroke-width: 5;
+      stroke-linecap: round;
+    }
+
+    .msg-ui,
+    .msg-server {
+      stroke: var(--gray);
+      stroke-width: 4;
+      stroke-linecap: round;
+    }
+
+    .msg-return {
+      stroke: var(--gray);
+      stroke-width: 4;
+      stroke-linecap: round;
+      stroke-dasharray: 8 12;
+    }
+
+    .msg-label {
+      fill: #4f453c;
+      font-size: 23px;
+      font-weight: 760;
+      letter-spacing: -.35px;
+    }
+
+    .msg-label.small {
+      fill: var(--sub);
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .note-box {
+      fill: rgba(255,255,255,.72);
+      stroke: rgba(180,130,90,.28);
+      stroke-width: 1.5;
+    }
+
+    .note-title {
+      fill: var(--ink);
+      font-size: 22px;
+      font-weight: 900;
+    }
+
+    .note-text {
+      fill: var(--sub);
+      font-size: 16px;
+      font-weight: 650;
+    }
+
+    .footer-note {
+      margin-top: 18px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+
+    .card {
+      padding: 16px 18px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: rgba(255,255,255,.72);
+      color: var(--sub);
+      line-height: 1.55;
+    }
+
+    .card strong {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--ink);
+      font-size: 16px;
+    }
+
+    @media print {
+      body { background: #fff; }
+      .page { width: 1760px; padding: 20px; }
+      .canvas { overflow: visible; box-shadow: none; }
+      .footer-note { page-break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="header">
+      <div>
+        <div class="eyebrow">MEOMTAMJEONG · USER SCENARIO</div>
+        <h1>면탐정 사용자 시퀀스 다이어그램</h1>
+        <p class="desc">
+          홈 진입 후 취향 설문으로 검색하고, 로컬 라멘 가게 상세/길찾기/탐정수첩 기록까지 이어지는 기준 흐름입니다.
+          서버 표기는 교수님 피드백에 맞춰 <strong>앱 Server</strong>로 통일했습니다.
+        </p>
+      </div>
+      <aside class="legend" aria-label="범례">
+        <div class="legend-title">LEGEND</div>
+        <div class="legend-row"><span class="sample"></span>사용자 조작</div>
+        <div class="legend-row"><span class="sample gray"></span>앱 UI 화면 표시/전환</div>
+        <div class="legend-row"><span class="sample dashed"></span>앱 Server 응답</div>
+      </aside>
+    </header>
+
+    <section class="canvas" aria-label="시퀀스 다이어그램">
+      <svg viewBox="0 0 1600 2260" role="img" aria-labelledby="diagramTitle diagramDesc">
+        <title id="diagramTitle">면탐정 사용자 시퀀스 다이어그램</title>
+        <desc id="diagramDesc">User, 앱 UI, 앱 Server 사이의 앱 실행, 홈, 취향 설문, 지도 검색, 상세, 길찾기, 로그인, 탐정수첩 저장 흐름</desc>
+
+        <defs>
+          <marker id="arrowGreen" markerWidth="16" markerHeight="16" refX="12" refY="8" orient="auto" markerUnits="strokeWidth">
+            <path d="M0,0 L16,8 L0,16 Z" fill="#087a5a" />
+          </marker>
+          <marker id="arrowGray" markerWidth="16" markerHeight="16" refX="12" refY="8" orient="auto" markerUnits="strokeWidth">
+            <path d="M0,0 L16,8 L0,16 Z" fill="#a8a29a" />
+          </marker>
+        </defs>
+
+        <text class="participant" x="60" y="62">User</text>
+        <text class="participant-sub" x="64" y="90">신나면</text>
+        <text class="participant" x="690" y="62" text-anchor="middle">앱 UI</text>
+        <text class="participant-sub" x="690" y="90" text-anchor="middle">화면 · 모달 · 탭바</text>
+        <text class="participant" x="1360" y="62" text-anchor="middle">앱 Server</text>
+        <text class="participant-sub" x="1360" y="90" text-anchor="middle">회원 · 가게 · 기록 데이터</text>
+
+        <line class="lifeline user" x1="115" y1="128" x2="115" y2="2140" />
+        <line class="lifeline" x1="690" y1="128" x2="690" y2="2140" />
+        <line class="lifeline server" x1="1360" y1="128" x2="1360" y2="2140" />
+
+        <rect class="phase" x="48" y="122" width="1475" height="54" rx="18" />
+        <text class="phase-text" x="72" y="156">01 · 앱 진입과 홈</text>
+
+        <line class="msg-user" x1="115" y1="220" x2="662" y2="220" marker-end="url(#arrowGreen)" />
+        <text class="msg-label" x="390" y="202" text-anchor="middle">앱 실행</text>
+
+        <line class="msg-ui" x1="690" y1="292" x2="142" y2="292" marker-end="url(#arrowGray)" />
+        <text class="msg-label" x="400" y="274" text-anchor="middle">스플래시 화면 표시</text>
+
+        <line class="msg-ui" x1="690" y1="364" x2="142" y2="364" marker-end="url(#arrowGray)" />
+        <text class="msg-label" x="400" y="346" text-anchor="middle">로그인 화면 표시</text>
+        <text class="msg-label small" x="400" y="382" text-anchor="middle">카카오 · 네이버 · 애플 · 비회원 시작</text>
+
+        <line class="msg-user" x1="115" y1="450" x2="662" y2="450" marker-end="url(#arrowGreen)" />
+        <text class="msg-label" x="390" y="432" text-anchor="middle">비회원으로 시작하기 선택</text>
+
+        <line class="msg-ui" x1="690" y1="522" x2="142" y2="522" marker-end="url(#arrowGray)" />
+        <text class="msg-label" x="405" y="504" text-anchor="middle">홈 화면으로 이동</text>
+        <text class="msg-label small" x="405" y="540" text-anchor="middle">상단 네비바 + 하단 4탭바 표시</text>
+
+        <rect class="phase" x="48" y="588" width="1475" height="54" rx="18" />
+        <text class="phase-text" x="72" y="622">02 · 취향 설문 기반 검색</text>
+
+        <line class="msg-user" x1="115" y1="694" x2="662" y2="694" marker-end="url(#arrowGreen)" />
+        <text class="msg-label" x="390" y="676" text-anchor="middle">홈에서 ‘취향에 맞게 찾기’ 선택</text>
+
+        <line class="msg-ui" x1="690" y1="766" x2="142" y2="766" marker-end="url(#arrowGray)" />
+        <text class="msg-label" x="400" y="748" text-anchor="middle">취향 찾기 화면 표시</text>
+        <text class="msg-label small" x="400" y="784" text-anchor="middle">X는 좌측 상단, 이전/다음은 하단 CTA 영역</text>
+
+        <line class="msg-user" x1="115" y1="852" x2="662" y2="852" marker-end="url(#arrowGreen)" />
+        <text class="msg-label" x="390" y="834" text-anchor="middle">5단계 취향 선택</text>
+        <text class="msg-label small" x="390" y="870" text-anchor="middle">육수 · 면 굵기 · 면 식감 · 국물 농도 · 맵기</text>
+
+        <line class="msg-ui" x1="690" y1="938" x2="1332" y2="938" marker-end="url(#arrowGray)" />
+        <text class="msg-label" x="1015" y="920" text-anchor="middle">취향 조건으로 로컬 가게 요청</text>
+
+        <line class="msg-return" x1="1360" y1="1010" x2="718" y2="1010" marker-end="url(#arrowGray)" />
+        <text class="msg-label" x="1015" y="992" text-anchor="middle">체인 제외 · 취향 매칭 결과 제공</text>
+
+        <line class="msg-ui" x1="690" y1="1082" x2="142" y2="1082" marker-end="url(#arrowGray)" />
+        <text class="msg-label" x="400" y="1064" text-anchor="middle">지도/가게 목록 화면 표시</text>
+        <text class="msg-label small" x="400" y="1100" text-anchor="middle">검색바와 필터 칩, 로컬 가게 핀 표시</text>
+
+        <line class="msg-user" x1="115" y1="1168" x2="662" y2="1168" marker-end="url(#arrowGreen)" />
+        <text class="msg-label" x="390" y="1150" text-anchor="middle">‘웨이팅 없음’ 등 필터 선택</text>
+
+        <line class="msg-ui" x1="690" y1="1240" x2="142" y2="1240" marker-end="url(#arrowGray)" />
+        <text class="msg-label" x="400" y="1222" text-anchor="middle">조건에 맞는 핀/가게 목록으로 갱신</text>
+
+        <rect class="phase" x="48" y="1306" width="1475" height="54" rx="18" />
+        <text class="phase-text" x="72" y="1340">03 · 가게 상세와 길찾기</text>
+
+        <line class="msg-user" x1="115" y1="1412" x2="662" y2="1412" marker-end="url(#arrowGreen)" />
+        <text class="msg-label" x="390" y="1394" text-anchor="middle">혼다라멘 선택</text>
+
+        <line class="msg-ui" x1="690" y1="1484" x2="1332" y2="1484" marker-end="url(#arrowGray)" />
+        <text class="msg-label" x="1015" y="1466" text-anchor="middle">가게 상세 정보 요청</text>
+
+        <line class="msg-return" x1="1360" y1="1556" x2="718" y2="1556" marker-end="url(#arrowGray)" />
+        <text class="msg-label" x="1015" y="1538" text-anchor="middle">육수 · 면 · 웨이팅 · 리뷰 데이터 제공</text>
+
+        <line class="msg-ui" x1="690" y1="1628" x2="142" y2="1628" marker-end="url(#arrowGray)" />
+        <text class="msg-label" x="400" y="1610" text-anchor="middle">가게 상세 페이지 표시</text>
+        <text class="msg-label small" x="400" y="1646" text-anchor="middle">비모달 화면, 고정 X/찜 버튼, 하단 탭바 유지</text>
+
+        <line class="msg-user" x1="115" y1="1714" x2="662" y2="1714" marker-end="url(#arrowGreen)" />
+        <text class="msg-label" x="390" y="1696" text-anchor="middle">길찾기 선택</text>
+
+        <line class="msg-ui" x1="690" y1="1786" x2="1332" y2="1786" marker-end="url(#arrowGray)" />
+        <text class="msg-label" x="1015" y="1768" text-anchor="middle">현재 위치 기준 경로 요청</text>
+
+        <line class="msg-return" x1="1360" y1="1858" x2="718" y2="1858" marker-end="url(#arrowGray)" />
+        <text class="msg-label" x="1015" y="1840" text-anchor="middle">경로/예상 시간 제공</text>
+
+        <line class="msg-ui" x1="690" y1="1930" x2="142" y2="1930" marker-end="url(#arrowGray)" />
+        <text class="msg-label" x="400" y="1912" text-anchor="middle">길찾기 화면 표시</text>
+        <text class="msg-label small" x="400" y="1948" text-anchor="middle">좌측 상단 X, 교통수단 선택, 경로 안내 CTA</text>
+
+        <rect class="phase" x="48" y="1996" width="1475" height="54" rx="18" />
+        <text class="phase-text" x="72" y="2030">04 · 로그인과 탐정수첩 저장</text>
+
+        <line class="msg-user" x1="115" y1="2102" x2="662" y2="2102" marker-end="url(#arrowGreen)" />
+        <text class="msg-label" x="390" y="2084" text-anchor="middle">상세에서 ‘탐정수첩에 저장’ 선택</text>
+
+        <line class="msg-ui" x1="690" y1="2174" x2="142" y2="2174" marker-end="url(#arrowGray)" />
+        <text class="msg-label" x="400" y="2156" text-anchor="middle">로그인 필요 모달 표시</text>
+      </svg>
+    </section>
+
+    <section class="canvas" style="margin-top:18px;" aria-label="저장 플로우 확장 다이어그램">
+      <svg viewBox="0 0 1600 760" role="img" aria-labelledby="saveFlowTitle saveFlowDesc">
+        <title id="saveFlowTitle">탐정수첩 저장 플로우 확장</title>
+        <desc id="saveFlowDesc">로그인 후 탐정수첩 작성과 저장 완료까지의 시퀀스</desc>
+        <defs>
+          <marker id="arrowGreen2" markerWidth="16" markerHeight="16" refX="12" refY="8" orient="auto" markerUnits="strokeWidth">
+            <path d="M0,0 L16,8 L0,16 Z" fill="#087a5a" />
+          </marker>
+          <marker id="arrowGray2" markerWidth="16" markerHeight="16" refX="12" refY="8" orient="auto" markerUnits="strokeWidth">
+            <path d="M0,0 L16,8 L0,16 Z" fill="#a8a29a" />
+          </marker>
+        </defs>
+
+        <text class="participant" x="60" y="62">User</text>
+        <text class="participant" x="690" y="62" text-anchor="middle">앱 UI</text>
+        <text class="participant" x="1360" y="62" text-anchor="middle">앱 Server</text>
+        <line class="lifeline user" x1="115" y1="100" x2="115" y2="700" />
+        <line class="lifeline" x1="690" y1="100" x2="690" y2="700" />
+        <line class="lifeline server" x1="1360" y1="100" x2="1360" y2="700" />
+
+        <line class="msg-user" x1="115" y1="150" x2="662" y2="150" marker-end="url(#arrowGreen2)" />
+        <text class="msg-label" x="390" y="132" text-anchor="middle">카카오 로그인 선택</text>
+
+        <line class="msg-ui" x1="690" y1="222" x2="1332" y2="222" marker-end="url(#arrowGray2)" />
+        <text class="msg-label" x="1015" y="204" text-anchor="middle">회원 인증 요청</text>
+
+        <line class="msg-return" x1="1360" y1="294" x2="718" y2="294" marker-end="url(#arrowGray2)" />
+        <text class="msg-label" x="1015" y="276" text-anchor="middle">회원 정보 제공</text>
+
+        <line class="msg-ui" x1="690" y1="366" x2="142" y2="366" marker-end="url(#arrowGray2)" />
+        <text class="msg-label" x="400" y="348" text-anchor="middle">혼다라멘 상세 화면으로 복귀</text>
+
+        <line class="msg-user" x1="115" y1="438" x2="662" y2="438" marker-end="url(#arrowGreen2)" />
+        <text class="msg-label" x="390" y="420" text-anchor="middle">탐정수첩에 저장 다시 선택</text>
+
+        <line class="msg-ui" x1="690" y1="510" x2="142" y2="510" marker-end="url(#arrowGray2)" />
+        <text class="msg-label" x="400" y="492" text-anchor="middle">탐정수첩 작성 화면 표시</text>
+        <text class="msg-label small" x="400" y="528" text-anchor="middle">모든 필수 항목 작성 전 CTA 비활성화</text>
+
+        <line class="msg-user" x1="115" y1="596" x2="662" y2="596" marker-end="url(#arrowGreen2)" />
+        <text class="msg-label" x="390" y="578" text-anchor="middle">메뉴 · 면 식감 · 농도 · 일치도 · 인상 작성</text>
+
+        <line class="msg-ui" x1="690" y1="668" x2="1332" y2="668" marker-end="url(#arrowGray2)" />
+        <text class="msg-label" x="1015" y="650" text-anchor="middle">기록 저장 요청</text>
+
+        <line class="msg-return" x1="1360" y1="724" x2="718" y2="724" marker-end="url(#arrowGray2)" />
+        <text class="msg-label" x="1015" y="706" text-anchor="middle">수첩 목록/취향 분포 갱신</text>
+      </svg>
+    </section>
+
+    <section class="footer-note">
+      <div class="card">
+        <strong>비모달 화면</strong>
+        홈, 지도, 가게 목록, 가게 상세, 길찾기, 탐정수첩 작성은 각각 독립 화면입니다. 특히 가게 상세는 모달이 아니라 하단 탭바가 유지되는 상세 페이지로 정리했습니다.
+      </div>
+      <div class="card">
+        <strong>모달 화면</strong>
+        “기록을 저장하려면 로그인이 필요해요”처럼 현재 작업을 잠시 막고 선택을 요구하는 경우만 모달로 사용합니다.
+      </div>
+      <div class="card">
+        <strong>버튼 활성 조건</strong>
+        취향 찾기는 현재 질문 답변 후 다음 CTA 활성화, 탐정수첩 기록은 5개 필수 항목 작성 완료 후 저장 CTA 활성화가 기준입니다.
+      </div>
+    </section>
+  </main>
+</body>
+</html>
