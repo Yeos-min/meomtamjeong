@@ -298,7 +298,7 @@ export default function NotebookPage() {
                 </div>
                 <AppButton
                   onClick={() => navigate('/')}
-                  variant="primary"
+                  variant="cta"
                   size="md"
                 >
                   라멘 탐색하러 가기
@@ -498,7 +498,7 @@ export default function NotebookPage() {
                 </div>
                 <AppButton
                   onClick={() => navigate('/map')}
-                  variant="primary"
+                  variant="cta"
                   size="md"
                 >
                   지도로 탐색하기

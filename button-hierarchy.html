@@ -205,20 +205,27 @@
     .md { height: 46px; font-size: 14px; }
     .wide { width: 100%; }
 
-    .primary {
+    .cta {
       color: var(--label);
       border-color: var(--accent);
       background: linear-gradient(135deg, var(--accent-soft), var(--accent));
       box-shadow: 0 10px 26px var(--accent-glow);
     }
 
-    .primary.pressed,
+    .cta.pressed,
     .selected {
       color: var(--label);
       border-color: var(--accent);
       background: var(--accent);
       box-shadow: 0 8px 18px var(--accent-glow);
       transform: scale(.98);
+    }
+
+    .primary {
+      color: var(--label);
+      background: var(--sub);
+      border-color: var(--sub);
+      box-shadow: 0 8px 20px var(--shadow);
     }
 
     .secondary {
@@ -452,7 +459,7 @@
         <h1>앱 버튼 계층 구조</h1>
         <p class="summary">
           현재 앱에서 사용하는 버튼을 목적과 위계 기준으로 정리했습니다.
-          기본 원칙은 “중요 CTA는 주황색, 이동/보조는 칩 컬러, 선택 완료 상태는 채워진 주황색, 닫기/뒤로가기는 44px 네모 아이콘 버튼”입니다.
+          기본 원칙은 “최종 CTA는 주황 그라데이션, 주요 행동은 갈색 Primary, 보조 행동은 베이지 Secondary, 중립 행동은 Outlined”입니다.
         </p>
       </div>
       <aside class="token-card">
@@ -476,18 +483,28 @@
 
       <div class="grid">
         <article class="panel">
-          <h3>PRIMARY CTA</h3>
+          <h3>CTA</h3>
           <p class="role">화면의 최종 행동. 한 화면에 1개만 가장 강하게 노출합니다.</p>
           <div class="stack">
-            <span class="btn primary wide">취향에 맞게 찾기</span>
-            <span class="btn primary wide">다음</span>
-            <span class="btn primary wide">기록 저장</span>
+            <span class="btn cta wide">취향에 맞게 찾기</span>
+            <span class="btn cta wide">내 라멘 찾기</span>
+            <span class="btn cta wide">기록 저장</span>
+          </div>
+        </article>
+
+        <article class="panel">
+          <h3>PRIMARY</h3>
+          <p class="role">중요하지만 최종 CTA는 아닌 주요 행동. 갈색 채움으로 구분합니다.</p>
+          <div class="stack">
+            <span class="btn primary wide">길찾기</span>
+            <span class="btn primary wide">가게 상세보기</span>
+            <span class="btn primary wide">조건 적용</span>
           </div>
         </article>
 
         <article class="panel">
           <h3>SECONDARY</h3>
-          <p class="role">이전, 보조 이동, 덜 중요한 선택. 기본 칩 배경을 사용합니다.</p>
+          <p class="role">이전, 교통수단 미선택, 일반 보조 행동. 베이지 칩 배경을 사용합니다.</p>
           <div class="stack">
             <span class="btn secondary wide">이전</span>
             <span class="btn secondary wide">자전거</span>
@@ -506,7 +523,7 @@
         </article>
 
         <article class="panel">
-          <h3>OUTLINE</h3>
+          <h3>OUTLINED</h3>
           <p class="role">흰 배경의 보조 행동. 홈의 지도 바로 보기, 로그인 보조 등에 사용합니다.</p>
           <div class="stack">
             <span class="btn outline wide">지도에서 바로 보기</span>
@@ -534,11 +551,11 @@
       <div class="states">
         <div class="state-card">
           <strong>기본 상태</strong>
-          <span class="btn primary wide">다음</span>
+          <span class="btn cta wide">다음</span>
         </div>
         <div class="state-card">
           <strong>눌림 상태</strong>
-          <span class="btn primary pressed wide">다음</span>
+          <span class="btn cta pressed wide">다음</span>
         </div>
         <div class="state-card">
           <strong>선택됨</strong>
@@ -613,20 +630,20 @@
           <tr>
             <td>홈</td>
             <td>취향에 맞게 찾기 / 지도에서 바로 보기 / 전체 보기</td>
-            <td><span class="tag">Primary</span> <span class="tag">Outline</span> <span class="tag">Text</span></td>
-            <td>가장 중요한 진입은 Primary, 지도 바로 이동은 Outline, 목록 더보기는 Text로 약하게 둡니다.</td>
+            <td><span class="tag">CTA</span> <span class="tag">Outlined</span> <span class="tag">Text</span></td>
+            <td>가장 중요한 진입은 CTA, 지도 바로 이동은 Outlined, 목록 더보기는 Text로 약하게 둡니다.</td>
           </tr>
           <tr>
             <td>취향 찾기</td>
             <td>X / 이전 / 다음 / 내 라멘 찾기 / 선택 카드</td>
-            <td><span class="tag">Icon</span> <span class="tag">Secondary</span> <span class="tag">Primary</span> <span class="tag">Selection</span></td>
+            <td><span class="tag">Icon</span> <span class="tag">Secondary</span> <span class="tag">CTA</span> <span class="tag">Selection</span></td>
             <td>현재 질문 미선택 시 다음 비활성. 마지막 단계는 전체 답변 완료 시 내 라멘 찾기 활성.</td>
           </tr>
           <tr>
             <td>지도</td>
             <td>검색바, 필터 칩, 조건 적용, 가게 상세보기</td>
             <td><span class="tag">Soft</span> <span class="tag">Selected</span> <span class="tag">Primary</span></td>
-            <td>선택된 필터는 채워진 주황색으로 상태를 유지합니다. 적용/상세보기만 Primary.</td>
+            <td>선택된 필터는 채워진 주황색으로 상태를 유지합니다. 조건 적용/상세보기는 Primary.</td>
           </tr>
           <tr>
             <td>가게 목록</td>
@@ -638,25 +655,25 @@
             <td>가게 상세</td>
             <td>X / 찜 / 길찾기 / 탐정수첩에 저장</td>
             <td><span class="tag">Icon</span> <span class="tag">Secondary</span> <span class="tag">Primary</span></td>
-            <td>X와 찜은 스크롤해도 같은 위치. 찜 선택 시 주황색 채움으로 표시. 하단 CTA 2개는 탭바 위에 나란히 배치.</td>
+            <td>X와 찜은 스크롤해도 같은 위치. 찜 선택 시 주황색 채움으로 표시. 길찾기는 Primary, 수첩 저장은 Secondary/Selected로 배치.</td>
           </tr>
           <tr>
             <td>길찾기</td>
             <td>X / 도보 / 자전거 / 대중교통 / 경로 안내 시작</td>
-            <td><span class="tag">Icon</span> <span class="tag">Selected</span> <span class="tag">Secondary</span> <span class="tag">Primary</span></td>
-            <td>현재 교통수단은 선택 상태, 나머지는 Secondary. 시작 버튼은 Primary CTA.</td>
+            <td><span class="tag">Icon</span> <span class="tag">Selected</span> <span class="tag">Secondary</span> <span class="tag">CTA</span></td>
+            <td>현재 교통수단은 선택 상태, 나머지는 Secondary. 시작 버튼은 CTA.</td>
           </tr>
           <tr>
             <td>탐정수첩 작성</td>
             <td>X / 메뉴 칩 / 면 식감 / 국물 농도 / 일치도 / 기록 저장</td>
-            <td><span class="tag">Icon</span> <span class="tag">Selected</span> <span class="tag">Primary</span></td>
-            <td>필수 5항목 완료 전 기록 저장 비활성. 완료 후 Primary 활성, 저장 완료 시 선택/완료 상태로 전환.</td>
+            <td><span class="tag">Icon</span> <span class="tag">Selected</span> <span class="tag">CTA</span></td>
+            <td>필수 5항목 완료 전 기록 저장 비활성. 완료 후 CTA 활성, 저장 완료 시 선택/완료 상태로 전환.</td>
           </tr>
           <tr>
             <td>로그인 필요 모달</td>
             <td>카카오 로그인 / 네이버 로그인 / 애플 로그인 / 닫기</td>
-            <td><span class="tag">Primary</span> <span class="tag">Outline</span></td>
-            <td>권장 로그인은 Primary, 대체 로그인과 닫기는 Outline 계층으로 둡니다.</td>
+            <td><span class="tag">CTA</span> <span class="tag">Outlined</span></td>
+            <td>권장 로그인은 CTA, 대체 로그인과 닫기는 Outlined 계층으로 둡니다.</td>
           </tr>
         </tbody>
       </table>

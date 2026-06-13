@@ -251,7 +251,7 @@ export default function PreferenceSelectionPage() {
           <AppButton
             onClick={handleNext}
             disabled={!currentAnswered}
-            variant="primary"
+            variant="cta"
             size="lg"
             fullWidth
           >
@@ -261,7 +261,7 @@ export default function PreferenceSelectionPage() {
           <AppButton
             onClick={handleFind}
             disabled={!allAnswered}
-            variant="primary"
+            variant="cta"
             size="lg"
             fullWidth
           >

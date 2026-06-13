@@ -60,7 +60,7 @@ export default function HomePage() {
             <div className="flex flex-col gap-[10px] mt-[20px]">
               <AppButton
                 onClick={() => navigate('/preference')}
-                variant="primary"
+                variant="cta"
                 size="lg"
                 fullWidth
               >
