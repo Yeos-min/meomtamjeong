@@ -238,7 +238,7 @@ export default function NotebookEntryPage() {
         <AppButton
           onClick={handleSave}
           disabled={!canSave}
-          variant="primary"
+          variant="cta"
           size="lg"
           fullWidth
           selected={saved}

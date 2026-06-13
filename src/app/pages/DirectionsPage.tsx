@@ -303,7 +303,7 @@ export default function DirectionsPage() {
 
         {/* 경로 안내 시작 버튼 */}
         <AppButton
-          variant="primary"
+          variant="cta"
           size="lg"
           fullWidth
           onClick={() => {/* 실제 내비는 미구현 — 시뮬레이션용 */}}

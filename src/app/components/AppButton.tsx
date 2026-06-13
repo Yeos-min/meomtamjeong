@@ -1,7 +1,7 @@
 import { ButtonHTMLAttributes, CSSProperties, ReactNode } from 'react';
 import { useApp } from '../AppContext';
 
-type AppButtonVariant = 'primary' | 'secondary' | 'soft' | 'outline' | 'text';
+type AppButtonVariant = 'cta' | 'primary' | 'secondary' | 'soft' | 'outline' | 'text';
 type AppButtonSize = 'sm' | 'md' | 'lg';
 
 type AppButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
@@ -60,12 +60,19 @@ export function AppButton({
     }
 
     switch (variant) {
-      case 'primary':
+      case 'cta':
         return {
           background: `linear-gradient(135deg, ${theme.accentSoft}, ${theme.accent})`,
           border: `1px solid ${theme.accent}`,
           color: theme.labelColor,
           boxShadow: `0 10px 26px ${theme.accentGlow}`,
+        };
+      case 'primary':
+        return {
+          backgroundColor: theme.subColor,
+          border: `1px solid ${theme.subColor}`,
+          color: theme.labelColor,
+          boxShadow: `0 8px 20px ${theme.shadow}`,
         };
       case 'soft':
         return {
@@ -114,4 +121,3 @@ export function AppButton({
     </button>
   );
 }
-
