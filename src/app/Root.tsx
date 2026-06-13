@@ -32,7 +32,7 @@ export default function Root() {
   }, [path]);
 
   // 탭바 숨김: 길찾기 / 기록 작성 / 설문 화면
-  const hideNav = path.endsWith('/directions') || path === '/notebook/entry' || path === '/preference' || path === '/login' || path === '/splash';
+  const hideNav = path.startsWith('/shop/') || path === '/notebook/entry' || path === '/preference' || path === '/login' || path === '/splash';
   const showTopNav = path === '/' || path === '/map' || path === '/shops' || path === '/notebook';
 
   return (

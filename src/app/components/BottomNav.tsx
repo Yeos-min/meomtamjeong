@@ -143,8 +143,8 @@ export function BottomNav() {
           style={
             item.active
               ? {
-                  backgroundColor: theme.accent,
-                  boxShadow: `0px 0px 14px 0px ${theme.accentGlow}`,
+                  backgroundColor: theme.subColor,
+                  boxShadow: `0px 8px 18px 0px ${theme.shadow}`,
                 }
               : { opacity: 0.55 }
           }

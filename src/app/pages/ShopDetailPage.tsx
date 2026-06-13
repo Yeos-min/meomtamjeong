@@ -98,15 +98,11 @@ export default function ShopDetailPage() {
       <div className="sticky top-[14px] z-40 h-0 px-[16px] flex items-start justify-between pointer-events-none">
         <NavIconButton
           onClick={() => navigate(-1)}
-          ariaLabel="이전 화면으로 돌아가기"
+          ariaLabel="가게 상세 닫기"
           className="pointer-events-auto"
           style={{ backdropFilter: 'blur(10px)' }}
         >
-          <div className="size-[17px]">
-            <svg className="size-full" fill="none" viewBox="0 0 16 16">
-              <path d={svgPaths.p300a1100} fill="currentColor" />
-            </svg>
-          </div>
+          <CloseIcon />
         </NavIconButton>
 
         <NavIconButton
@@ -441,7 +437,7 @@ export default function ShopDetailPage() {
 
           <AppButton
             onClick={handleDirections}
-            variant="primary"
+            variant="cta"
             size="lg"
             fullWidth
             className="min-w-0"

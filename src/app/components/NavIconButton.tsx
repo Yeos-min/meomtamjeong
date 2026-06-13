@@ -19,9 +19,9 @@ export function NavIconButton({ ariaLabel, children, onClick, className = '', se
       onClick={onClick}
       className={`size-[44px] rounded-[14px] flex items-center justify-center active:scale-95 transition-transform ${className}`}
       style={{
-        backgroundColor: selected ? theme.accent : theme.cardBg,
-        border: `1px solid ${selected ? theme.accent : theme.border}`,
-        boxShadow: selected ? `0 8px 18px ${theme.accentGlow}` : `0 8px 20px ${theme.shadow}`,
+        backgroundColor: selected ? theme.subColor : theme.cardBg,
+        border: `1px solid ${selected ? theme.subColor : theme.border}`,
+        boxShadow: `0 8px 20px ${theme.shadow}`,
         color: selected ? theme.labelColor : theme.subColor,
         ...style,
       }}
