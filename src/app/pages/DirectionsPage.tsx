@@ -2,8 +2,9 @@ import { useState } from 'react';
 import { useParams, useNavigate } from 'react-router';
 import { useApp } from '../AppContext';
 import { mockShops } from '../types';
-import { CloseIcon, NavIconButton } from '../components/NavIconButton';
+import { NavIconButton } from '../components/NavIconButton';
 import { AppButton } from '../components/AppButton';
+import svgPaths from '../../imports/가게상세정보상세형/svg-g3qprezm69';
 
 const MAP_W = 390;
 const MAP_H = 480;
@@ -119,8 +120,12 @@ export default function DirectionsPage() {
         className="flex items-center justify-between px-[16px] py-[12px] z-10 flex-shrink-0"
         style={{ backgroundColor: theme.pageBg, borderBottom: `1px solid ${border}` }}
       >
-        <NavIconButton onClick={() => navigate(-1)} ariaLabel="길찾기 닫기">
-          <CloseIcon />
+        <NavIconButton onClick={() => navigate(-1)} ariaLabel="가게 상세로 돌아가기">
+          <div className="size-[17px]">
+            <svg className="size-full" fill="none" viewBox="0 0 16 16" aria-hidden="true">
+              <path d={svgPaths.p300a1100} fill="currentColor" />
+            </svg>
+          </div>
         </NavIconButton>
         <span style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontSize: '15px', fontWeight: 900, color: titleColor }}>
           길찾기

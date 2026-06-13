@@ -50,17 +50,16 @@ export function AppButton({
       };
     }
 
-    if (selected) {
-      return {
-        backgroundColor: theme.accent,
-        border: `1px solid ${theme.accent}`,
-        color: theme.labelColor,
-        boxShadow: `0 8px 18px ${theme.accentGlow}`,
-      };
-    }
-
     switch (variant) {
       case 'cta':
+        if (selected) {
+          return {
+            background: `linear-gradient(135deg, ${theme.accentSoft}, ${theme.accent})`,
+            border: `1px solid ${theme.accent}`,
+            color: theme.labelColor,
+            boxShadow: `0 8px 18px ${theme.accentGlow}`,
+          };
+        }
         return {
           background: `linear-gradient(135deg, ${theme.accentSoft}, ${theme.accent})`,
           border: `1px solid ${theme.accent}`,
@@ -68,6 +67,14 @@ export function AppButton({
           boxShadow: `0 10px 26px ${theme.accentGlow}`,
         };
       case 'primary':
+        if (selected) {
+          return {
+            backgroundColor: theme.subColor,
+            border: `1px solid ${theme.subColor}`,
+            color: theme.labelColor,
+            boxShadow: `0 8px 20px ${theme.shadow}`,
+          };
+        }
         return {
           backgroundColor: theme.subColor,
           border: `1px solid ${theme.subColor}`,
@@ -75,6 +82,14 @@ export function AppButton({
           boxShadow: `0 8px 20px ${theme.shadow}`,
         };
       case 'soft':
+        if (selected) {
+          return {
+            backgroundColor: theme.subColor,
+            border: `1px solid ${theme.subColor}`,
+            color: theme.labelColor,
+            boxShadow: `0 8px 20px ${theme.shadow}`,
+          };
+        }
         return {
           backgroundColor: `${theme.accent}16`,
           border: `1px solid ${theme.accent}66`,
@@ -82,6 +97,14 @@ export function AppButton({
           boxShadow: 'none',
         };
       case 'outline':
+        if (selected) {
+          return {
+            backgroundColor: theme.subColor,
+            border: `1px solid ${theme.subColor}`,
+            color: theme.labelColor,
+            boxShadow: `0 8px 20px ${theme.shadow}`,
+          };
+        }
         return {
           backgroundColor: theme.cardBg,
           border: `1px solid ${theme.border}`,
@@ -89,6 +112,14 @@ export function AppButton({
           boxShadow: 'none',
         };
       case 'text':
+        if (selected) {
+          return {
+            backgroundColor: theme.subColor,
+            border: `1px solid ${theme.subColor}`,
+            color: theme.labelColor,
+            boxShadow: `0 8px 20px ${theme.shadow}`,
+          };
+        }
         return {
           backgroundColor: 'transparent',
           border: '1px solid transparent',
@@ -97,6 +128,14 @@ export function AppButton({
         };
       case 'secondary':
       default:
+        if (selected) {
+          return {
+            backgroundColor: theme.subColor,
+            border: `1px solid ${theme.subColor}`,
+            color: theme.labelColor,
+            boxShadow: `0 8px 20px ${theme.shadow}`,
+          };
+        }
         return {
           backgroundColor: theme.chipBg,
           border: `1px solid ${theme.border}`,

@@ -499,7 +499,7 @@ export default function MapPage() {
 
           <AppButton
             onClick={() => navigate(`/shop/${selectedShop.id}`)}
-            variant="primary"
+            variant="cta"
             size="lg"
             fullWidth
           >

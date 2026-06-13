@@ -71,7 +71,7 @@ export default function HomePage() {
               </AppButton>
               <AppButton
                 onClick={() => navigate('/map')}
-                variant="outline"
+                variant="primary"
                 size="md"
                 fullWidth
               >

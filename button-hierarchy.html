@@ -212,12 +212,19 @@
       box-shadow: 0 10px 26px var(--accent-glow);
     }
 
-    .cta.pressed,
-    .selected {
+    .cta.pressed {
       color: var(--label);
       border-color: var(--accent);
       background: var(--accent);
       box-shadow: 0 8px 18px var(--accent-glow);
+      transform: scale(.98);
+    }
+
+    .selected {
+      color: var(--label);
+      border-color: var(--sub);
+      background: var(--sub);
+      box-shadow: 0 8px 20px var(--shadow);
       transform: scale(.98);
     }
 
@@ -291,9 +298,9 @@
 
     .icon-btn.selected {
       color: var(--label);
-      background: var(--accent);
-      border-color: var(--accent);
-      box-shadow: 0 8px 18px var(--accent-glow);
+      background: var(--sub);
+      border-color: var(--sub);
+      box-shadow: 0 8px 20px var(--shadow);
       transform: none;
     }
 
@@ -322,8 +329,8 @@
     }
 
     .choice-card.selected {
-      border-color: var(--accent);
-      background: rgba(232,124,42,.09);
+      border-color: var(--sub);
+      background: rgba(122,79,48,.10);
       box-shadow: none;
       transform: none;
     }
@@ -339,7 +346,7 @@
     }
 
     .choice-card.selected .radio {
-      border-color: var(--accent);
+      border-color: var(--sub);
     }
 
     .choice-card.selected .radio::after {
@@ -347,7 +354,7 @@
       width: 11px;
       height: 11px;
       border-radius: 50%;
-      background: var(--accent);
+      background: var(--sub);
     }
 
     .states {
@@ -489,6 +496,7 @@
             <span class="btn cta wide">취향에 맞게 찾기</span>
             <span class="btn cta wide">내 라멘 찾기</span>
             <span class="btn cta wide">기록 저장</span>
+            <span class="btn cta wide">길찾기</span>
           </div>
         </article>
 
@@ -496,9 +504,9 @@
           <h3>PRIMARY</h3>
           <p class="role">중요하지만 최종 CTA는 아닌 주요 행동. 갈색 채움으로 구분합니다.</p>
           <div class="stack">
-            <span class="btn primary wide">길찾기</span>
             <span class="btn primary wide">가게 상세보기</span>
             <span class="btn primary wide">조건 적용</span>
+            <span class="btn primary wide">로그인</span>
           </div>
         </article>
 
@@ -604,7 +612,7 @@
           <h3>취향 설문 선택 후</h3>
           <div class="choice-card selected">
             <div>
-              <strong style="color:var(--accent);">가는 면</strong>
+              <strong style="color:var(--sub);">가는 면</strong>
               <span>육수를 빠르게 머금는 섬세한 면</span>
             </div>
             <i class="radio"></i>
@@ -643,7 +651,7 @@
             <td>지도</td>
             <td>검색바, 필터 칩, 조건 적용, 가게 상세보기</td>
             <td><span class="tag">Soft</span> <span class="tag">Selected</span> <span class="tag">Primary</span></td>
-            <td>선택된 필터는 채워진 주황색으로 상태를 유지합니다. 조건 적용/상세보기는 Primary.</td>
+            <td>선택된 필터는 갈색 선택 상태로 유지합니다. 조건 적용/상세보기는 Primary.</td>
           </tr>
           <tr>
             <td>가게 목록</td>
@@ -654,8 +662,8 @@
           <tr>
             <td>가게 상세</td>
             <td>X / 찜 / 길찾기 / 탐정수첩에 저장</td>
-            <td><span class="tag">Icon</span> <span class="tag">Secondary</span> <span class="tag">Primary</span></td>
-            <td>X와 찜은 스크롤해도 같은 위치. 찜 선택 시 주황색 채움으로 표시. 길찾기는 Primary, 수첩 저장은 Secondary/Selected로 배치.</td>
+            <td><span class="tag">Icon</span> <span class="tag">Secondary</span> <span class="tag">Selected</span> <span class="tag">CTA</span></td>
+            <td>모달 화면으로 보고 하단 탭바는 숨깁니다. X와 찜은 스크롤해도 같은 위치. 찜 선택 시 갈색 선택 상태로 표시. 길찾기는 CTA, 수첩 저장은 Secondary/Selected로 배치.</td>
           </tr>
           <tr>
             <td>길찾기</td>
@@ -681,7 +689,7 @@
       <div class="rule-list">
         <div class="rule">
           <strong>1. 색상 위계</strong>
-          주황색 채움은 화면의 핵심 행동 또는 선택 완료 상태에만 씁니다. 여러 개가 동시에 강하게 보이면 우선순위가 흐려집니다.
+          주황 그라데이션은 화면의 핵심 CTA에만 씁니다. 선택 완료 상태는 갈색으로 분리해 CTA처럼 보이지 않게 합니다.
         </div>
         <div class="rule">
           <strong>2. 닫기/뒤로가기</strong>
