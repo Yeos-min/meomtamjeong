@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router';
+﻿import { useNavigate } from 'react-router';
 import { useApp } from '../AppContext';
 import { mockShops, SignatureTag } from '../types';
 import { NavIconButton } from '../components/NavIconButton';
@@ -44,11 +44,11 @@ export default function EventsPage() {
           </svg>
         </NavIconButton>
         <span className="text-[20px] tracking-[-1px]"
-          style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", color: accent }}>
+          style={{ fontFamily: "'Noto Sans KR', sans-serif", color: accent }}>
           면탐정
         </span>
         <span className="text-[13px] opacity-60"
-          style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", color: subColor }}>
+          style={{ fontFamily: "'Noto Sans KR', sans-serif", color: subColor }}>
           이벤트 라멘
         </span>
       </div>
@@ -62,22 +62,22 @@ export default function EventsPage() {
               className="px-[10px] py-[4px] rounded-full flex items-center gap-[6px]"
               style={{ background: `linear-gradient(90deg, ${accent}, ${accentSoft})` }}
             >
-              <span className="text-[10px]" style={{ fontFamily: "'Manrope', sans-serif", fontWeight: 700, color: labelColor, letterSpacing: '0.5px' }}>
+              <span className="text-[10px]" style={{ fontFamily: "'Noto Sans KR', sans-serif", fontWeight: 700, color: labelColor, letterSpacing: '0.5px' }}>
                 LIMITED
               </span>
             </div>
             <span className="text-[11px] tracking-[1px] uppercase"
-              style={{ fontFamily: "'Manrope', sans-serif", color: mutedColor }}>
+              style={{ fontFamily: "'Noto Sans KR', sans-serif", color: mutedColor }}>
               이번 주 한정 메뉴
             </span>
           </div>
           <div className="text-[30px] tracking-[-1.5px] leading-[1.2]"
-            style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", color: titleColor }}>
+            style={{ fontFamily: "'Noto Sans KR', sans-serif", color: titleColor }}>
             <p className="mb-0">🔥 이벤트</p>
             <p>라멘 탐색</p>
           </div>
           <p className="text-[13px] leading-relaxed"
-            style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", color: subColor }}>
+            style={{ fontFamily: "'Noto Sans KR', sans-serif", color: subColor }}>
             지금만 먹을 수 있는 시즌 한정 메뉴를 모았습니다
           </p>
         </div>
@@ -86,7 +86,7 @@ export default function EventsPage() {
         {eventShops.length === 0 ? (
           <div className="flex flex-col items-center justify-center gap-[12px] py-[60px]">
             <span className="text-[36px]">🍜</span>
-            <span className="text-[14px]" style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", color: subColor }}>
+            <span className="text-[14px]" style={{ fontFamily: "'Noto Sans KR', sans-serif", color: subColor }}>
               현재 진행 중인 이벤트 메뉴가 없습니다
             </span>
           </div>
@@ -116,7 +116,7 @@ export default function EventsPage() {
                     className="absolute top-[12px] left-[12px] flex items-center gap-[5px] px-[10px] py-[4px] rounded-full"
                     style={{ background: `linear-gradient(90deg, ${accent}, ${accentSoft})`, boxShadow: `0 4px 12px ${accentGlow}` }}
                   >
-                    <span className="text-[10px]" style={{ fontFamily: "'Manrope', sans-serif", fontWeight: 700, color: labelColor }}>
+                    <span className="text-[10px]" style={{ fontFamily: "'Noto Sans KR', sans-serif", fontWeight: 700, color: labelColor }}>
                       🔥 한정 메뉴 {limitedMenus.length}개
                     </span>
                   </div>
@@ -129,7 +129,7 @@ export default function EventsPage() {
                     <svg className="size-[10px]" fill="#FFB5A0" viewBox="0 0 12 12">
                       <path d="M6 1l1.545 3.13L11 4.635 8.5 7.075l.59 3.425L6 8.885l-3.09 1.615.59-3.425L1 4.635l3.455-.505L6 1z" />
                     </svg>
-                    <span className="text-[12px] text-white" style={{ fontFamily: "'Manrope', sans-serif", fontWeight: 700 }}>
+                    <span className="text-[12px] text-white" style={{ fontFamily: "'Noto Sans KR', sans-serif", fontWeight: 700 }}>
                       {shop.rating}
                     </span>
                   </div>
@@ -141,24 +141,24 @@ export default function EventsPage() {
                   <div className="flex items-start justify-between">
                     <div>
                       <div className="text-[20px] tracking-[-0.5px]"
-                        style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", color: titleColor }}>
+                        style={{ fontFamily: "'Noto Sans KR', sans-serif", color: titleColor }}>
                         {shop.name}
                       </div>
                       <div className="flex gap-[6px] flex-wrap mt-[4px]">
                         {shop.broth.map(b => (
                           <span key={b} className="text-[11px] px-[7px] py-[2px] rounded-[4px]"
-                            style={{ backgroundColor: chipBg, fontFamily: "'WenQuanYi Zen Hei', sans-serif", color: subColor }}>
+                            style={{ backgroundColor: chipBg, fontFamily: "'Noto Sans KR', sans-serif", color: subColor }}>
                             {b} 육수
                           </span>
                         ))}
                         <span className="text-[11px] px-[7px] py-[2px] rounded-[4px]"
-                          style={{ backgroundColor: chipBg, fontFamily: "'WenQuanYi Zen Hei', sans-serif", color: subColor }}>
+                          style={{ backgroundColor: chipBg, fontFamily: "'Noto Sans KR', sans-serif", color: subColor }}>
                           {shop.richness}
                         </span>
                       </div>
                     </div>
                     <span className="text-[12px] shrink-0 ml-2"
-                      style={{ fontFamily: "'Manrope', sans-serif", fontWeight: 500, color: accentSoft }}>
+                      style={{ fontFamily: "'Noto Sans KR', sans-serif", fontWeight: 500, color: accentSoft }}>
                       {shop.distance}
                     </span>
                   </div>
@@ -168,7 +168,7 @@ export default function EventsPage() {
                     <div className="flex items-center gap-[6px]">
                       <span className="text-[10px]">⏰</span>
                       <span className="text-[11px] uppercase tracking-[0.8px]"
-                        style={{ fontFamily: "'Manrope', sans-serif", fontWeight: 700, color: accent }}>
+                        style={{ fontFamily: "'Noto Sans KR', sans-serif", fontWeight: 700, color: accent }}>
                         이번 주 한정 메뉴
                       </span>
                     </div>
@@ -180,17 +180,17 @@ export default function EventsPage() {
                       >
                         <div className="flex flex-col gap-[2px]">
                           <span className="text-[13px]"
-                            style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", color: titleColor }}>
+                            style={{ fontFamily: "'Noto Sans KR', sans-serif", color: titleColor }}>
                             {menu.name}
                           </span>
                           <span className="text-[11px]"
-                            style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", color: subColor }}>
+                            style={{ fontFamily: "'Noto Sans KR', sans-serif", color: subColor }}>
                             {menu.description}
                           </span>
                         </div>
                         <div className="flex flex-col items-end gap-[4px] shrink-0 ml-[12px]">
                           <span className="text-[13px]"
-                            style={{ fontFamily: "'Manrope', sans-serif", fontWeight: 700, color: accent }}>
+                            style={{ fontFamily: "'Noto Sans KR', sans-serif", fontWeight: 700, color: accent }}>
                             {menu.price.toLocaleString()}원
                           </span>
                           <div
@@ -198,7 +198,7 @@ export default function EventsPage() {
                             style={{ background: `linear-gradient(90deg, ${accent}44, ${accentSoft}44)`, border: `1px solid ${accent}66` }}
                           >
                             <span className="text-[9px]"
-                              style={{ fontFamily: "'Manrope', sans-serif", fontWeight: 700, color: accent }}>
+                              style={{ fontFamily: "'Noto Sans KR', sans-serif", fontWeight: 700, color: accent }}>
                               LIMITED
                             </span>
                           </div>
@@ -216,7 +216,7 @@ export default function EventsPage() {
                           style={{ backgroundColor: deepBg, border: `1px solid ${border}` }}>
                           <span className="text-[10px]">{SIGNATURE_ICONS[tag]}</span>
                           <span className="text-[10px]"
-                            style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", color: accentSoft }}>
+                            style={{ fontFamily: "'Noto Sans KR', sans-serif", color: accentSoft }}>
                             {tag}
                           </span>
                         </div>
@@ -226,7 +226,7 @@ export default function EventsPage() {
 
                   <div className="flex items-center gap-[4px] justify-end">
                     <span className="text-[12px]"
-                      style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", color: accentSoft }}>
+                      style={{ fontFamily: "'Noto Sans KR', sans-serif", color: accentSoft }}>
                       상세보기
                     </span>
                     <svg className="size-[14px]" fill="none" viewBox="0 0 16 16">

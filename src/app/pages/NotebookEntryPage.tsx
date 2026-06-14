@@ -1,4 +1,4 @@
-import { useState } from 'react';
+﻿import { useState } from 'react';
 import { useNavigate, useSearchParams } from 'react-router';
 import { useApp } from '../AppContext';
 import { mockShops } from '../types';
@@ -72,7 +72,7 @@ export default function NotebookEntryPage() {
         </NavIconButton>
         <span
           style={{
-            fontFamily: "'WenQuanYi Zen Hei', sans-serif",
+            fontFamily: "'Noto Sans KR', sans-serif",
             fontSize: '15px',
             fontWeight: 900,
             color: titleColor,
@@ -92,7 +92,7 @@ export default function NotebookEntryPage() {
           <svg width="14" height="14" fill="none" viewBox="0 0 20 20">
             <path d="M10 2a5.5 5.5 0 015.5 5.5c0 4-5.5 10-5.5 10S4.5 11.5 4.5 7.5A5.5 5.5 0 0110 2z" fill={accent} />
           </svg>
-          <span style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontSize: '13px', fontWeight: 700, color: accent }}>
+          <span style={{ fontFamily: "'Noto Sans KR', sans-serif", fontSize: '13px', fontWeight: 700, color: accent }}>
             {shopName}
           </span>
         </div>
@@ -101,17 +101,17 @@ export default function NotebookEntryPage() {
       {/* 폼 영역 */}
       <div className="flex flex-col gap-[20px] px-[20px] pt-[12px]">
         <div className="rounded-[10px] px-[12px] py-[10px] flex items-center justify-between" style={{ backgroundColor: chipBg }}>
-          <span style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontSize: '12px', color: subColor }}>
+          <span style={{ fontFamily: "'Noto Sans KR', sans-serif", fontSize: '12px', color: subColor }}>
             모든 항목을 작성하면 기록을 저장할 수 있어요
           </span>
-          <span style={{ fontFamily: "'Manrope', sans-serif", fontSize: '12px', fontWeight: 700, color: canSave ? accent : mutedColor }}>
+          <span style={{ fontFamily: "'Noto Sans KR', sans-serif", fontSize: '12px', fontWeight: 700, color: canSave ? accent : mutedColor }}>
             {completedCount}/5
           </span>
         </div>
 
         {/* 먹은 메뉴 */}
         <div>
-          <label style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontSize: '12px', fontWeight: 700, color: subColor, display: 'block', marginBottom: '8px' }}>
+          <label style={{ fontFamily: "'Noto Sans KR', sans-serif", fontSize: '12px', fontWeight: 700, color: subColor, display: 'block', marginBottom: '8px' }}>
             먹은 메뉴 <span style={{ color: accent }}>*</span>
           </label>
           {shopData && shopData.menus.length > 0 && (
@@ -136,7 +136,7 @@ export default function NotebookEntryPage() {
             placeholder="직접 입력..."
             className="w-full rounded-[10px] px-[14px] py-[11px] outline-none"
             style={{
-              fontFamily: "'WenQuanYi Zen Hei', sans-serif",
+              fontFamily: "'Noto Sans KR', sans-serif",
               fontSize: '14px',
               color: titleColor,
               backgroundColor: chipBg,
@@ -147,7 +147,7 @@ export default function NotebookEntryPage() {
 
         {/* 면 식감 */}
         <div>
-          <label style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontSize: '12px', fontWeight: 700, color: subColor, display: 'block', marginBottom: '8px' }}>
+          <label style={{ fontFamily: "'Noto Sans KR', sans-serif", fontSize: '12px', fontWeight: 700, color: subColor, display: 'block', marginBottom: '8px' }}>
             면 식감 <span style={{ color: accent }}>*</span>
           </label>
           <div className="grid grid-cols-3 gap-[8px]">
@@ -168,7 +168,7 @@ export default function NotebookEntryPage() {
 
         {/* 국물 농도 */}
         <div>
-          <label style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontSize: '12px', fontWeight: 700, color: subColor, display: 'block', marginBottom: '8px' }}>
+          <label style={{ fontFamily: "'Noto Sans KR', sans-serif", fontSize: '12px', fontWeight: 700, color: subColor, display: 'block', marginBottom: '8px' }}>
             국물 농도 <span style={{ color: accent }}>*</span>
           </label>
           <div className="flex items-center gap-[0px]">
@@ -193,7 +193,7 @@ export default function NotebookEntryPage() {
 
         {/* 예상 취향과의 일치 */}
         <div>
-          <label style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontSize: '12px', fontWeight: 700, color: subColor, display: 'block', marginBottom: '8px' }}>
+          <label style={{ fontFamily: "'Noto Sans KR', sans-serif", fontSize: '12px', fontWeight: 700, color: subColor, display: 'block', marginBottom: '8px' }}>
             예상 취향과의 일치 <span style={{ color: accent }}>*</span>
           </label>
           <div className="grid grid-cols-3 gap-[8px]">
@@ -214,7 +214,7 @@ export default function NotebookEntryPage() {
 
         {/* 짧은 인상 */}
         <div>
-          <label style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontSize: '12px', fontWeight: 700, color: subColor, display: 'block', marginBottom: '8px' }}>
+          <label style={{ fontFamily: "'Noto Sans KR', sans-serif", fontSize: '12px', fontWeight: 700, color: subColor, display: 'block', marginBottom: '8px' }}>
             짧은 인상 <span style={{ color: accent }}>*</span>
           </label>
           <textarea
@@ -224,7 +224,7 @@ export default function NotebookEntryPage() {
             rows={4}
             className="w-full rounded-[12px] px-[14px] py-[12px] outline-none resize-none"
             style={{
-              fontFamily: "'WenQuanYi Zen Hei', sans-serif",
+              fontFamily: "'Noto Sans KR', sans-serif",
               fontSize: '13px',
               lineHeight: 1.6,
               color: titleColor,
@@ -253,7 +253,7 @@ export default function NotebookEntryPage() {
           className="fixed left-1/2 -translate-x-1/2 bottom-[24px] px-[20px] h-[44px] rounded-[12px] flex items-center justify-center"
           style={{ backgroundColor: '#2C1A0E', zIndex: 100, boxShadow: '0 4px 16px rgba(0,0,0,0.3)' }}
         >
-          <span style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontSize: '13px', fontWeight: 700, color: '#FFFBF5' }}>
+          <span style={{ fontFamily: "'Noto Sans KR', sans-serif", fontSize: '13px', fontWeight: 700, color: '#FFFBF5' }}>
             탐정수첩에 기록이 저장되었어요
           </span>
         </div>

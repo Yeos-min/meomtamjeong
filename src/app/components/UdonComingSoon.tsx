@@ -1,4 +1,4 @@
-import { useApp } from '../AppContext';
+﻿import { useApp } from '../AppContext';
 import { useNavigate } from 'react-router';
 
 export function UdonComingSoon() {
@@ -31,20 +31,20 @@ export function UdonComingSoon() {
       <div className="flex flex-col gap-[10px]">
         <div
           className="text-[11px] tracking-[1.8px] uppercase"
-          style={{ fontFamily: "'Manrope', sans-serif", color: accentSoft }}
+          style={{ fontFamily: "'Noto Sans KR', sans-serif", color: accentSoft }}
         >
           Coming Soon
         </div>
         <div
           className="text-[28px] tracking-[-1px]"
-          style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", lineHeight: 1.2, color: theme.titleColor }}
+          style={{ fontFamily: "'Noto Sans KR', sans-serif", lineHeight: 1.2, color: theme.titleColor }}
         >
           <p className="mb-0">우동 탐정 모드</p>
           <p>준비 중입니다</p>
         </div>
         <div
           className="text-[14px] leading-relaxed"
-          style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", color: subColor }}
+          style={{ fontFamily: "'Noto Sans KR', sans-serif", color: subColor }}
         >
           울산 우동 맛집 데이터를 수집하고 있어요.{'\n'}조금만 기다려 주세요!
         </div>
@@ -55,13 +55,13 @@ export function UdonComingSoon() {
         <div className="flex justify-between items-center">
           <span
             className="text-[11px]"
-            style={{ fontFamily: "'Manrope', sans-serif", color: mutedColor }}
+            style={{ fontFamily: "'Noto Sans KR', sans-serif", color: mutedColor }}
           >
             데이터 수집 현황
           </span>
           <span
             className="text-[11px]"
-            style={{ fontFamily: "'Manrope', sans-serif", fontWeight: 700, color: accent }}
+            style={{ fontFamily: "'Noto Sans KR', sans-serif", fontWeight: 700, color: accent }}
           >
             42%
           </span>
@@ -96,7 +96,7 @@ export function UdonComingSoon() {
               <span
                 className="text-[12px]"
                 style={{
-                  fontFamily: "'WenQuanYi Zen Hei', sans-serif",
+                  fontFamily: "'Noto Sans KR', sans-serif",
                   color: item.done ? theme.titleColor : mutedColor,
                   textDecoration: 'none',
                 }}
@@ -120,7 +120,7 @@ export function UdonComingSoon() {
         <span className="text-[16px]">🍖</span>
         <span
           className="text-[15px]"
-          style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontWeight: 700, color: theme.labelColor }}
+          style={{ fontFamily: "'Noto Sans KR', sans-serif", fontWeight: 700, color: theme.labelColor }}
         >
           라멘 탐정 모드로 돌아가기
         </span>

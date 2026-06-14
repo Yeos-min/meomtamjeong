@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router';
+﻿import { useNavigate } from 'react-router';
 import { useApp } from '../AppContext';
 import { NavIconButton } from '../components/NavIconButton';
 
@@ -23,13 +23,13 @@ export default function ResultsPage() {
         </NavIconButton>
         <span
           className="text-[20px] tracking-[-1px]"
-          style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", color: accent }}
+          style={{ fontFamily: "'Noto Sans KR', sans-serif", color: accent }}
         >
           면탐정
         </span>
         <span
           className="text-[13px] opacity-60"
-          style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", color: subColor }}
+          style={{ fontFamily: "'Noto Sans KR', sans-serif", color: subColor }}
         >
           탐색 결과
         </span>
@@ -42,7 +42,7 @@ export default function ResultsPage() {
           <div
             className="text-[28px] tracking-[-1.4px]"
             style={{
-              fontFamily: "'WenQuanYi Zen Hei', sans-serif",
+              fontFamily: "'Noto Sans KR', sans-serif",
               lineHeight: '1.2',
               color: titleColor,
             }}
@@ -52,7 +52,7 @@ export default function ResultsPage() {
           </div>
           <div
             className="text-[13px] leading-relaxed"
-            style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", color: subColor }}
+            style={{ fontFamily: "'Noto Sans KR', sans-serif", color: subColor }}
           >
             취향 분석 기반으로 엄선한 울산의 숨은 라멘집입니다
           </div>
@@ -90,7 +90,7 @@ export default function ResultsPage() {
                   >
                     <span
                       className="text-[10px]"
-                      style={{ fontFamily: "'Manrope', sans-serif", fontWeight: 700, color: labelColor }}
+                      style={{ fontFamily: "'Noto Sans KR', sans-serif", fontWeight: 700, color: labelColor }}
                     >
                       {idx + 1}
                     </span>
@@ -103,7 +103,7 @@ export default function ResultsPage() {
                   <div className="flex items-center justify-between gap-[8px]">
                     <span
                       className="text-[16px] tracking-[-0.4px] truncate"
-                      style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontWeight: 700, color: titleColor }}
+                      style={{ fontFamily: "'Noto Sans KR', sans-serif", fontWeight: 700, color: titleColor }}
                     >
                       {shop.name}
                     </span>
@@ -113,7 +113,7 @@ export default function ResultsPage() {
                       </svg>
                       <span
                         className="text-[12px]"
-                        style={{ fontFamily: "'Manrope', sans-serif", fontWeight: 700, color: titleColor }}
+                        style={{ fontFamily: "'Noto Sans KR', sans-serif", fontWeight: 700, color: titleColor }}
                       >
                         {shop.rating}
                       </span>
@@ -123,7 +123,7 @@ export default function ResultsPage() {
                   {/* Description */}
                   <div
                     className="text-[12px] leading-snug line-clamp-1"
-                    style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", color: subColor }}
+                    style={{ fontFamily: "'Noto Sans KR', sans-serif", color: subColor }}
                   >
                     {shop.description}
                   </div>
@@ -132,21 +132,21 @@ export default function ResultsPage() {
                   <div className="flex gap-[5px] flex-wrap mt-[2px]">
                     <span
                       className="px-[7px] py-[2px] rounded-[4px] text-[10px]"
-                      style={{ backgroundColor: chipBg, color: subColor, fontFamily: "'WenQuanYi Zen Hei', sans-serif" }}
+                      style={{ backgroundColor: chipBg, color: subColor, fontFamily: "'Noto Sans KR', sans-serif" }}
                     >
                       {shop.broth.join('·')} 육수
                     </span>
                     {shop.spiceLevel !== '없음' && (
                       <span
                         className="px-[7px] py-[2px] rounded-[4px] text-[10px]"
-                        style={{ backgroundColor: chipBg, color: subColor, fontFamily: "'WenQuanYi Zen Hei', sans-serif" }}
+                        style={{ backgroundColor: chipBg, color: subColor, fontFamily: "'Noto Sans KR', sans-serif" }}
                       >
                         🌶 {shop.spiceLevel}
                       </span>
                     )}
                     <span
                       className="px-[7px] py-[2px] rounded-[4px] text-[10px]"
-                      style={{ backgroundColor: chipBg, color: subColor, fontFamily: "'WenQuanYi Zen Hei', sans-serif" }}
+                      style={{ backgroundColor: chipBg, color: subColor, fontFamily: "'Noto Sans KR', sans-serif" }}
                     >
                       {shop.richness}
                     </span>
@@ -160,7 +160,7 @@ export default function ResultsPage() {
                       </svg>
                       <span
                         className="text-[11px] leading-snug"
-                        style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", color: accent }}
+                        style={{ fontFamily: "'Noto Sans KR', sans-serif", color: accent }}
                       >
                         {shop.signatureTags.join(' · ')}
                       </span>
@@ -196,7 +196,7 @@ export default function ResultsPage() {
           </svg>
           <span
             className="text-[14px]"
-            style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", color: accentSoft }}
+            style={{ fontFamily: "'Noto Sans KR', sans-serif", color: accentSoft }}
           >
             지도에서 더 찾아보기
           </span>

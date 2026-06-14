@@ -1,4 +1,4 @@
-import { ButtonHTMLAttributes, CSSProperties, ReactNode } from 'react';
+﻿import { ButtonHTMLAttributes, CSSProperties, ReactNode } from 'react';
 import { useApp } from '../AppContext';
 
 type AppButtonVariant = 'cta' | 'primary' | 'secondary' | 'soft' | 'outline' | 'text';
@@ -34,7 +34,7 @@ export function AppButton({
   const { theme } = useApp();
 
   const base: CSSProperties = {
-    fontFamily: "'WenQuanYi Zen Hei', sans-serif",
+    fontFamily: "'Noto Sans KR', sans-serif",
     fontWeight: selected ? 800 : 700,
   };
 

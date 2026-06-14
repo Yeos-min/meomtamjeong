@@ -1,4 +1,4 @@
-import svgPaths from "./svg-2k5p8fjeqy";
+﻿import svgPaths from "./svg-2k5p8fjeqy";
 import imgRamenBowl from "./10e8596bf94cb0e55bdf2cc012009e43255159ba.png";
 
 function Container1() {
@@ -16,7 +16,7 @@ function Container1() {
 function Heading() {
   return (
     <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-name="Heading 1">
-      <div className="flex flex-col font-['WenQuanYi_Zen_Hei:Medium',sans-serif] h-[40px] justify-center leading-[0] not-italic relative shrink-0 text-[#ffb5a0] text-[36px] tracking-[-0.9px] w-[174.61px]">
+      <div className="flex flex-col font-['Noto_Sans_KR',sans-serif] h-[40px] justify-center leading-[0] not-italic relative shrink-0 text-[#ffb5a0] text-[36px] tracking-[-0.9px] w-[174.61px]">
         <p className="leading-[40px]">탐정수첩 📓</p>
       </div>
     </div>
@@ -26,7 +26,7 @@ function Heading() {
 function Container3() {
   return (
     <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-name="Container">
-      <div className="flex flex-col font-['WenQuanYi_Zen_Hei:Medium',sans-serif] h-[20px] justify-center leading-[0] not-italic relative shrink-0 text-[#ab8980] text-[14px] w-[103.61px]">
+      <div className="flex flex-col font-['Noto_Sans_KR',sans-serif] h-[20px] justify-center leading-[0] not-italic relative shrink-0 text-[#ab8980] text-[14px] w-[103.61px]">
         <p className="leading-[20px]">나만의 수사 일지</p>
       </div>
     </div>
@@ -78,7 +78,7 @@ function Container5() {
 function Container6() {
   return (
     <div className="content-stretch flex flex-col items-start overflow-clip relative shrink-0 w-full" data-name="Container">
-      <div className="flex flex-col font-['Manrope:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#ffdbce] text-[16px] w-full">
+      <div className="flex flex-col font-['Noto_Sans_KR',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#ffdbce] text-[16px] w-full">
         <p className="leading-[24px]">2024.03.15</p>
       </div>
     </div>
@@ -112,7 +112,7 @@ function BackgroundBorder() {
 function DateInput() {
   return (
     <div className="content-stretch flex flex-col gap-[8px] items-start relative shrink-0 w-full" data-name="Date Input">
-      <div className="flex flex-col font-['WenQuanYi_Zen_Hei:Medium',sans-serif] h-[16px] justify-center leading-[0] not-italic opacity-80 relative shrink-0 text-[#ffb5a0] text-[12px] tracking-[1.2px] uppercase w-[57px]">
+      <div className="flex flex-col font-['Noto_Sans_KR',sans-serif] h-[16px] justify-center leading-[0] not-italic opacity-80 relative shrink-0 text-[#ffb5a0] text-[12px] tracking-[1.2px] uppercase w-[57px]">
         <p className="leading-[16px]">방문 날짜</p>
       </div>
       <BackgroundBorder />
@@ -135,7 +135,7 @@ function Container7() {
 function Container8() {
   return (
     <div className="content-stretch flex flex-col items-start overflow-clip pb-px relative shrink-0 w-full" data-name="Container">
-      <div className="flex flex-col font-['WenQuanYi_Zen_Hei:Medium',sans-serif] justify-center leading-[0] not-italic relative shrink-0 text-[16px] text-[rgba(171,137,128,0.4)] w-full">
+      <div className="flex flex-col font-['Noto_Sans_KR',sans-serif] justify-center leading-[0] not-italic relative shrink-0 text-[16px] text-[rgba(171,137,128,0.4)] w-full">
         <p className="leading-[normal]">메뉴를 입력하세요</p>
       </div>
     </div>
@@ -169,7 +169,7 @@ function BackgroundBorder1() {
 function MenuInput() {
   return (
     <div className="content-stretch flex flex-col gap-[8px] items-start relative shrink-0 w-full" data-name="Menu Input">
-      <div className="flex flex-col font-['WenQuanYi_Zen_Hei:Medium',sans-serif] h-[16px] justify-center leading-[0] not-italic opacity-80 relative shrink-0 text-[#ffb5a0] text-[12px] tracking-[1.2px] uppercase w-[70.2px]">
+      <div className="flex flex-col font-['Noto_Sans_KR',sans-serif] h-[16px] justify-center leading-[0] not-italic opacity-80 relative shrink-0 text-[#ffb5a0] text-[12px] tracking-[1.2px] uppercase w-[70.2px]">
         <p className="leading-[16px]">주문한 메뉴</p>
       </div>
       <BackgroundBorder1 />
@@ -180,7 +180,7 @@ function MenuInput() {
 function Container9() {
   return (
     <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-h-px min-w-px relative" data-name="Container">
-      <div className="flex flex-col font-['WenQuanYi_Zen_Hei:Medium',sans-serif] justify-center leading-[0] not-italic relative shrink-0 text-[16px] text-[rgba(171,137,128,0.4)] w-full">
+      <div className="flex flex-col font-['Noto_Sans_KR',sans-serif] justify-center leading-[0] not-italic relative shrink-0 text-[16px] text-[rgba(171,137,128,0.4)] w-full">
         <p className="leading-[24px]">오늘의 솔직한 한 마디...</p>
       </div>
     </div>
@@ -211,7 +211,7 @@ function BackgroundBorder2() {
 function MemoInput() {
   return (
     <div className="content-stretch flex flex-col gap-[8px] items-start relative shrink-0 w-full" data-name="Memo Input">
-      <div className="flex flex-col font-['WenQuanYi_Zen_Hei:Medium',sans-serif] h-[16px] justify-center leading-[0] not-italic opacity-80 relative shrink-0 text-[#ffb5a0] text-[12px] tracking-[1.2px] uppercase w-[61.2px]">
+      <div className="flex flex-col font-['Noto_Sans_KR',sans-serif] h-[16px] justify-center leading-[0] not-italic opacity-80 relative shrink-0 text-[#ffb5a0] text-[12px] tracking-[1.2px] uppercase w-[61.2px]">
         <p className="leading-[16px]">한 줄 메모</p>
       </div>
       <BackgroundBorder2 />
@@ -236,7 +236,7 @@ function SubmitButton() {
     <div className="bg-[#ff5722] content-stretch flex gap-[8px] items-center justify-center py-[20px] relative rounded-[4px] shrink-0 w-full" data-name="Submit Button">
       <div className="absolute bg-[rgba(255,255,255,0)] inset-0 rounded-[4px] shadow-[0px_10px_15px_-3px_rgba(255,87,34,0.2),0px_4px_6px_-4px_rgba(255,87,34,0.2)]" data-name="Submit Button:shadow" />
       <Container10 />
-      <div className="flex flex-col font-['WenQuanYi_Zen_Hei:Medium',sans-serif] h-[24px] justify-center leading-[0] not-italic relative shrink-0 text-[#541200] text-[16px] text-center w-[136px]">
+      <div className="flex flex-col font-['Noto_Sans_KR',sans-serif] h-[24px] justify-center leading-[0] not-italic relative shrink-0 text-[#541200] text-[16px] text-center w-[136px]">
         <p className="leading-[24px]">수사 기록 저장하기</p>
       </div>
     </div>
@@ -277,7 +277,7 @@ function InputFormSectionTheCaseFile() {
 function Heading1() {
   return (
     <div className="content-stretch flex flex-col items-start relative shrink-0" data-name="Heading 2">
-      <div className="flex flex-col font-['WenQuanYi_Zen_Hei:Medium',sans-serif] h-[32px] justify-center leading-[0] not-italic relative shrink-0 text-[#ffdbce] text-[24px] w-[180.02px]">
+      <div className="flex flex-col font-['Noto_Sans_KR',sans-serif] h-[32px] justify-center leading-[0] not-italic relative shrink-0 text-[#ffdbce] text-[24px] w-[180.02px]">
         <p className="leading-[32px]">과거의 수사 기록</p>
       </div>
     </div>
@@ -287,7 +287,7 @@ function Heading1() {
 function Container12() {
   return (
     <div className="content-stretch flex flex-col items-start relative shrink-0" data-name="Container">
-      <div className="flex flex-col font-['WenQuanYi_Zen_Hei:Medium',sans-serif] h-[16px] justify-center leading-[0] not-italic relative shrink-0 text-[#f0be74] text-[12px] w-[48px]">
+      <div className="flex flex-col font-['Noto_Sans_KR',sans-serif] h-[16px] justify-center leading-[0] not-italic relative shrink-0 text-[#f0be74] text-[12px] w-[48px]">
         <p className="[text-decoration-skip-ink:none] decoration-solid leading-[16px] underline">전체보기</p>
       </div>
     </div>
@@ -311,10 +311,10 @@ function Paragraph() {
   return (
     <div className="relative shrink-0 w-full" data-name="Paragraph">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex items-start justify-between leading-[0] relative w-full">
-        <div className="flex flex-col font-['Manrope:Regular',sans-serif] font-normal h-[16px] justify-center relative shrink-0 text-[#ab8980] text-[12px] w-[58.2px]">
+        <div className="flex flex-col font-['Noto_Sans_KR',sans-serif] font-normal h-[16px] justify-center relative shrink-0 text-[#ab8980] text-[12px] w-[58.2px]">
           <p className="leading-[16px]">2024.03.10</p>
         </div>
-        <div className="flex flex-col font-['WenQuanYi_Zen_Hei:Medium',sans-serif] h-[15px] justify-center not-italic relative shrink-0 text-[#ffb5a0] text-[10px] tracking-[-0.5px] uppercase w-[69.52px]">
+        <div className="flex flex-col font-['Noto_Sans_KR',sans-serif] h-[15px] justify-center not-italic relative shrink-0 text-[#ffb5a0] text-[10px] tracking-[-0.5px] uppercase w-[69.52px]">
           <p className="leading-[15px]">이전 기록과 비교</p>
         </div>
       </div>
@@ -325,7 +325,7 @@ function Paragraph() {
 function Heading2() {
   return (
     <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-name="Heading 3">
-      <div className="flex flex-col font-['WenQuanYi_Zen_Hei:Medium',sans-serif] justify-center leading-[0] not-italic relative shrink-0 text-[#ffdbce] text-[18px] w-full">
+      <div className="flex flex-col font-['Noto_Sans_KR',sans-serif] justify-center leading-[0] not-italic relative shrink-0 text-[#ffdbce] text-[18px] w-full">
         <p className="leading-[28px]">매운 돈코츠 라멘 특식</p>
       </div>
     </div>
@@ -335,7 +335,7 @@ function Heading2() {
 function Container15() {
   return (
     <div className="h-[45.5px] overflow-clip relative shrink-0 w-full" data-name="Container">
-      <div className="-translate-y-1/2 absolute flex flex-col font-['WenQuanYi_Zen_Hei:Medium',sans-serif] justify-center leading-[0] left-0 not-italic text-[#e4beb4] text-[14px] top-[21.88px] w-[294.01px]">
+      <div className="-translate-y-1/2 absolute flex flex-col font-['Noto_Sans_KR',sans-serif] justify-center leading-[0] left-0 not-italic text-[#e4beb4] text-[14px] top-[21.88px] w-[294.01px]">
         <p className="leading-[22.75px] mb-0">염도가 완벽했고 차슈의 두께가 이전보다 두꺼워</p>
         <p className="leading-[22.75px]">진 느낌. 마늘 후레이크 추가가 신의 한 수였음.</p>
       </div>
@@ -370,10 +370,10 @@ function Paragraph1() {
   return (
     <div className="relative shrink-0 w-full" data-name="Paragraph">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex items-start justify-between leading-[0] relative w-full">
-        <div className="flex flex-col font-['Manrope:Regular',sans-serif] font-normal h-[16px] justify-center relative shrink-0 text-[#ab8980] text-[12px] w-[61.8px]">
+        <div className="flex flex-col font-['Noto_Sans_KR',sans-serif] font-normal h-[16px] justify-center relative shrink-0 text-[#ab8980] text-[12px] w-[61.8px]">
           <p className="leading-[16px]">2024.03.02</p>
         </div>
-        <div className="flex flex-col font-['WenQuanYi_Zen_Hei:Medium',sans-serif] h-[15px] justify-center not-italic relative shrink-0 text-[#ffb5a0] text-[10px] tracking-[-0.5px] uppercase w-[69.52px]">
+        <div className="flex flex-col font-['Noto_Sans_KR',sans-serif] h-[15px] justify-center not-italic relative shrink-0 text-[#ffb5a0] text-[10px] tracking-[-0.5px] uppercase w-[69.52px]">
           <p className="leading-[15px]">이전 기록과 비교</p>
         </div>
       </div>
@@ -384,7 +384,7 @@ function Paragraph1() {
 function Heading3() {
   return (
     <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-name="Heading 3">
-      <div className="flex flex-col font-['WenQuanYi_Zen_Hei:Medium',sans-serif] justify-center leading-[0] not-italic relative shrink-0 text-[#ffdbce] text-[18px] w-full">
+      <div className="flex flex-col font-['Noto_Sans_KR',sans-serif] justify-center leading-[0] not-italic relative shrink-0 text-[#ffdbce] text-[18px] w-full">
         <p className="leading-[28px]">토리 파이탄 라멘</p>
       </div>
     </div>
@@ -394,7 +394,7 @@ function Heading3() {
 function Container17() {
   return (
     <div className="h-[45.5px] overflow-clip relative shrink-0 w-full" data-name="Container">
-      <div className="-translate-y-1/2 absolute flex flex-col font-['WenQuanYi_Zen_Hei:Medium',sans-serif] justify-center leading-[0] left-0 not-italic text-[#e4beb4] text-[14px] top-[21.88px] w-[286.37px]">
+      <div className="-translate-y-1/2 absolute flex flex-col font-['Noto_Sans_KR',sans-serif] justify-center leading-[0] left-0 not-italic text-[#e4beb4] text-[14px] top-[21.88px] w-[286.37px]">
         <p className="leading-[22.75px] mb-0">국물이 매우 진함. 닭 육수의 고소함이 일품이나</p>
         <p className="leading-[22.75px]">면발의 익힘 정도가 조금 아쉬웠음.</p>
       </div>
@@ -429,10 +429,10 @@ function Paragraph2() {
   return (
     <div className="relative shrink-0 w-full" data-name="Paragraph">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex items-start justify-between leading-[0] relative w-full">
-        <div className="flex flex-col font-['Manrope:Regular',sans-serif] font-normal h-[16px] justify-center relative shrink-0 text-[#ab8980] text-[12px] w-[61.52px]">
+        <div className="flex flex-col font-['Noto_Sans_KR',sans-serif] font-normal h-[16px] justify-center relative shrink-0 text-[#ab8980] text-[12px] w-[61.52px]">
           <p className="leading-[16px]">2024.02.24</p>
         </div>
-        <div className="flex flex-col font-['WenQuanYi_Zen_Hei:Medium',sans-serif] h-[15px] justify-center not-italic relative shrink-0 text-[#ffb5a0] text-[10px] tracking-[-0.5px] uppercase w-[69.52px]">
+        <div className="flex flex-col font-['Noto_Sans_KR',sans-serif] h-[15px] justify-center not-italic relative shrink-0 text-[#ffb5a0] text-[10px] tracking-[-0.5px] uppercase w-[69.52px]">
           <p className="leading-[15px]">이전 기록과 비교</p>
         </div>
       </div>
@@ -443,7 +443,7 @@ function Paragraph2() {
 function Heading4() {
   return (
     <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-name="Heading 3">
-      <div className="flex flex-col font-['WenQuanYi_Zen_Hei:Medium',sans-serif] justify-center leading-[0] not-italic relative shrink-0 text-[#ffdbce] text-[18px] w-full">
+      <div className="flex flex-col font-['Noto_Sans_KR',sans-serif] justify-center leading-[0] not-italic relative shrink-0 text-[#ffdbce] text-[18px] w-full">
         <p className="leading-[28px]">마제소바 세트</p>
       </div>
     </div>
@@ -453,7 +453,7 @@ function Heading4() {
 function Container19() {
   return (
     <div className="h-[45.5px] overflow-clip relative shrink-0 w-full" data-name="Container">
-      <div className="-translate-y-1/2 absolute flex flex-col font-['WenQuanYi_Zen_Hei:Medium',sans-serif] justify-center leading-[0] left-0 not-italic text-[#e4beb4] text-[14px] top-[21.88px] w-[285.62px]">
+      <div className="-translate-y-1/2 absolute flex flex-col font-['Noto_Sans_KR',sans-serif] justify-center leading-[0] left-0 not-italic text-[#e4beb4] text-[14px] top-[21.88px] w-[285.62px]">
         <p className="leading-[22.75px] mb-0">다시마 식초를 두 바퀴 돌렸을 때 감칠맛이 폭발</p>
         <p className="leading-[22.75px]">함. 남은 양념에 밥 비벼먹는 것 필수.</p>
       </div>
@@ -519,7 +519,7 @@ function RamenBowl() {
 function Container20() {
   return (
     <div className="content-stretch flex flex-col items-start relative shrink-0" data-name="Container">
-      <div className="flex flex-col font-['Epilogue:Regular',sans-serif] font-normal h-[16px] justify-center leading-[0] relative shrink-0 text-[#ffdbd1] text-[12px] tracking-[2.4px] uppercase w-[211.81px]">
+      <div className="flex flex-col font-['Noto_Sans_KR',sans-serif] font-normal h-[16px] justify-center leading-[0] relative shrink-0 text-[#ffdbd1] text-[12px] tracking-[2.4px] uppercase w-[211.81px]">
         <p className="leading-[16px]">Authentic Investigation</p>
       </div>
     </div>
@@ -570,7 +570,7 @@ function Container21() {
 function Margin() {
   return (
     <div className="content-stretch flex flex-col items-start pt-[4px] relative shrink-0" data-name="Margin">
-      <div className="flex flex-col font-['WenQuanYi_Zen_Hei:Medium',sans-serif] h-[17px] justify-center leading-[0] not-italic relative shrink-0 text-[#ffb5a0] text-[11px] tracking-[0.55px] uppercase w-[11.56px]">
+      <div className="flex flex-col font-['Noto_Sans_KR',sans-serif] h-[17px] justify-center leading-[0] not-italic relative shrink-0 text-[#ffb5a0] text-[11px] tracking-[0.55px] uppercase w-[11.56px]">
         <p className="leading-[16.5px]">홈</p>
       </div>
     </div>
@@ -603,7 +603,7 @@ function Container22() {
 function Margin1() {
   return (
     <div className="content-stretch flex flex-col items-start pt-[4px] relative shrink-0" data-name="Margin">
-      <div className="flex flex-col font-['WenQuanYi_Zen_Hei:Medium',sans-serif] h-[17px] justify-center leading-[0] not-italic relative shrink-0 text-[#ffb5a0] text-[11px] tracking-[0.55px] uppercase w-[23.11px]">
+      <div className="flex flex-col font-['Noto_Sans_KR',sans-serif] h-[17px] justify-center leading-[0] not-italic relative shrink-0 text-[#ffb5a0] text-[11px] tracking-[0.55px] uppercase w-[23.11px]">
         <p className="leading-[16.5px]">지도</p>
       </div>
     </div>

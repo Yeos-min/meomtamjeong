@@ -1,4 +1,4 @@
-/**
+﻿/**
  * MapPage — 카카오 지도 + 장소 검색 API (React-Kakao-Maps-SDK 버전)
  */
 import { useState, useEffect, useRef } from 'react';
@@ -104,7 +104,7 @@ export default function MapPage() {
           <button onClick={() => navigate(-1)} className="size-[36px] flex items-center justify-center rounded-full" style={{ backgroundColor: chipBg }}>
             <ChevronLeft stroke={accentSoft} />
           </button>
-          <span style={{ fontFamily: "'WenQuanYi Zen Hei',sans-serif", color: accent }}>면탐정</span>
+          <span style={{ fontFamily: "'Noto Sans KR', sans-serif", color: accent }}>면탐정</span>
         </div>
         <div className="flex-1 overflow-y-auto"><UdonComingSoon /></div>
       </div>
@@ -119,8 +119,8 @@ export default function MapPage() {
           <ChevronLeft stroke={accentSoft} />
         </button>
         <div className="flex items-center gap-[8px]">
-          <span className="text-[20px] tracking-[-0.5px]" style={{ fontFamily: "'WenQuanYi Zen Hei',sans-serif", color: accent }}>면탐정</span>
-          <span className="text-[13px]" style={{ fontFamily: "'WenQuanYi Zen Hei',sans-serif", color: subColor }}>라멘 지도</span>
+          <span className="text-[20px] tracking-[-0.5px]" style={{ fontFamily: "'Noto Sans KR', sans-serif", color: accent }}>면탐정</span>
+          <span className="text-[13px]" style={{ fontFamily: "'Noto Sans KR', sans-serif", color: subColor }}>라멘 지도</span>
         </div>
       </div>
 
@@ -130,7 +130,7 @@ export default function MapPage() {
           const active = activeFilter === f.id;
           return (
             <button key={f.id} onClick={() => setActiveFilter(f.id)} className="px-[12px] py-[6px] rounded-[16px] whitespace-nowrap shrink-0 transition-all duration-200 active:scale-[0.96]" style={{ backgroundColor: active ? accent : chipBg, border: `1px solid ${active ? accent : border}`, boxShadow: active ? `0 0 10px ${accentGlow}` : 'none' }}>
-              <span className="text-[11px]" style={{ fontFamily: "'WenQuanYi Zen Hei',sans-serif", fontWeight: active ? 700 : 400, color: active ? labelColor : subColor }}>{f.label}</span>
+              <span className="text-[11px]" style={{ fontFamily: "'Noto Sans KR', sans-serif", fontWeight: active ? 700 : 400, color: active ? labelColor : subColor }}>{f.label}</span>
             </button>
           );
         })}

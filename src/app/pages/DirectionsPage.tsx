@@ -1,4 +1,4 @@
-import { useState } from 'react';
+﻿import { useState } from 'react';
 import { useParams, useNavigate } from 'react-router';
 import { useApp } from '../AppContext';
 import { mockShops } from '../types';
@@ -100,7 +100,7 @@ export default function DirectionsPage() {
   if (!shop) {
     return (
       <div className="h-full flex items-center justify-center" style={{ backgroundColor: theme.pageBg }}>
-        <span style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", color: theme.subColor }}>가게를 찾을 수 없어요</span>
+        <span style={{ fontFamily: "'Noto Sans KR', sans-serif", color: theme.subColor }}>가게를 찾을 수 없어요</span>
       </div>
     );
   }
@@ -127,7 +127,7 @@ export default function DirectionsPage() {
             </svg>
           </div>
         </NavIconButton>
-        <span style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontSize: '15px', fontWeight: 900, color: titleColor }}>
+        <span style={{ fontFamily: "'Noto Sans KR', sans-serif", fontSize: '15px', fontWeight: 900, color: titleColor }}>
           길찾기
         </span>
         <div className="size-[44px]" aria-hidden="true" />
@@ -223,7 +223,7 @@ export default function DirectionsPage() {
             fontSize="9"
             fontWeight="700"
             fill="#FFFBF5"
-            fontFamily="WenQuanYi Zen Hei, sans-serif"
+            fontFamily="Noto Sans KR, sans-serif"
           >
             {shop.name}
           </text>
@@ -244,7 +244,7 @@ export default function DirectionsPage() {
             fontSize="8"
             fontWeight="700"
             fill="white"
-            fontFamily="WenQuanYi Zen Hei, sans-serif"
+            fontFamily="Noto Sans KR, sans-serif"
           >
             현재 위치
           </text>
@@ -259,30 +259,30 @@ export default function DirectionsPage() {
         {/* 소요 시간 & 거리 */}
         <div className="mb-[12px]">
           <div className="flex items-baseline gap-[8px]">
-            <span style={{ fontFamily: "'Manrope', sans-serif", fontSize: '26px', fontWeight: 900, color: titleColor }}>
+            <span style={{ fontFamily: "'Noto Sans KR', sans-serif", fontSize: '26px', fontWeight: 900, color: titleColor }}>
               {timeMin}분
             </span>
-            <span style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontSize: '14px', color: subColor }}>
+            <span style={{ fontFamily: "'Noto Sans KR', sans-serif", fontSize: '14px', color: subColor }}>
               {shop.name}까지
             </span>
           </div>
           <div className="flex gap-[6px] mt-[6px]">
             <span
               className="px-[8px] py-[3px] rounded-full"
-              style={{ backgroundColor: '#2C6EE8' + '18', border: '1px solid #2C6EE8' + '44', fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontSize: '11px', fontWeight: 700, color: '#2C6EE8' }}
+              style={{ backgroundColor: '#2C6EE8' + '18', border: '1px solid #2C6EE8' + '44', fontFamily: "'Noto Sans KR', sans-serif", fontSize: '11px', fontWeight: 700, color: '#2C6EE8' }}
             >
               {mode}
             </span>
             <span
               className="px-[8px] py-[3px] rounded-full"
-              style={{ backgroundColor: chipBg, border: `1px solid ${border}`, fontFamily: "'Manrope', sans-serif", fontSize: '11px', color: subColor }}
+              style={{ backgroundColor: chipBg, border: `1px solid ${border}`, fontFamily: "'Noto Sans KR', sans-serif", fontSize: '11px', color: subColor }}
             >
               {distM >= 1000 ? `${(distM / 1000).toFixed(1)}km` : `${distM}m`}
             </span>
             {shop.waiting && (
               <span
                 className="px-[8px] py-[3px] rounded-full"
-                style={{ backgroundColor: accent + '18', border: `1px solid ${accent}44`, fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontSize: '11px', color: accent }}
+                style={{ backgroundColor: accent + '18', border: `1px solid ${accent}44`, fontFamily: "'Noto Sans KR', sans-serif", fontSize: '11px', color: accent }}
               >
                 웨이팅 {shop.waitingTime}
               </span>

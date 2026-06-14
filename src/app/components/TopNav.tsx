@@ -1,4 +1,4 @@
-import { useLocation, useNavigate } from 'react-router';
+﻿import { useLocation, useNavigate } from 'react-router';
 import { useApp } from '../AppContext';
 
 type TopNavProps = {
@@ -34,7 +34,7 @@ export function TopNav({ overlay = false }: TopNavProps) {
         className="flex items-center active:opacity-70"
         aria-label={`${title} 화면`}
       >
-        <span style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontSize: '22px', fontWeight: 900, color: location.pathname === '/' ? theme.accent : theme.titleColor }}>
+        <span style={{ fontFamily: "'Noto Sans KR', sans-serif", fontSize: '22px', fontWeight: 900, color: location.pathname === '/' ? theme.accent : theme.titleColor }}>
           {title}
         </span>
       </button>

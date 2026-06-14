@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+﻿import { useEffect } from 'react';
 import { useNavigate } from 'react-router';
 import { useApp } from '../AppContext';
 import appIcon from '../../imports/_______.png';
@@ -38,7 +38,7 @@ export default function SplashPage() {
           <div className="flex flex-col items-center gap-[6px]">
             <span
               style={{
-                fontFamily: "'WenQuanYi Zen Hei', sans-serif",
+                fontFamily: "'Noto Sans KR', sans-serif",
                 fontSize: '32px',
                 fontWeight: 900,
                 letterSpacing: '-0.06em',
@@ -49,7 +49,7 @@ export default function SplashPage() {
             </span>
             <span
               style={{
-                fontFamily: "'WenQuanYi Zen Hei', sans-serif",
+                fontFamily: "'Noto Sans KR', sans-serif",
                 fontSize: '13px',
                 color: '#8B6A50',
               }}

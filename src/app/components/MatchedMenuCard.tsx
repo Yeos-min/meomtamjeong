@@ -1,4 +1,4 @@
-/**
+﻿/**
  * MatchedMenuCard
  * 사용자가 선택한 취향 항목과 가게 메뉴를 비교해,
  * "취향에 맞는 메뉴" 배지와 매칭 라벨을 표시하는 카드 컴포넌트
@@ -23,7 +23,7 @@ function MatchBadge({ label, accent, labelColor }: { label: string; accent: stri
         backgroundColor: accent + '22',
         color: accent,
         border: `1px solid ${accent}55`,
-        fontFamily: "'Manrope', sans-serif",
+        fontFamily: "'Noto Sans KR', sans-serif",
         fontWeight: 600,
       }}
     >
@@ -71,7 +71,7 @@ export function MatchedMenuCard({ menus, preference, theme, isRamen, mode }: Pro
           </div>
           <span
             className="text-[9px]"
-            style={{ fontFamily: "'Manrope', sans-serif", color: accent, fontWeight: 700 }}
+            style={{ fontFamily: "'Noto Sans KR', sans-serif", color: accent, fontWeight: 700 }}
           >
             {best.score}/{total} 일치
           </span>
@@ -81,14 +81,14 @@ export function MatchedMenuCard({ menus, preference, theme, isRamen, mode }: Pro
           <div className="flex items-center gap-[5px] flex-wrap">
             <span
               className="text-[13px] truncate"
-              style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontWeight: 600, color: textMain }}
+              style={{ fontFamily: "'Noto Sans KR', sans-serif", fontWeight: 600, color: textMain }}
             >
               {best.menu.name}
             </span>
             {best.menu.isSignature && (
               <span
                 className="text-[9px] px-[5px] py-[1px] rounded-[3px] shrink-0"
-                style={{ backgroundColor: accent, color: labelColor, fontFamily: "'Manrope', sans-serif", fontWeight: 700 }}
+                style={{ backgroundColor: accent, color: labelColor, fontFamily: "'Noto Sans KR', sans-serif", fontWeight: 700 }}
               >
                 시그니처
               </span>
@@ -96,7 +96,7 @@ export function MatchedMenuCard({ menus, preference, theme, isRamen, mode }: Pro
             {best.menu.isLimited && (
               <span
                 className="text-[9px] px-[5px] py-[1px] rounded-[3px] shrink-0"
-                style={{ backgroundColor: '#c07020', color: '#fff', fontFamily: "'Manrope', sans-serif", fontWeight: 700 }}
+                style={{ backgroundColor: '#c07020', color: '#fff', fontFamily: "'Noto Sans KR', sans-serif", fontWeight: 700 }}
               >
                 한정
               </span>
@@ -112,7 +112,7 @@ export function MatchedMenuCard({ menus, preference, theme, isRamen, mode }: Pro
         <div className="shrink-0 text-right">
           <span
             className="text-[13px]"
-            style={{ fontFamily: "'Manrope', sans-serif", fontWeight: 700, color: accentSoft }}
+            style={{ fontFamily: "'Noto Sans KR', sans-serif", fontWeight: 700, color: accentSoft }}
           >
             {best.menu.price.toLocaleString()}원
           </span>
@@ -154,7 +154,7 @@ export function MatchedMenuCard({ menus, preference, theme, isRamen, mode }: Pro
                   {isPerfect && (
                     <span
                       className="text-[9px] px-[6px] py-[2px] rounded-[4px] shrink-0"
-                      style={{ backgroundColor: accent, color: labelColor, fontFamily: "'Manrope', sans-serif", fontWeight: 700 }}
+                      style={{ backgroundColor: accent, color: labelColor, fontFamily: "'Noto Sans KR', sans-serif", fontWeight: 700 }}
                     >
                       ✦ 취향 일치
                     </span>
@@ -162,7 +162,7 @@ export function MatchedMenuCard({ menus, preference, theme, isRamen, mode }: Pro
                   {menu.isSignature && (
                     <span
                       className="text-[9px] px-[5px] py-[1px] rounded-[3px] shrink-0"
-                      style={{ backgroundColor: accentSoft + '40', color: accentSoft, fontFamily: "'Manrope', sans-serif", fontWeight: 700 }}
+                      style={{ backgroundColor: accentSoft + '40', color: accentSoft, fontFamily: "'Noto Sans KR', sans-serif", fontWeight: 700 }}
                     >
                       시그니처
                     </span>
@@ -170,7 +170,7 @@ export function MatchedMenuCard({ menus, preference, theme, isRamen, mode }: Pro
                   {menu.isLimited && (
                     <span
                       className="text-[9px] px-[5px] py-[1px] rounded-[3px] shrink-0"
-                      style={{ backgroundColor: '#c0702040', color: '#c07020', fontFamily: "'Manrope', sans-serif", fontWeight: 700 }}
+                      style={{ backgroundColor: '#c0702040', color: '#c07020', fontFamily: "'Noto Sans KR', sans-serif", fontWeight: 700 }}
                     >
                       기간 한정
                     </span>
@@ -178,13 +178,13 @@ export function MatchedMenuCard({ menus, preference, theme, isRamen, mode }: Pro
                 </div>
                 <div
                   className="text-[15px] mt-[2px]"
-                  style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontWeight: 600, color: textMain }}
+                  style={{ fontFamily: "'Noto Sans KR', sans-serif", fontWeight: 600, color: textMain }}
                 >
                   {menu.name}
                 </div>
                 <div
                   className="text-[12px] mt-[1px]"
-                  style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", color: subColor }}
+                  style={{ fontFamily: "'Noto Sans KR', sans-serif", color: subColor }}
                 >
                   {menu.description}
                 </div>
@@ -192,7 +192,7 @@ export function MatchedMenuCard({ menus, preference, theme, isRamen, mode }: Pro
               <div className="shrink-0 text-right">
                 <span
                   className="text-[14px]"
-                  style={{ fontFamily: "'Manrope', sans-serif", fontWeight: 700, color: isPerfect ? accent : subColor }}
+                  style={{ fontFamily: "'Noto Sans KR', sans-serif", fontWeight: 700, color: isPerfect ? accent : subColor }}
                 >
                   {menu.price.toLocaleString()}원
                 </span>
@@ -225,7 +225,7 @@ export function MatchedMenuCard({ menus, preference, theme, isRamen, mode }: Pro
                         ? mutedColor
                         : subColor,
                     border: matched === true ? `1px solid ${accent}55` : '1px solid transparent',
-                    fontFamily: "'WenQuanYi Zen Hei', sans-serif",
+                    fontFamily: "'Noto Sans KR', sans-serif",
                     fontWeight: matched === true ? 600 : 400,
                     textDecoration: matched === false ? 'line-through' : 'none',
                   }}
