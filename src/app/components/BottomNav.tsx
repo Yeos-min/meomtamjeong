@@ -1,4 +1,4 @@
-import { useNavigate, useLocation } from 'react-router';
+﻿import { useNavigate, useLocation } from 'react-router';
 import { useApp } from '../AppContext';
 
 export function BottomNav() {
@@ -153,7 +153,7 @@ export function BottomNav() {
           <span
             className="tracking-wide"
             style={{
-              fontFamily: "'WenQuanYi Zen Hei', sans-serif",
+              fontFamily: "'Noto Sans KR', sans-serif",
               fontSize: '10px',
               fontWeight: item.active ? 700 : 400,
               color: item.active ? theme.labelColor : theme.mutedColor,

@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router';
+﻿import { useNavigate } from 'react-router';
 import { useApp } from '../AppContext';
 import appIcon from '../../imports/_______.png';
 import { AppButton } from '../components/AppButton';
@@ -41,7 +41,7 @@ export default function LoginPage() {
 
           <span
             style={{
-              fontFamily: "'WenQuanYi Zen Hei', sans-serif",
+              fontFamily: "'Noto Sans KR', sans-serif",
               fontSize: '28px',
               fontWeight: 900,
               letterSpacing: '-0.05em',
@@ -52,7 +52,7 @@ export default function LoginPage() {
           </span>
           <span
             style={{
-              fontFamily: "'WenQuanYi Zen Hei', sans-serif",
+              fontFamily: "'Noto Sans KR', sans-serif",
               fontSize: '13px',
               color: '#8B6A50',
               textAlign: 'center',
@@ -78,7 +78,7 @@ export default function LoginPage() {
             </svg>
             <span
               style={{
-                fontFamily: "'WenQuanYi Zen Hei', sans-serif",
+                fontFamily: "'Noto Sans KR', sans-serif",
                 fontSize: '14px',
                 fontWeight: 700,
                 color: '#3A1D1D',
@@ -99,7 +99,7 @@ export default function LoginPage() {
             </svg>
             <span
               style={{
-                fontFamily: "'WenQuanYi Zen Hei', sans-serif",
+                fontFamily: "'Noto Sans KR', sans-serif",
                 fontSize: '14px',
                 fontWeight: 700,
                 color: '#ffffff',
@@ -127,7 +127,7 @@ export default function LoginPage() {
             </svg>
             <span
               style={{
-                fontFamily: "'WenQuanYi Zen Hei', sans-serif",
+                fontFamily: "'Noto Sans KR', sans-serif",
                 fontSize: '14px',
                 fontWeight: 700,
                 color: '#ffffff',
@@ -140,7 +140,7 @@ export default function LoginPage() {
           {/* 구분선 */}
           <div className="flex items-center gap-[12px] my-[4px]">
             <div className="flex-1 h-[1px]" style={{ backgroundColor: '#E0D5C8' }} />
-            <span style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontSize: '12px', color: '#B0978A' }}>
+            <span style={{ fontFamily: "'Noto Sans KR', sans-serif", fontSize: '12px', color: '#B0978A' }}>
               또는
             </span>
             <div className="flex-1 h-[1px]" style={{ backgroundColor: '#E0D5C8' }} />
@@ -159,7 +159,7 @@ export default function LoginPage() {
 
         <p
           className="mt-[24px] text-center"
-          style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontSize: '11px', color: '#B0978A' }}
+          style={{ fontFamily: "'Noto Sans KR', sans-serif", fontSize: '11px', color: '#B0978A' }}
         >
           로그인하면 탐정수첩에 방문 기록을 남길 수 있어요
         </p>

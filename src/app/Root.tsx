@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from 'react';
+﻿import { useEffect, useState, useRef } from 'react';
 import { Outlet, useLocation, useNavigate } from 'react-router';
 import { BottomNav } from './components/BottomNav';
 import { TopNav } from './components/TopNav';
@@ -86,7 +86,7 @@ export default function Root() {
             backgroundColor: theme.cardBg,
             border: `1px solid ${theme.border}`,
             color: theme.titleColor,
-            fontFamily: "'WenQuanYi Zen Hei', sans-serif",
+            fontFamily: "'Noto Sans KR', sans-serif",
             fontSize: '13px',
           },
         }}

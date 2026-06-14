@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router';
+﻿import { useNavigate } from 'react-router';
 import { useApp } from '../AppContext';
 import { mockShops } from '../types';
 import { AppButton } from '../components/AppButton';
@@ -34,7 +34,7 @@ export default function HomePage() {
             <circle cx="8" cy="8" r="5.5" stroke={accent} strokeWidth="1.8" />
             <path d="M12.2 12.2L16 16" stroke={accent} strokeWidth="1.8" strokeLinecap="round" />
           </svg>
-          <span style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontSize: '13px', color: mutedColor }}>
+          <span style={{ fontFamily: "'Noto Sans KR', sans-serif", fontSize: '13px', color: mutedColor }}>
             가게 또는 지역을 검색하세요
           </span>
         </button>
@@ -49,11 +49,11 @@ export default function HomePage() {
           <div className="relative">
             <h1
               className="tracking-[-1.4px]"
-              style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontSize: '28px', lineHeight: 1.18, fontWeight: 900, color: titleColor }}
+              style={{ fontFamily: "'Noto Sans KR', sans-serif", fontSize: '28px', lineHeight: 1.18, fontWeight: 900, color: titleColor }}
             >
               취향으로 찾는<br />울산 로컬 라멘
             </h1>
-            <p className="mt-[10px] leading-relaxed" style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontSize: '13px', color: subColor }}>
+            <p className="mt-[10px] leading-relaxed" style={{ fontFamily: "'Noto Sans KR', sans-serif", fontSize: '13px', color: subColor }}>
               체인점보다 내 취향에 맞는 단독 운영 라멘집을 먼저 보여드려요.
             </p>
 
@@ -90,10 +90,10 @@ export default function HomePage() {
             { label: '체인 제외', value: '제외' },
           ].map((stat) => (
             <div key={stat.label} className="rounded-[14px] py-[12px] text-center" style={{ backgroundColor: cardBg, border: `1px solid ${border}` }}>
-              <div style={{ fontFamily: "'Manrope', sans-serif", fontSize: '21px', fontWeight: 900, color: titleColor }}>
+              <div style={{ fontFamily: "'Noto Sans KR', sans-serif", fontSize: '21px', fontWeight: 900, color: titleColor }}>
                 {stat.value}
               </div>
-              <div className="mt-[2px]" style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontSize: '11px', color: mutedColor }}>
+              <div className="mt-[2px]" style={{ fontFamily: "'Noto Sans KR', sans-serif", fontSize: '11px', color: mutedColor }}>
                 {stat.label}
               </div>
             </div>
@@ -103,10 +103,10 @@ export default function HomePage() {
 
       <section className="px-[20px] mt-[22px]">
         <div className="flex items-center justify-between mb-[10px]">
-          <h2 style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontSize: '17px', fontWeight: 900, color: titleColor }}>
+          <h2 style={{ fontFamily: "'Noto Sans KR', sans-serif", fontSize: '17px', fontWeight: 900, color: titleColor }}>
             로컬 라멘 미리보기
           </h2>
-          <button onClick={() => navigate('/shops')} style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontSize: '12px', color: accent, fontWeight: 700 }}>
+          <button onClick={() => navigate('/shops')} style={{ fontFamily: "'Noto Sans KR', sans-serif", fontSize: '12px', color: accent, fontWeight: 700 }}>
             전체 보기
           </button>
         </div>
@@ -123,19 +123,19 @@ export default function HomePage() {
               </div>
               <div className="flex-1 min-w-0">
                 <div className="flex items-center justify-between gap-[8px]">
-                  <span style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontSize: '15px', fontWeight: 900, color: titleColor }}>
+                  <span style={{ fontFamily: "'Noto Sans KR', sans-serif", fontSize: '15px', fontWeight: 900, color: titleColor }}>
                     {shop.name}
                   </span>
-                  <span style={{ fontFamily: "'Manrope', sans-serif", fontSize: '11px', color: accent, fontWeight: 800 }}>
+                  <span style={{ fontFamily: "'Noto Sans KR', sans-serif", fontSize: '11px', color: accent, fontWeight: 800 }}>
                     {shop.distance}
                   </span>
                 </div>
-                <div className="mt-[3px] truncate" style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontSize: '12px', color: subColor }}>
+                <div className="mt-[3px] truncate" style={{ fontFamily: "'Noto Sans KR', sans-serif", fontSize: '12px', color: subColor }}>
                   {shop.description}
                 </div>
                 <div className="flex gap-[4px] flex-wrap mt-[7px]">
                   {shop.tags.slice(0, 2).map((tag) => (
-                    <span key={tag} className="px-[7px] py-[2px] rounded-full" style={{ backgroundColor: chipBg, fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontSize: '10px', color: mutedColor }}>
+                    <span key={tag} className="px-[7px] py-[2px] rounded-full" style={{ backgroundColor: chipBg, fontFamily: "'Noto Sans KR', sans-serif", fontSize: '10px', color: mutedColor }}>
                       {tag}
                     </span>
                   ))}
@@ -148,10 +148,10 @@ export default function HomePage() {
 
       <section className="px-[20px] mt-[22px]">
         <div className="rounded-[16px] p-[16px]" style={{ backgroundColor: hasPreference ? accent + '12' : chipBg, border: `1px solid ${hasPreference ? accent + '44' : border}` }}>
-          <div style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontSize: '14px', fontWeight: 900, color: titleColor }}>
+          <div style={{ fontFamily: "'Noto Sans KR', sans-serif", fontSize: '14px', fontWeight: 900, color: titleColor }}>
             {hasPreference ? '현재 저장된 취향' : '아직 취향을 설정하지 않았어요'}
           </div>
-          <div className="mt-[6px]" style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontSize: '12px', color: hasPreference ? subColor : mutedColor }}>
+          <div className="mt-[6px]" style={{ fontFamily: "'Noto Sans KR', sans-serif", fontSize: '12px', color: hasPreference ? subColor : mutedColor }}>
             {hasPreference ? preferenceSummary : '설문을 완료하면 지도에서 취향 필터가 자동으로 적용됩니다.'}
           </div>
         </div>

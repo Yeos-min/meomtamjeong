@@ -1,4 +1,4 @@
-/** 울산 중구 일대 스타일라이즈드 SVG 지도 */
+﻿/** 울산 중구 일대 스타일라이즈드 SVG 지도 */
 import { Shop } from '../types';
 import { Theme } from '../theme';
 
@@ -54,7 +54,7 @@ export function UlsanMapSvg({ shops, filteredIds, selectedId, onSelect, onDismis
         />
       ))}
       <text x="160" y="418" fill={isRamen ? '#1a2e40' : '#6a9ab0'} fontSize="9"
-        style={{ fontFamily: 'Manrope, sans-serif', letterSpacing: '2px' }}>
+        style={{ fontFamily: 'Noto Sans KR, sans-serif', letterSpacing: '2px' }}>
         태화강
       </text>
 
@@ -207,38 +207,38 @@ export function UlsanMapSvg({ shops, filteredIds, selectedId, onSelect, onDismis
         <circle key={`t${i}`} cx={cx} cy={cy} r="3.5" fill={isRamen ? '#1e3a1e' : '#a8c890'} />
       ))}
       <text x="55" y="356" textAnchor="middle" fill={isRamen ? '#2a4a2a' : '#6a8a58'} fontSize="7"
-        style={{ fontFamily: 'Manrope, sans-serif', letterSpacing: '0.5px' }}>
+        style={{ fontFamily: 'Noto Sans KR, sans-serif', letterSpacing: '0.5px' }}>
         태화강 국가정원
       </text>
 
       {/* ─── 도로 이름 라벨 ─── */}
       {/* 간선 라벨 */}
-      <text x="108" y="87" fill={textColor} fontSize="7.5" style={{ fontFamily: 'Manrope, sans-serif', letterSpacing: '0.3px' }}>
+      <text x="108" y="87" fill={textColor} fontSize="7.5" style={{ fontFamily: 'Noto Sans KR, sans-serif', letterSpacing: '0.3px' }}>
         문수로
       </text>
-      <text x="204" y="87" fill={textColor} fontSize="7.5" style={{ fontFamily: 'Manrope, sans-serif', letterSpacing: '0.3px' }}>
+      <text x="204" y="87" fill={textColor} fontSize="7.5" style={{ fontFamily: 'Noto Sans KR, sans-serif', letterSpacing: '0.3px' }}>
         태화로
       </text>
-      <text x="25" y="88" fill={textColor} fontSize="7" style={{ fontFamily: 'Manrope, sans-serif', letterSpacing: '0.3px' }}>
+      <text x="25" y="88" fill={textColor} fontSize="7" style={{ fontFamily: 'Noto Sans KR, sans-serif', letterSpacing: '0.3px' }}>
         남산로
       </text>
-      <text x="24" y="198" fill={textColor} fontSize="7.5" style={{ fontFamily: 'Manrope, sans-serif', letterSpacing: '0.3px' }}>
+      <text x="24" y="198" fill={textColor} fontSize="7.5" style={{ fontFamily: 'Noto Sans KR, sans-serif', letterSpacing: '0.3px' }}>
         삼산로
       </text>
-      <text x="24" y="308" fill={textColor} fontSize="7.5" style={{ fontFamily: 'Manrope, sans-serif', letterSpacing: '0.3px' }}>
+      <text x="24" y="308" fill={textColor} fontSize="7.5" style={{ fontFamily: 'Noto Sans KR, sans-serif', letterSpacing: '0.3px' }}>
         중앙로
       </text>
-      <text x="158" y="197" fill={textColor} fontSize="7" style={{ fontFamily: 'Manrope, sans-serif', letterSpacing: '0.3px' }}>
+      <text x="158" y="197" fill={textColor} fontSize="7" style={{ fontFamily: 'Noto Sans KR, sans-serif', letterSpacing: '0.3px' }}>
         번영로
       </text>
       {/* 지구명 */}
-      <text x="50" y="130" fill={textBright} fontSize="9" style={{ fontFamily: 'Manrope, sans-serif', letterSpacing: '1px', fontWeight: 600 }}>
+      <text x="50" y="130" fill={textBright} fontSize="9" style={{ fontFamily: 'Noto Sans KR, sans-serif', letterSpacing: '1px', fontWeight: 600 }}>
         중구
       </text>
-      <text x="220" y="130" fill={textBright} fontSize="9" style={{ fontFamily: 'Manrope, sans-serif', letterSpacing: '1px', fontWeight: 600 }}>
+      <text x="220" y="130" fill={textBright} fontSize="9" style={{ fontFamily: 'Noto Sans KR, sans-serif', letterSpacing: '1px', fontWeight: 600 }}>
         남구
       </text>
-      <text x="336" y="130" fill={textBright} fontSize="9" style={{ fontFamily: 'Manrope, sans-serif', letterSpacing: '1px', fontWeight: 600 }}>
+      <text x="336" y="130" fill={textBright} fontSize="9" style={{ fontFamily: 'Noto Sans KR, sans-serif', letterSpacing: '1px', fontWeight: 600 }}>
         동구
       </text>
       {/* 반환점 (교차로) 표시 */}
@@ -315,7 +315,7 @@ export function UlsanMapSvg({ shops, filteredIds, selectedId, onSelect, onDismis
                   textAnchor="middle"
                   fill={isRamen ? '#ffdbce' : theme.titleColor}
                   fontSize="10"
-                  style={{ fontFamily: 'WenQuanYi Zen Hei, sans-serif', fontWeight: 700 }}
+                  style={{ fontFamily: 'Noto Sans KR, sans-serif', fontWeight: 700 }}
                 >
                   {shop.name}
                 </text>
@@ -326,7 +326,7 @@ export function UlsanMapSvg({ shops, filteredIds, selectedId, onSelect, onDismis
                   textAnchor="middle"
                   fill={theme.accentSoft}
                   fontSize="9"
-                  style={{ fontFamily: 'Manrope, sans-serif' }}
+                  style={{ fontFamily: 'Noto Sans KR, sans-serif' }}
                 >
                   {shop.tags[0]} · {shop.distance}
                 </text>
@@ -347,7 +347,7 @@ export function UlsanMapSvg({ shops, filteredIds, selectedId, onSelect, onDismis
                   textAnchor="middle"
                   fill={isRamen ? '#ffd0b8' : '#2a1a0a'}
                   fontSize="8"
-                  style={{ fontFamily: 'WenQuanYi Zen Hei, sans-serif', fontWeight: 600 }}
+                  style={{ fontFamily: 'Noto Sans KR, sans-serif', fontWeight: 600 }}
                 >
                   {shop.name}
                 </text>

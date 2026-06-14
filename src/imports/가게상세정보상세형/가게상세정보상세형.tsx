@@ -1,4 +1,4 @@
-import svgPaths from "./svg-g3qprezm69";
+﻿import svgPaths from "./svg-g3qprezm69";
 import img from "./f6f0a2f302a6363511e20b713a62bb90c7dc8540.png";
 import imgImage from "./a8c15b13f5007225cecc85aa8c427cc972ae007c.png";
 
@@ -28,7 +28,7 @@ function HeaderHeroImageSection() {
 function Heading() {
   return (
     <div className="content-stretch flex flex-col items-start relative shrink-0" data-name="Heading 1">
-      <div className="flex flex-col font-['WenQuanYi_Zen_Hei:Medium',sans-serif] h-[36px] justify-center leading-[0] not-italic relative shrink-0 text-[30px] text-white tracking-[-0.75px] w-[247.52px]">
+      <div className="flex flex-col font-['Noto_Sans_KR',sans-serif] h-[36px] justify-center leading-[0] not-italic relative shrink-0 text-[30px] text-white tracking-[-0.75px] w-[247.52px]">
         <p className="leading-[36px]">이치란 본점 스타일</p>
       </div>
     </div>
@@ -39,7 +39,7 @@ function Border() {
   return (
     <div className="content-stretch flex flex-col items-start px-[9px] py-[3px] relative rounded-[12px] shrink-0" data-name="Border">
       <div aria-hidden="true" className="absolute border border-[#ff5722] border-solid inset-0 pointer-events-none rounded-[12px]" />
-      <div className="flex flex-col font-['WenQuanYi_Zen_Hei:Medium',sans-serif] h-[15px] justify-center leading-[0] not-italic relative shrink-0 text-[#ff5722] text-[10px] tracking-[0.5px] uppercase w-[55.02px]">
+      <div className="flex flex-col font-['Noto_Sans_KR',sans-serif] h-[15px] justify-center leading-[0] not-italic relative shrink-0 text-[#ff5722] text-[10px] tracking-[0.5px] uppercase w-[55.02px]">
         <p className="leading-[15px]">웨이팅 있음</p>
       </div>
     </div>
@@ -58,7 +58,7 @@ function Container() {
 function Container1() {
   return (
     <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-name="Container">
-      <div className="flex flex-col font-['WenQuanYi_Zen_Hei:Medium',sans-serif] justify-center leading-[0] not-italic relative shrink-0 text-[#e4beb4] text-[16px] w-full">
+      <div className="flex flex-col font-['Noto_Sans_KR',sans-serif] justify-center leading-[0] not-italic relative shrink-0 text-[#e4beb4] text-[16px] w-full">
         <p className="leading-[24px]">48시간 우려낸 진한 돈코츠의 정석</p>
       </div>
     </div>
@@ -77,7 +77,7 @@ function SectionStoreHeader() {
 function Container3() {
   return (
     <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-h-px min-w-px relative" data-name="Container">
-      <div className="flex flex-col font-['WenQuanYi_Zen_Hei:Medium',sans-serif] justify-center leading-[0] not-italic relative shrink-0 text-[#ff5722] text-[14px] w-full">
+      <div className="flex flex-col font-['Noto_Sans_KR',sans-serif] justify-center leading-[0] not-italic relative shrink-0 text-[#ff5722] text-[14px] w-full">
         <p className="leading-[20px]">✦ 이 가게만의 특이점</p>
       </div>
     </div>
@@ -98,7 +98,7 @@ function Container4() {
   return (
     <div className="relative shrink-0 w-full" data-name="Container">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start relative w-full">
-        <div className="flex flex-col font-['WenQuanYi_Zen_Hei:Medium',sans-serif] justify-center leading-[0] not-italic relative shrink-0 text-[18px] text-white w-full">
+        <div className="flex flex-col font-['Noto_Sans_KR',sans-serif] justify-center leading-[0] not-italic relative shrink-0 text-[18px] text-white w-full">
           <p className="leading-[29.25px] mb-0">비법 고추 기름 소스가 만드는 감칠맛</p>
           <p className="leading-[29.25px] mb-0">의 정점. 마지막 한 방울까지 풍미가 살</p>
           <p className="leading-[29.25px]">아있습니다.</p>
@@ -124,7 +124,7 @@ function Container5() {
   return (
     <div className="relative shrink-0" data-name="Container">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start relative">
-        <div className="flex flex-col font-['WenQuanYi_Zen_Hei:Medium',sans-serif] h-[20px] justify-center leading-[0] not-italic relative shrink-0 text-[#e4beb4] text-[14px] w-[58.81px]">
+        <div className="flex flex-col font-['Noto_Sans_KR',sans-serif] h-[20px] justify-center leading-[0] not-italic relative shrink-0 text-[#e4beb4] text-[14px] w-[58.81px]">
           <p className="leading-[20px]">육수 종류</p>
         </div>
       </div>
@@ -136,7 +136,7 @@ function Container6() {
   return (
     <div className="relative shrink-0" data-name="Container">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start relative">
-        <div className="flex flex-col font-['WenQuanYi_Zen_Hei:Medium',sans-serif] h-[24px] justify-center leading-[0] not-italic relative shrink-0 text-[16px] text-white w-[48px]">
+        <div className="flex flex-col font-['Noto_Sans_KR',sans-serif] h-[24px] justify-center leading-[0] not-italic relative shrink-0 text-[16px] text-white w-[48px]">
           <p className="leading-[24px]">돼지뼈</p>
         </div>
       </div>
@@ -158,7 +158,7 @@ function Container7() {
   return (
     <div className="relative shrink-0" data-name="Container">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start relative">
-        <div className="flex flex-col font-['WenQuanYi_Zen_Hei:Medium',sans-serif] h-[20px] justify-center leading-[0] not-italic relative shrink-0 text-[#e4beb4] text-[14px] w-[44.81px]">
+        <div className="flex flex-col font-['Noto_Sans_KR',sans-serif] h-[20px] justify-center leading-[0] not-italic relative shrink-0 text-[#e4beb4] text-[14px] w-[44.81px]">
           <p className="leading-[20px]">면 삶기</p>
         </div>
       </div>
@@ -170,7 +170,7 @@ function Container8() {
   return (
     <div className="relative shrink-0" data-name="Container">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start relative">
-        <div className="flex flex-col font-['WenQuanYi_Zen_Hei:Medium',sans-serif] h-[24px] justify-center leading-[0] not-italic relative shrink-0 text-[16px] text-white w-[48px]">
+        <div className="flex flex-col font-['Noto_Sans_KR',sans-serif] h-[24px] justify-center leading-[0] not-italic relative shrink-0 text-[16px] text-white w-[48px]">
           <p className="leading-[24px]">보통면</p>
         </div>
       </div>
@@ -192,7 +192,7 @@ function Container9() {
   return (
     <div className="relative shrink-0" data-name="Container">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start relative">
-        <div className="flex flex-col font-['WenQuanYi_Zen_Hei:Medium',sans-serif] h-[20px] justify-center leading-[0] not-italic relative shrink-0 text-[#e4beb4] text-[14px] w-[58.81px]">
+        <div className="flex flex-col font-['Noto_Sans_KR',sans-serif] h-[20px] justify-center leading-[0] not-italic relative shrink-0 text-[#e4beb4] text-[14px] w-[58.81px]">
           <p className="leading-[20px]">국물 진함</p>
         </div>
       </div>
@@ -204,7 +204,7 @@ function Container10() {
   return (
     <div className="relative shrink-0" data-name="Container">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start relative">
-        <div className="flex flex-col font-['WenQuanYi_Zen_Hei:Medium',sans-serif] h-[24px] justify-center leading-[0] not-italic relative shrink-0 text-[16px] text-white w-[32px]">
+        <div className="flex flex-col font-['Noto_Sans_KR',sans-serif] h-[24px] justify-center leading-[0] not-italic relative shrink-0 text-[16px] text-white w-[32px]">
           <p className="leading-[24px]">진함</p>
         </div>
       </div>
@@ -226,7 +226,7 @@ function Container11() {
   return (
     <div className="relative shrink-0" data-name="Container">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start relative">
-        <div className="flex flex-col font-['WenQuanYi_Zen_Hei:Medium',sans-serif] h-[20px] justify-center leading-[0] not-italic relative shrink-0 text-[#e4beb4] text-[14px] w-[42px]">
+        <div className="flex flex-col font-['Noto_Sans_KR',sans-serif] h-[20px] justify-center leading-[0] not-italic relative shrink-0 text-[#e4beb4] text-[14px] w-[42px]">
           <p className="leading-[20px]">매운맛</p>
         </div>
       </div>
@@ -238,7 +238,7 @@ function Container12() {
   return (
     <div className="relative shrink-0" data-name="Container">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start relative">
-        <div className="flex flex-col font-['WenQuanYi_Zen_Hei:Medium',sans-serif] h-[24px] justify-center leading-[0] not-italic relative shrink-0 text-[16px] text-white w-[32px]">
+        <div className="flex flex-col font-['Noto_Sans_KR',sans-serif] h-[24px] justify-center leading-[0] not-italic relative shrink-0 text-[16px] text-white w-[32px]">
           <p className="leading-[24px]">약간</p>
         </div>
       </div>
@@ -260,7 +260,7 @@ function Container13() {
   return (
     <div className="relative shrink-0" data-name="Container">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start relative">
-        <div className="flex flex-col font-['WenQuanYi_Zen_Hei:Medium',sans-serif] h-[20px] justify-center leading-[0] not-italic relative shrink-0 text-[#e4beb4] text-[14px] w-[42px]">
+        <div className="flex flex-col font-['Noto_Sans_KR',sans-serif] h-[20px] justify-center leading-[0] not-italic relative shrink-0 text-[#e4beb4] text-[14px] w-[42px]">
           <p className="leading-[20px]">웨이팅</p>
         </div>
       </div>
@@ -272,7 +272,7 @@ function Container14() {
   return (
     <div className="relative shrink-0" data-name="Container">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start relative">
-        <div className="flex flex-col font-['Manrope:Bold','Noto_Sans_KR:Bold',sans-serif] font-bold h-[24px] justify-center leading-[0] relative shrink-0 text-[16px] text-white w-[104.95px]">
+        <div className="flex flex-col font-['Noto_Sans_KR',sans-serif] font-bold h-[24px] justify-center leading-[0] relative shrink-0 text-[16px] text-white w-[104.95px]">
           <p className="leading-[24px]">있음 (약 20분)</p>
         </div>
       </div>
@@ -305,7 +305,7 @@ function SectionTechnicalMetadataAsymmetricList() {
 function Heading1() {
   return (
     <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-name="Heading 3">
-      <div className="flex flex-col font-['Epilogue:Regular',sans-serif] font-normal justify-center leading-[0] relative shrink-0 text-[#e4beb4] text-[14px] tracking-[1.4px] uppercase w-full">
+      <div className="flex flex-col font-['Noto_Sans_KR',sans-serif] font-normal justify-center leading-[0] relative shrink-0 text-[#e4beb4] text-[14px] tracking-[1.4px] uppercase w-full">
         <p className="leading-[20px]">Keyword Review</p>
       </div>
     </div>
@@ -316,7 +316,7 @@ function Background() {
   return (
     <div className="bg-[#1b3d2b] relative rounded-[4px] self-stretch shrink-0" data-name="Background">
       <div className="content-stretch flex flex-col h-full items-start px-[16px] py-[8px] relative">
-        <div className="flex flex-col font-['WenQuanYi_Zen_Hei:Medium',sans-serif] h-[16px] justify-center leading-[0] not-italic relative shrink-0 text-[#81c784] text-[12px] w-[60.58px]">
+        <div className="flex flex-col font-['Noto_Sans_KR',sans-serif] h-[16px] justify-center leading-[0] not-italic relative shrink-0 text-[#81c784] text-[12px] w-[60.58px]">
           <p className="leading-[16px]">[국물 진함]</p>
         </div>
       </div>
@@ -328,7 +328,7 @@ function Background1() {
   return (
     <div className="bg-[#1b3d2b] relative rounded-[4px] self-stretch shrink-0" data-name="Background">
       <div className="content-stretch flex flex-col h-full items-start px-[16px] py-[8px] relative">
-        <div className="flex flex-col font-['WenQuanYi_Zen_Hei:Medium',sans-serif] h-[16px] justify-center leading-[0] not-italic relative shrink-0 text-[#81c784] text-[12px] w-[48.58px]">
+        <div className="flex flex-col font-['Noto_Sans_KR',sans-serif] h-[16px] justify-center leading-[0] not-italic relative shrink-0 text-[#81c784] text-[12px] w-[48.58px]">
           <p className="leading-[16px]">[면 쫄깃]</p>
         </div>
       </div>
@@ -340,7 +340,7 @@ function Background2() {
   return (
     <div className="bg-[#1b3d2b] relative rounded-[4px] self-stretch shrink-0" data-name="Background">
       <div className="content-stretch flex flex-col h-full items-start px-[16px] py-[8px] relative">
-        <div className="flex flex-col font-['WenQuanYi_Zen_Hei:Medium',sans-serif] h-[16px] justify-center leading-[0] not-italic relative shrink-0 text-[#81c784] text-[12px] w-[72.58px]">
+        <div className="flex flex-col font-['Noto_Sans_KR',sans-serif] h-[16px] justify-center leading-[0] not-italic relative shrink-0 text-[#81c784] text-[12px] w-[72.58px]">
           <p className="leading-[16px]">[웨이팅 있음]</p>
         </div>
       </div>
@@ -382,7 +382,7 @@ function Container16() {
 function Container17() {
   return (
     <div className="content-stretch flex flex-col items-center relative shrink-0" data-name="Container">
-      <div className="flex flex-col font-['WenQuanYi_Zen_Hei:Medium',sans-serif] h-[24px] justify-center leading-[0] not-italic relative shrink-0 text-[16px] text-center text-white w-[147.2px]">
+      <div className="flex flex-col font-['Noto_Sans_KR',sans-serif] h-[24px] justify-center leading-[0] not-italic relative shrink-0 text-[16px] text-center text-white w-[147.2px]">
         <p className="leading-[24px]">탐정수첩에 기록하기</p>
       </div>
     </div>
@@ -464,7 +464,7 @@ function Container19() {
 function Container20() {
   return (
     <div className="content-stretch flex flex-col items-center relative shrink-0" data-name="Container">
-      <div className="flex flex-col font-['WenQuanYi_Zen_Hei:Medium',sans-serif] h-[20px] justify-center leading-[0] not-italic relative shrink-0 text-[14px] text-center text-white w-[42px]">
+      <div className="flex flex-col font-['Noto_Sans_KR',sans-serif] h-[20px] justify-center leading-[0] not-italic relative shrink-0 text-[14px] text-center text-white w-[42px]">
         <p className="leading-[20px]">길찾기</p>
       </div>
     </div>

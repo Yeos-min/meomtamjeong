@@ -1,4 +1,4 @@
-import { NotebookEntry } from '../types';
+﻿import { NotebookEntry } from '../types';
 import { Theme } from '../theme';
 
 interface Props {
@@ -54,13 +54,13 @@ export function CompareView({ shopName, entries, isOpen, onClose, theme }: Props
             <div>
               <div
                 className="text-[11px] tracking-[1.2px] uppercase mb-[2px]"
-                style={{ fontFamily: "'Manrope', sans-serif", color: accentSoft }}
+                style={{ fontFamily: "'Noto Sans KR', sans-serif", color: accentSoft }}
               >
                 Visit Comparison
               </div>
               <div
                 className="text-[20px] tracking-[-0.5px]"
-                style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", color: titleColor }}
+                style={{ fontFamily: "'Noto Sans KR', sans-serif", color: titleColor }}
               >
                 {shopName}
               </div>
@@ -86,7 +86,7 @@ export function CompareView({ shopName, entries, isOpen, onClose, theme }: Props
               >
                 <span
                   className="text-[11px]"
-                  style={{ fontFamily: "'Manrope', sans-serif", fontWeight: 700, color: accent }}
+                  style={{ fontFamily: "'Noto Sans KR', sans-serif", fontWeight: 700, color: accent }}
                 >
                   최근 방문
                 </span>
@@ -97,7 +97,7 @@ export function CompareView({ shopName, entries, isOpen, onClose, theme }: Props
               >
                 <span
                   className="text-[11px]"
-                  style={{ fontFamily: "'Manrope', sans-serif", fontWeight: 700, color: mutedColor }}
+                  style={{ fontFamily: "'Noto Sans KR', sans-serif", fontWeight: 700, color: mutedColor }}
                 >
                   이전 방문
                 </span>
@@ -139,7 +139,7 @@ export function CompareView({ shopName, entries, isOpen, onClose, theme }: Props
               >
                 <span
                   className="text-[12px]"
-                  style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", color: mutedColor }}
+                  style={{ fontFamily: "'Noto Sans KR', sans-serif", color: mutedColor }}
                 >
                   + {entries.length - 2}개의 방문 기록이 더 있습니다
                 </span>
@@ -170,7 +170,7 @@ function CompareRow({
     <div className="flex flex-col gap-[6px]">
       <span
         className="text-[10px] tracking-[1px] uppercase px-[2px]"
-        style={{ fontFamily: "'Manrope', sans-serif", color: mutedColor }}
+        style={{ fontFamily: "'Noto Sans KR', sans-serif", color: mutedColor }}
       >
         {label}
       </span>
@@ -186,7 +186,7 @@ function CompareRow({
           <span
             className={`text-[13px] ${multiLine ? '' : 'line-clamp-2'}`}
             style={{
-              fontFamily: isDate ? "'Manrope', sans-serif" : "'WenQuanYi Zen Hei', sans-serif",
+              fontFamily: isDate ? "'Noto Sans KR', sans-serif" : "'Noto Sans KR', sans-serif",
               color: highlight ? theme.titleColor : titleColor,
               fontWeight: highlight ? 600 : 400,
               display: 'block',
@@ -203,7 +203,7 @@ function CompareRow({
           <span
             className={`text-[13px] ${multiLine ? '' : 'line-clamp-2'}`}
             style={{
-              fontFamily: isDate ? "'Manrope', sans-serif" : "'WenQuanYi Zen Hei', sans-serif",
+              fontFamily: isDate ? "'Noto Sans KR', sans-serif" : "'Noto Sans KR', sans-serif",
               color: subColor,
               display: 'block',
             }}

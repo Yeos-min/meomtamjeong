@@ -1,4 +1,4 @@
-import { useState } from 'react';
+﻿import { useState } from 'react';
 import { useParams, useNavigate } from 'react-router';
 import { mockShops, SignatureTag, getMenuMatch, totalSelectedCount } from '../types';
 import { useApp } from '../AppContext';
@@ -154,7 +154,7 @@ export default function ShopDetailPage() {
         >
           <span
             className="text-[10px] uppercase tracking-[0.5px]"
-            style={{ fontFamily: "'Manrope', sans-serif", fontWeight: 700, color: labelColor }}
+            style={{ fontFamily: "'Noto Sans KR', sans-serif", fontWeight: 700, color: labelColor }}
           >
             {shop.broth[0]} 육수
           </span>
@@ -169,7 +169,7 @@ export default function ShopDetailPage() {
             <svg className="size-[10px]" fill={labelColor} viewBox="0 0 20 20">
               <path d="M12 21C12 21 3 14.5 3 8.5a5 5 0 019-3 5 5 0 019 3C21 14.5 12 21 12 21z" />
             </svg>
-            <span className="text-[10px]" style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontWeight: 700, color: labelColor }}>
+            <span className="text-[10px]" style={{ fontFamily: "'Noto Sans KR', sans-serif", fontWeight: 700, color: labelColor }}>
               수첩에 저장됨 ({savedEntries.length}회)
             </span>
           </div>
@@ -189,7 +189,7 @@ export default function ShopDetailPage() {
                 <span
                   className="text-[36px] tracking-[-1.2px]"
                   style={{
-                    fontFamily: "'WenQuanYi Zen Hei', sans-serif",
+                    fontFamily: "'Noto Sans KR', sans-serif",
                     lineHeight: 1.08,
                     fontWeight: 900,
                     color: theme.titleColor,
@@ -204,7 +204,7 @@ export default function ShopDetailPage() {
                   >
                     <span
                       className="text-[10px] tracking-[0.5px]"
-                      style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", color: accent }}
+                      style={{ fontFamily: "'Noto Sans KR', sans-serif", color: accent }}
                     >
                       웨이팅 있음
                     </span>
@@ -215,7 +215,7 @@ export default function ShopDetailPage() {
           </div>
           <div
             className="text-[14px] leading-relaxed"
-            style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", color: subColor }}
+            style={{ fontFamily: "'Noto Sans KR', sans-serif", color: subColor }}
           >
             {shop.description}
           </div>
@@ -234,13 +234,13 @@ export default function ShopDetailPage() {
                   <span className="text-[20px]">{SIGNATURE_ICONS[tag]}</span>
                   <span
                     className="text-[11px]"
-                    style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontWeight: 600, color: accentSoft }}
+                    style={{ fontFamily: "'Noto Sans KR', sans-serif", fontWeight: 600, color: accentSoft }}
                   >
                     {tag}
                   </span>
                   <span
                     className="text-[9px]"
-                    style={{ fontFamily: "'Manrope', sans-serif", color: mutedColor }}
+                    style={{ fontFamily: "'Noto Sans KR', sans-serif", color: mutedColor }}
                   >
                     {SIGNATURE_DESC[tag]}
                   </span>
@@ -261,14 +261,14 @@ export default function ShopDetailPage() {
         >
           <div
             className="text-[12px]"
-            style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", color: accent }}
+            style={{ fontFamily: "'Noto Sans KR', sans-serif", color: accent }}
           >
             ✦ 이 가게만의 특이점
           </div>
           <div
             className="text-[15px] leading-relaxed"
             style={{
-              fontFamily: "'WenQuanYi Zen Hei', sans-serif",
+              fontFamily: "'Noto Sans KR', sans-serif",
               color: theme.titleColor,
             }}
           >
@@ -286,14 +286,14 @@ export default function ShopDetailPage() {
             >
               <span
                 className="text-[13px]"
-                style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", color: subColor }}
+                style={{ fontFamily: "'Noto Sans KR', sans-serif", color: subColor }}
               >
                 {item.label}
               </span>
               <span
                 className="text-[14px]"
                 style={{
-                  fontFamily: "'WenQuanYi Zen Hei', sans-serif",
+                  fontFamily: "'Noto Sans KR', sans-serif",
                   fontWeight: 600,
                   color: theme.titleColor,
                 }}
@@ -310,7 +310,7 @@ export default function ShopDetailPage() {
             {selectedCount > 0 && (
               <span
                 className="text-[11px]"
-                style={{ fontFamily: "'Manrope', sans-serif", color: accentSoft }}
+                style={{ fontFamily: "'Noto Sans KR', sans-serif", color: accentSoft }}
               >
                 ✦ = 취향 일치
               </span>
@@ -326,13 +326,13 @@ export default function ShopDetailPage() {
               <div>
                 <div
                   className="text-[12px]"
-                  style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontWeight: 700, color: accent }}
+                  style={{ fontFamily: "'Noto Sans KR', sans-serif", fontWeight: 700, color: accent }}
                 >
                   선택한 취향과 딱 맞는 메뉴가 있어요!
                 </div>
                 <div
                   className="text-[11px] mt-[1px]"
-                  style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", color: subColor }}
+                  style={{ fontFamily: "'Noto Sans KR', sans-serif", color: subColor }}
                 >
                   {perfectMenus.map((m) => m.name).join(', ')}
                 </div>
@@ -364,7 +364,7 @@ export default function ShopDetailPage() {
                 <span
                   className="text-[12px]"
                   style={{
-                    fontFamily: "'WenQuanYi Zen Hei', sans-serif",
+                    fontFamily: "'Noto Sans KR', sans-serif",
                     color: '#3a6a30',
                   }}
                 >
@@ -379,7 +379,7 @@ export default function ShopDetailPage() {
         {shop.detectiveReviews.length > 0 && (
           <div className="flex flex-col gap-[12px]">
             <div className="flex items-center justify-end">
-              <span style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontSize: '10px', color: accent }}>
+              <span style={{ fontFamily: "'Noto Sans KR', sans-serif", fontSize: '10px', color: accent }}>
                 방문 인증 기록
               </span>
             </div>
@@ -397,16 +397,16 @@ export default function ShopDetailPage() {
                     { label: '재방문', value: review.revisit },
                   ].map((item) => (
                     <div key={item.label} className="rounded-[8px] p-[8px]" style={{ backgroundColor: chipBg }}>
-                      <div style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontSize: '10px', color: mutedColor }}>{item.label}</div>
-                      <div style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontSize: '11px', fontWeight: 600, color: theme.titleColor, marginTop: 3 }}>{item.value}</div>
+                      <div style={{ fontFamily: "'Noto Sans KR', sans-serif", fontSize: '10px', color: mutedColor }}>{item.label}</div>
+                      <div style={{ fontFamily: "'Noto Sans KR', sans-serif", fontSize: '11px', fontWeight: 600, color: theme.titleColor, marginTop: 3 }}>{item.value}</div>
                     </div>
                   ))}
                 </div>
-                <p style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontSize: '12px', lineHeight: 1.6, color: subColor }}>
+                <p style={{ fontFamily: "'Noto Sans KR', sans-serif", fontSize: '12px', lineHeight: 1.6, color: subColor }}>
                   {review.note}
                 </p>
                 {review.verifiedVisit && (
-                  <span style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontSize: '10px', color: accent }}>
+                  <span style={{ fontFamily: "'Noto Sans KR', sans-serif", fontSize: '10px', color: accent }}>
                     탐정수첩 방문 인증 리뷰
                   </span>
                 )}
@@ -472,18 +472,18 @@ export default function ShopDetailPage() {
               <NavIconButton onClick={() => setLoginModalOpen(false)} ariaLabel="로그인 안내 닫기">
                 <CloseIcon />
               </NavIconButton>
-              <span style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontSize: '14px', fontWeight: 900, color: theme.titleColor }}>
+              <span style={{ fontFamily: "'Noto Sans KR', sans-serif", fontSize: '14px', fontWeight: 900, color: theme.titleColor }}>
                 면탐정
               </span>
               <div className="size-[44px]" aria-hidden="true" />
             </div>
 
             <div id="login-required-title" className="text-center mb-[6px]">
-              <span style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontSize: '18px', fontWeight: 900, color: theme.titleColor, lineHeight: 1.4 }}>
+              <span style={{ fontFamily: "'Noto Sans KR', sans-serif", fontSize: '18px', fontWeight: 900, color: theme.titleColor, lineHeight: 1.4 }}>
                 기록을 저장하려면{'\n'}로그인이 필요해요
               </span>
             </div>
-            <p className="text-center mb-[20px]" style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontSize: '13px', color: subColor }}>
+            <p className="text-center mb-[20px]" style={{ fontFamily: "'Noto Sans KR', sans-serif", fontSize: '13px', color: subColor }}>
               로그인하면 탐정수첩에 방문 기록을 남길 수 있어요.
             </p>
 
@@ -496,9 +496,9 @@ export default function ShopDetailPage() {
                 <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
                   <path d="M10 2C5.58 2 2 4.91 2 8.5c0 2.28 1.44 4.27 3.6 5.44L4.7 17.3a.3.3 0 00.43.35l3.9-2.6c.32.04.64.06.97.06 4.42 0 8-2.91 8-6.51S14.42 2 10 2z" fill="#3A1D1D" />
                 </svg>
-                <span style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontSize: '14px', fontWeight: 700, color: '#3A1D1D' }}>카카오 로그인</span>
+                <span style={{ fontFamily: "'Noto Sans KR', sans-serif", fontSize: '14px', fontWeight: 700, color: '#3A1D1D' }}>카카오 로그인</span>
               </button>
-              <span className="text-center py-[5px]" style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontSize: '11px', color: mutedColor }}>
+              <span className="text-center py-[5px]" style={{ fontFamily: "'Noto Sans KR', sans-serif", fontSize: '11px', color: mutedColor }}>
                 다른 방법으로 로그인
               </span>
               <AppButton

@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+﻿import { useEffect } from 'react';
 import { useNavigate, useSearchParams } from 'react-router';
 import { useApp } from '../AppContext';
 
@@ -47,7 +47,7 @@ export default function KakaoAuthPage() {
           <div className="flex flex-col items-center gap-[8px] text-center">
             <span
               style={{
-                fontFamily: "'WenQuanYi Zen Hei', sans-serif",
+                fontFamily: "'Noto Sans KR', sans-serif",
                 fontSize: '18px',
                 fontWeight: 900,
                 color: '#2C1A0E',
@@ -57,7 +57,7 @@ export default function KakaoAuthPage() {
             </span>
             <span
               style={{
-                fontFamily: "'WenQuanYi Zen Hei', sans-serif",
+                fontFamily: "'Noto Sans KR', sans-serif",
                 fontSize: '13px',
                 color: '#8B6A50',
                 lineHeight: 1.6,

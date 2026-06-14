@@ -1,4 +1,4 @@
-import { useState } from 'react';
+﻿import { useState } from 'react';
 import { useNavigate } from 'react-router';
 import { useApp } from '../AppContext';
 import { BrothType, TextureType, NoodleThicknessType, RichnessType, SpiceType } from '../types';
@@ -71,10 +71,10 @@ function ChoiceCard({ label, desc, active, onClick, accent, chipBg, border, titl
       }}
     >
       <div className="min-w-0">
-        <div style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontSize: '14px', fontWeight: active ? 700 : 500, color: active ? accent : titleColor }}>
+        <div style={{ fontFamily: "'Noto Sans KR', sans-serif", fontSize: '14px', fontWeight: active ? 700 : 500, color: active ? accent : titleColor }}>
           {label}
         </div>
-        <div className="mt-[3px]" style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontSize: '11px', color: subColor }}>
+        <div className="mt-[3px]" style={{ fontFamily: "'Noto Sans KR', sans-serif", fontSize: '11px', color: subColor }}>
           {desc}
         </div>
       </div>
@@ -147,18 +147,18 @@ export default function PreferenceSelectionPage() {
         <NavIconButton onClick={() => navigate('/')} ariaLabel="취향 찾기 나가기" size="sm">
           <CloseIcon />
         </NavIconButton>
-        <span style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontSize: '12px', fontWeight: 700, color: mutedColor }}>
+        <span style={{ fontFamily: "'Noto Sans KR', sans-serif", fontSize: '12px', fontWeight: 700, color: mutedColor }}>
           {currentStep + 1} / {STEPS.length}
         </span>
         <div className="size-[44px]" aria-hidden="true" />
       </header>
       <h1
         className="tracking-[-1.3px]"
-        style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontSize: '27px', lineHeight: 1.22, fontWeight: 900, color: titleColor }}
+        style={{ fontFamily: "'Noto Sans KR', sans-serif", fontSize: '27px', lineHeight: 1.22, fontWeight: 900, color: titleColor }}
       >
         당신의 라멘 취향을<br />찾아볼게요
       </h1>
-      <p className="mt-[8px]" style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontSize: '12px', color: mutedColor }}>
+      <p className="mt-[8px]" style={{ fontFamily: "'Noto Sans KR', sans-serif", fontSize: '12px', color: mutedColor }}>
         5가지 질문으로 로컬 라멘집을 추천해드립니다.
       </p>
 
@@ -171,7 +171,7 @@ export default function PreferenceSelectionPage() {
             />
             <span
               className="block mt-[6px] text-center"
-              style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontSize: '10px', color: index === currentStep ? accent : mutedColor, fontWeight: index === currentStep ? 700 : 400 }}
+              style={{ fontFamily: "'Noto Sans KR', sans-serif", fontSize: '10px', color: index === currentStep ? accent : mutedColor, fontWeight: index === currentStep ? 700 : 400 }}
             >
               {surveyStep.label}
             </span>
@@ -185,17 +185,17 @@ export default function PreferenceSelectionPage() {
       >
         <div className="flex items-center justify-between mb-[12px]">
           <span aria-hidden="true" />
-          <span style={{ fontFamily: "'Manrope', sans-serif", fontSize: '11px', color: mutedColor }}>
+          <span style={{ fontFamily: "'Noto Sans KR', sans-serif", fontSize: '11px', color: mutedColor }}>
             {currentStep + 1} / {STEPS.length}
           </span>
         </div>
         <h2
           className="whitespace-pre-line tracking-[-0.5px]"
-          style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontSize: '21px', lineHeight: 1.32, fontWeight: 900, color: titleColor }}
+          style={{ fontFamily: "'Noto Sans KR', sans-serif", fontSize: '21px', lineHeight: 1.32, fontWeight: 900, color: titleColor }}
         >
           {step.question}
         </h2>
-        <p className="mt-[7px] mb-[17px]" style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontSize: '12px', color: mutedColor }}>
+        <p className="mt-[7px] mb-[17px]" style={{ fontFamily: "'Noto Sans KR', sans-serif", fontSize: '12px', color: mutedColor }}>
           {step.guide}
         </p>
 
@@ -215,7 +215,7 @@ export default function PreferenceSelectionPage() {
               />
               <span
                 className="absolute top-[11px] right-[42px] px-[6px] py-[2px] rounded-full"
-                style={{ backgroundColor: pageBg, fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontSize: '9px', color: mutedColor }}
+                style={{ backgroundColor: pageBg, fontFamily: "'Noto Sans KR', sans-serif", fontSize: '9px', color: mutedColor }}
               >
                 {option.category}
               </span>

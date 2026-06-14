@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react';
+﻿import { useState, useMemo } from 'react';
 import { useNavigate } from 'react-router';
 import { useApp } from '../AppContext';
 import { mockShops, Shop, BrothType, NoodleThicknessType, TextureType, RichnessType, SpiceType } from '../types';
@@ -109,7 +109,7 @@ function ShopPin({ shop, isSelected, onSelect }: ShopPinProps) {
             className="rounded-[8px] px-[8px] py-[3px] mb-[3px] whitespace-nowrap"
             style={{
               backgroundColor: '#2C1A0E',
-              fontFamily: "'WenQuanYi Zen Hei', sans-serif",
+              fontFamily: "'Noto Sans KR', sans-serif",
               fontSize: '10px',
               fontWeight: 700,
               color: '#FFFBF5',
@@ -273,7 +273,7 @@ export default function MapPage() {
             <circle cx="8" cy="8" r="5.5" stroke={theme.accent} strokeWidth="1.8" />
             <path d="M12.2 12.2L16 16" stroke={theme.accent} strokeWidth="1.8" strokeLinecap="round" />
           </svg>
-          <span style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontSize: '13px', color: theme.mutedColor }}>
+          <span style={{ fontFamily: "'Noto Sans KR', sans-serif", fontSize: '13px', color: theme.mutedColor }}>
             가게 또는 지역을 검색하세요
           </span>
         </button>
@@ -287,7 +287,7 @@ export default function MapPage() {
                 className="flex-shrink-0 flex items-center gap-[4px] px-[10px] py-[5px] rounded-full active:scale-95 transition-transform"
                 style={{ backgroundColor: '#2C1A0E', border: '1px solid #2C1A0E' }}
               >
-                <span style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontSize: '11px', fontWeight: 700, color: '#FFFBF5' }}>{f}</span>
+                <span style={{ fontFamily: "'Noto Sans KR', sans-serif", fontSize: '11px', fontWeight: 700, color: '#FFFBF5' }}>{f}</span>
                 <span style={{ fontSize: '10px', color: '#D4A882' }}>×</span>
               </button>
             ))}
@@ -330,7 +330,7 @@ export default function MapPage() {
                   onChange={(e) => setSearchText(e.target.value)}
                   placeholder="가게 이름 검색"
                   className="flex-1 bg-transparent outline-none"
-                  style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontSize: '13px', color: theme.titleColor }}
+                  style={{ fontFamily: "'Noto Sans KR', sans-serif", fontSize: '13px', color: theme.titleColor }}
                 />
               </div>
             </div>
@@ -347,8 +347,8 @@ export default function MapPage() {
                     <svg width="14" height="14" fill="none" viewBox="0 0 20 20">
                       <path d="M10 2a5.5 5.5 0 015.5 5.5c0 4-5.5 10-5.5 10S4.5 11.5 4.5 7.5A5.5 5.5 0 0110 2z" stroke={theme.accentSoft} strokeWidth="1.8" fill="none" />
                     </svg>
-                    <span style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontSize: '13px', color: theme.titleColor }}>{shop.name}</span>
-                    <span style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontSize: '11px', color: theme.mutedColor, marginLeft: 'auto' }}>{shop.broth.join('·')}</span>
+                    <span style={{ fontFamily: "'Noto Sans KR', sans-serif", fontSize: '13px', color: theme.titleColor }}>{shop.name}</span>
+                    <span style={{ fontFamily: "'Noto Sans KR', sans-serif", fontSize: '11px', color: theme.mutedColor, marginLeft: 'auto' }}>{shop.broth.join('·')}</span>
                   </button>
                 ))}
               </div>
@@ -359,16 +359,16 @@ export default function MapPage() {
                     className="rounded-[10px] px-[12px] py-[8px] mb-[12px] flex items-center justify-between"
                     style={{ backgroundColor: theme.chipBg }}
                   >
-                    <span style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontSize: '12px', color: theme.subColor }}>
+                    <span style={{ fontFamily: "'Noto Sans KR', sans-serif", fontSize: '12px', color: theme.subColor }}>
                       조건 {activeFilters.length}개 선택됨
                     </span>
-                    <button onClick={() => setActiveFilters([])} style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontSize: '11px', color: theme.mutedColor }}>
+                    <button onClick={() => setActiveFilters([])} style={{ fontFamily: "'Noto Sans KR', sans-serif", fontSize: '11px', color: theme.mutedColor }}>
                       초기화
                     </button>
                   </div>
                 )}
 
-                <div style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontSize: '11px', fontWeight: 700, color: theme.subColor, marginBottom: '8px' }}>
+                <div style={{ fontFamily: "'Noto Sans KR', sans-serif", fontSize: '11px', fontWeight: 700, color: theme.subColor, marginBottom: '8px' }}>
                   육수 스타일
                 </div>
                 <div className="flex gap-[6px] flex-wrap mb-[12px]">
@@ -379,7 +379,7 @@ export default function MapPage() {
                   ))}
                 </div>
 
-                <div style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontSize: '11px', fontWeight: 700, color: theme.subColor, marginBottom: '8px' }}>
+                <div style={{ fontFamily: "'Noto Sans KR', sans-serif", fontSize: '11px', fontWeight: 700, color: theme.subColor, marginBottom: '8px' }}>
                   면 굵기
                 </div>
                 <div className="flex gap-[6px] flex-wrap mb-[12px]">
@@ -390,7 +390,7 @@ export default function MapPage() {
                   ))}
                 </div>
 
-                <div style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontSize: '11px', fontWeight: 700, color: theme.subColor, marginBottom: '8px' }}>
+                <div style={{ fontFamily: "'Noto Sans KR', sans-serif", fontSize: '11px', fontWeight: 700, color: theme.subColor, marginBottom: '8px' }}>
                   국물 농도와 면 식감
                 </div>
                 <div className="flex gap-[6px] flex-wrap mb-[12px]">
@@ -406,7 +406,7 @@ export default function MapPage() {
                   ))}
                 </div>
 
-                <div style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontSize: '11px', fontWeight: 700, color: theme.subColor, marginBottom: '8px' }}>
+                <div style={{ fontFamily: "'Noto Sans KR', sans-serif", fontSize: '11px', fontWeight: 700, color: theme.subColor, marginBottom: '8px' }}>
                   맵기
                 </div>
                 <div className="flex gap-[6px] flex-wrap mb-[12px]">
@@ -417,7 +417,7 @@ export default function MapPage() {
                   ))}
                 </div>
 
-                <div style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontSize: '11px', fontWeight: 700, color: theme.subColor, marginBottom: '8px' }}>
+                <div style={{ fontFamily: "'Noto Sans KR', sans-serif", fontSize: '11px', fontWeight: 700, color: theme.subColor, marginBottom: '8px' }}>
                   추가 조건
                 </div>
                 <div className="flex gap-[6px] flex-wrap">
@@ -466,31 +466,31 @@ export default function MapPage() {
             </div>
             <div className="flex flex-col gap-[3px] flex-1 min-w-0">
               <div className="flex items-center gap-[6px]">
-                <span style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontSize: '15px', fontWeight: 900, color: theme.titleColor }}>
+                <span style={{ fontFamily: "'Noto Sans KR', sans-serif", fontSize: '15px', fontWeight: 900, color: theme.titleColor }}>
                   {selectedShop.name}
                 </span>
                 <span
                   className="px-[6px] py-[1px] rounded-full"
-                  style={{ backgroundColor: theme.accent + '22', fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontSize: '9px', fontWeight: 700, color: theme.accent }}
+                  style={{ backgroundColor: theme.accent + '22', fontFamily: "'Noto Sans KR', sans-serif", fontSize: '9px', fontWeight: 700, color: theme.accent }}
                 >
                   로컬
                 </span>
               </div>
-              <span style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontSize: '12px', color: theme.subColor }}>
+              <span style={{ fontFamily: "'Noto Sans KR', sans-serif", fontSize: '12px', color: theme.subColor }}>
                 {selectedShop.noodleThickness} · {selectedShop.noodleShape} · {selectedShop.description}
               </span>
               <div className="flex gap-[4px] mt-[3px] flex-wrap">
                 {preference.broth.length > 0 && selectedShop.broth.some((b) => preference.broth.includes(b)) && (
-                  <span className="px-[6px] py-[2px] rounded-full" style={{ backgroundColor: theme.accent, fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontSize: '9px', fontWeight: 700, color: '#FFFBF5' }}>
+                  <span className="px-[6px] py-[2px] rounded-full" style={{ backgroundColor: theme.accent, fontFamily: "'Noto Sans KR', sans-serif", fontSize: '9px', fontWeight: 700, color: '#FFFBF5' }}>
                     취향 일치
                   </span>
                 )}
                 {!selectedShop.waiting && (
-                  <span className="px-[6px] py-[2px] rounded-full" style={{ backgroundColor: theme.chipBg, border: `1px solid ${theme.border}`, fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontSize: '9px', color: theme.subColor }}>
+                  <span className="px-[6px] py-[2px] rounded-full" style={{ backgroundColor: theme.chipBg, border: `1px solid ${theme.border}`, fontFamily: "'Noto Sans KR', sans-serif", fontSize: '9px', color: theme.subColor }}>
                     웨이팅 없음
                   </span>
                 )}
-                <span className="px-[6px] py-[2px] rounded-full" style={{ backgroundColor: theme.chipBg, border: `1px solid ${theme.border}`, fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontSize: '9px', color: theme.subColor }}>
+                <span className="px-[6px] py-[2px] rounded-full" style={{ backgroundColor: theme.chipBg, border: `1px solid ${theme.border}`, fontFamily: "'Noto Sans KR', sans-serif", fontSize: '9px', color: theme.subColor }}>
                   {selectedShop.distance}
                 </span>
               </div>
@@ -514,7 +514,7 @@ export default function MapPage() {
           className="absolute left-[16px] right-[16px] h-[42px] rounded-[12px] flex items-center justify-center"
           style={{ bottom: '16px', backgroundColor: '#2C1A0E', zIndex: 15 }}
         >
-          <span style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontSize: '12px', fontWeight: 700, color: '#FFFBF5' }}>
+          <span style={{ fontFamily: "'Noto Sans KR', sans-serif", fontSize: '12px', fontWeight: 700, color: '#FFFBF5' }}>
             조건에 맞는 로컬 가게만 표시했어요 ({filteredShops.length}곳)
           </span>
         </div>

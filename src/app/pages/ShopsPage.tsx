@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+﻿import { useMemo, useState } from 'react';
 import { useNavigate } from 'react-router';
 import { useApp } from '../AppContext';
 import { mockShops } from '../types';
@@ -54,7 +54,7 @@ export default function ShopsPage() {
           <div>
             <h1
               className="tracking-[-1px]"
-              style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontSize: '25px', lineHeight: 1.18, fontWeight: 900, color: theme.titleColor }}
+              style={{ fontFamily: "'Noto Sans KR', sans-serif", fontSize: '25px', lineHeight: 1.18, fontWeight: 900, color: theme.titleColor }}
             >
               울산 삼산<br />로컬 라멘 가게
             </h1>
@@ -63,10 +63,10 @@ export default function ShopsPage() {
             className="px-[10px] py-[8px] rounded-[12px] text-center"
             style={{ backgroundColor: theme.deepBg, border: `1px solid ${theme.border}` }}
           >
-            <div style={{ fontFamily: "'Manrope', sans-serif", fontSize: '18px', fontWeight: 900, color: theme.titleColor }}>
+            <div style={{ fontFamily: "'Noto Sans KR', sans-serif", fontSize: '18px', fontWeight: 900, color: theme.titleColor }}>
               {filteredShops.length}
             </div>
-            <div style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontSize: '10px', color: theme.mutedColor }}>
+            <div style={{ fontFamily: "'Noto Sans KR', sans-serif", fontSize: '10px', color: theme.mutedColor }}>
               표시 중
             </div>
           </div>
@@ -85,7 +85,7 @@ export default function ShopsPage() {
             onChange={(event) => setQuery(event.target.value)}
             placeholder="가게명, 육수, 태그로 찾아보기"
             className="flex-1 bg-transparent outline-none"
-            style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontSize: '13px', color: theme.titleColor }}
+            style={{ fontFamily: "'Noto Sans KR', sans-serif", fontSize: '13px', color: theme.titleColor }}
           />
         </label>
 
@@ -114,7 +114,7 @@ export default function ShopsPage() {
           style={{ backgroundColor: theme.deepBg, border: `1px solid ${theme.border}` }}
         >
           <div className="flex items-center justify-between">
-            <div style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontSize: '14px', fontWeight: 900, color: theme.titleColor }}>
+            <div style={{ fontFamily: "'Noto Sans KR', sans-serif", fontSize: '14px', fontWeight: 900, color: theme.titleColor }}>
               체인 제외 로컬 중심
             </div>
             <AppButton
@@ -125,7 +125,7 @@ export default function ShopsPage() {
               지도에서 보기
             </AppButton>
           </div>
-          <p className="mt-[6px] leading-relaxed" style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontSize: '12px', color: theme.subColor }}>
+          <p className="mt-[6px] leading-relaxed" style={{ fontFamily: "'Noto Sans KR', sans-serif", fontSize: '12px', color: theme.subColor }}>
             면탐정은 프랜차이즈보다 단독 운영 가게와 취향 정보가 뚜렷한 라멘집을 먼저 보여줘요.
           </p>
         </div>
@@ -146,24 +146,24 @@ export default function ShopsPage() {
               <div className="flex-1 min-w-0">
                 <div className="flex items-start justify-between gap-[8px]">
                   <div className="min-w-0">
-                    <div className="truncate" style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontSize: '17px', fontWeight: 900, color: theme.titleColor }}>
+                    <div className="truncate" style={{ fontFamily: "'Noto Sans KR', sans-serif", fontSize: '17px', fontWeight: 900, color: theme.titleColor }}>
                       {shop.name}
                     </div>
-                    <div className="mt-[4px]" style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontSize: '12px', color: theme.subColor }}>
+                    <div className="mt-[4px]" style={{ fontFamily: "'Noto Sans KR', sans-serif", fontSize: '12px', color: theme.subColor }}>
                       평점 {shop.rating.toFixed(1)} · {shop.distance}
                     </div>
                   </div>
                   {shop.mustTry && (
                     <span
                       className="px-[7px] py-[4px] rounded-full shrink-0"
-                      style={{ backgroundColor: theme.accent + '16', color: theme.accent, fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontSize: '10px', fontWeight: 800 }}
+                      style={{ backgroundColor: theme.accent + '16', color: theme.accent, fontFamily: "'Noto Sans KR', sans-serif", fontSize: '10px', fontWeight: 800 }}
                     >
                       추천
                     </span>
                   )}
                 </div>
 
-                <div className="mt-[8px] line-clamp-2" style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontSize: '12px', lineHeight: 1.45, color: theme.subColor }}>
+                <div className="mt-[8px] line-clamp-2" style={{ fontFamily: "'Noto Sans KR', sans-serif", fontSize: '12px', lineHeight: 1.45, color: theme.subColor }}>
                   {shop.description}
                 </div>
 
@@ -172,7 +172,7 @@ export default function ShopsPage() {
                     <span
                       key={tag}
                       className="px-[7px] py-[3px] rounded-full"
-                      style={{ backgroundColor: theme.chipBg, color: theme.mutedColor, fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontSize: '10px', fontWeight: 700 }}
+                      style={{ backgroundColor: theme.chipBg, color: theme.mutedColor, fontFamily: "'Noto Sans KR', sans-serif", fontSize: '10px', fontWeight: 700 }}
                     >
                       {tag}
                     </span>
@@ -192,10 +192,10 @@ export default function ShopsPage() {
                   className="rounded-[10px] px-[8px] py-[7px]"
                   style={{ backgroundColor: theme.cardBg2, border: `1px solid ${theme.border}` }}
                 >
-                  <div style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontSize: '10px', color: theme.mutedColor }}>
+                  <div style={{ fontFamily: "'Noto Sans KR', sans-serif", fontSize: '10px', color: theme.mutedColor }}>
                     {label}
                   </div>
-                  <div className="mt-[2px] truncate" style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontSize: '11px', fontWeight: 800, color: theme.titleColor }}>
+                  <div className="mt-[2px] truncate" style={{ fontFamily: "'Noto Sans KR', sans-serif", fontSize: '11px', fontWeight: 800, color: theme.titleColor }}>
                     {value}
                   </div>
                 </div>
@@ -209,7 +209,7 @@ export default function ShopsPage() {
             className="rounded-[18px] px-[18px] py-[26px] text-center"
             style={{ backgroundColor: theme.cardBg, border: `1px solid ${theme.border}` }}
           >
-            <div style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontSize: '15px', fontWeight: 900, color: theme.titleColor }}>
+            <div style={{ fontFamily: "'Noto Sans KR', sans-serif", fontSize: '15px', fontWeight: 900, color: theme.titleColor }}>
               조건에 맞는 가게가 없어요
             </div>
             <AppButton

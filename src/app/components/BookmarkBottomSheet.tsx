@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+﻿import { useState, useEffect } from 'react';
 import { Shop } from '../types';
 import { Theme } from '../theme';
 
@@ -81,13 +81,13 @@ export function BookmarkBottomSheet({ shop, isOpen, onClose, onSave, theme, isRa
           <div className="flex flex-col gap-[2px]">
             <span
               className="text-[18px] tracking-[-0.5px]"
-              style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontWeight: 700, color: theme.titleColor }}
+              style={{ fontFamily: "'Noto Sans KR', sans-serif", fontWeight: 700, color: theme.titleColor }}
             >
               📓 탐정수첩 기록
             </span>
             <span
               className="text-[12px]"
-              style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", color: accentSoft }}
+              style={{ fontFamily: "'Noto Sans KR', sans-serif", color: accentSoft }}
             >
               {shop.name}
             </span>
@@ -107,7 +107,7 @@ export function BookmarkBottomSheet({ shop, isOpen, onClose, onSave, theme, isRa
         <div className="flex flex-col gap-[14px] px-[20px] pb-[32px] overflow-y-auto" style={{ maxHeight: '70vh' }}>
           {/* Date */}
           <div className="flex flex-col gap-[5px]">
-            <span className="text-[10px] tracking-[1px] uppercase" style={{ fontFamily: "'Manrope', sans-serif", color: mutedColor }}>
+            <span className="text-[10px] tracking-[1px] uppercase" style={{ fontFamily: "'Noto Sans KR', sans-serif", color: mutedColor }}>
               방문 날짜
             </span>
             <div className="rounded-[10px] px-[14px] py-[12px]" style={{ backgroundColor: deepBg, border: `1px solid ${border}` }}>
@@ -116,14 +116,14 @@ export function BookmarkBottomSheet({ shop, isOpen, onClose, onSave, theme, isRa
                 value={date}
                 onChange={(e) => setDate(e.target.value)}
                 className="w-full bg-transparent text-[14px] outline-none"
-                style={{ fontFamily: "'Manrope', sans-serif", color: theme.titleColor }}
+                style={{ fontFamily: "'Noto Sans KR', sans-serif", color: theme.titleColor }}
               />
             </div>
           </div>
 
           {/* Menu - 빠른 선택 */}
           <div className="flex flex-col gap-[5px]">
-            <span className="text-[10px] tracking-[1px] uppercase" style={{ fontFamily: "'Manrope', sans-serif", color: mutedColor }}>
+            <span className="text-[10px] tracking-[1px] uppercase" style={{ fontFamily: "'Noto Sans KR', sans-serif", color: mutedColor }}>
               주문한 메뉴
             </span>
             <div className="flex gap-[6px] flex-wrap mb-[4px]">
@@ -139,7 +139,7 @@ export function BookmarkBottomSheet({ shop, isOpen, onClose, onSave, theme, isRa
                 >
                   <span
                     className="text-[11px]"
-                    style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", color: menu === m.name ? labelColor : subColor }}
+                    style={{ fontFamily: "'Noto Sans KR', sans-serif", color: menu === m.name ? labelColor : subColor }}
                   >
                     {BROTH_EMOJI[m.broth] ?? '🍜'} {m.name}
                   </span>
@@ -153,14 +153,14 @@ export function BookmarkBottomSheet({ shop, isOpen, onClose, onSave, theme, isRa
                 onChange={(e) => setMenu(e.target.value)}
                 placeholder="직접 입력하거나 위에서 선택"
                 className="w-full bg-transparent text-[14px] outline-none"
-                style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", color: isRamen ? '#fff' : theme.titleColor }}
+                style={{ fontFamily: "'Noto Sans KR', sans-serif", color: isRamen ? '#fff' : theme.titleColor }}
               />
             </div>
           </div>
 
           {/* Memo */}
           <div className="flex flex-col gap-[5px]">
-            <span className="text-[10px] tracking-[1px] uppercase" style={{ fontFamily: "'Manrope', sans-serif", color: mutedColor }}>
+            <span className="text-[10px] tracking-[1px] uppercase" style={{ fontFamily: "'Noto Sans KR', sans-serif", color: mutedColor }}>
               한 줄 메모 <span style={{ color: mutedColor + '80' }}>(선택)</span>
             </span>
             <div className="rounded-[10px] px-[14px] py-[12px]" style={{ backgroundColor: deepBg, border: `1px solid ${border}` }}>
@@ -170,7 +170,7 @@ export function BookmarkBottomSheet({ shop, isOpen, onClose, onSave, theme, isRa
                 placeholder="오늘의 솔직한 한 마디..."
                 rows={2}
                 className="w-full bg-transparent text-[14px] outline-none resize-none"
-                style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", color: theme.titleColor }}
+                style={{ fontFamily: "'Noto Sans KR', sans-serif", color: theme.titleColor }}
               />
             </div>
           </div>
@@ -189,7 +189,7 @@ export function BookmarkBottomSheet({ shop, isOpen, onClose, onSave, theme, isRa
             }}
           >
             {saving ? (
-              <span className="text-[15px]" style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", color: menu.trim() ? labelColor : mutedColor }}>
+              <span className="text-[15px]" style={{ fontFamily: "'Noto Sans KR', sans-serif", color: menu.trim() ? labelColor : mutedColor }}>
                 저장 중...
               </span>
             ) : (
@@ -200,7 +200,7 @@ export function BookmarkBottomSheet({ shop, isOpen, onClose, onSave, theme, isRa
                 </svg>
                 <span
                   className="text-[15px]"
-                  style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontWeight: 700, color: menu.trim() ? labelColor : mutedColor }}
+                  style={{ fontFamily: "'Noto Sans KR', sans-serif", fontWeight: 700, color: menu.trim() ? labelColor : mutedColor }}
                 >
                   수사 기록 저장
                 </span>

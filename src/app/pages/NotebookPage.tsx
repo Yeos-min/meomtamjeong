@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react';
+﻿import { useState, useMemo } from 'react';
 import { useApp } from '../AppContext';
 import { useNavigate } from 'react-router';
 import { NotebookEntry, mockShops } from '../types';
@@ -46,11 +46,11 @@ function EntryCard({
       }}
     >
       <div className="flex items-center justify-between">
-        <span className="text-[11px]" style={{ fontFamily: "'Manrope', sans-serif", color: mutedColor }}>
+        <span className="text-[11px]" style={{ fontFamily: "'Noto Sans KR', sans-serif", color: mutedColor }}>
           {entry.date}
           {isLatest && (
             <span className="ml-[6px] px-[5px] py-[1px] rounded-[3px] text-[9px]"
-              style={{ backgroundColor: accent, color: labelColor, fontFamily: "'Manrope', sans-serif", fontWeight: 700 }}>
+              style={{ backgroundColor: accent, color: labelColor, fontFamily: "'Noto Sans KR', sans-serif", fontWeight: 700 }}>
               최신
             </span>
           )}
@@ -79,14 +79,14 @@ function EntryCard({
             value={editMenu}
             onChange={(e) => setEditMenu(e.target.value)}
             className="w-full bg-transparent text-[13px] outline-none rounded-[6px] px-[8px] py-[6px]"
-            style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", color: theme.titleColor, border: `1px solid ${border}` }}
+            style={{ fontFamily: "'Noto Sans KR', sans-serif", color: theme.titleColor, border: `1px solid ${border}` }}
           />
           <textarea
             value={editMemo}
             onChange={(e) => setEditMemo(e.target.value)}
             rows={2}
             className="w-full bg-transparent text-[12px] outline-none resize-none rounded-[6px] px-[8px] py-[6px]"
-            style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", color: subColor, border: `1px solid ${border}` }}
+            style={{ fontFamily: "'Noto Sans KR', sans-serif", color: subColor, border: `1px solid ${border}` }}
           />
           <div className="flex gap-[6px]">
             <AppButton onClick={handleSaveEdit} variant="primary" size="sm" className="flex-1">
@@ -99,11 +99,11 @@ function EntryCard({
         </div>
       ) : (
         <>
-          <div className="text-[14px]" style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", color: theme.titleColor, fontWeight: 600 }}>
+          <div className="text-[14px]" style={{ fontFamily: "'Noto Sans KR', sans-serif", color: theme.titleColor, fontWeight: 600 }}>
             {entry.menu}
           </div>
           {entry.memo && (
-            <div className="text-[12px] leading-relaxed" style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", color: subColor }}>
+            <div className="text-[12px] leading-relaxed" style={{ fontFamily: "'Noto Sans KR', sans-serif", color: subColor }}>
               {entry.memo}
             </div>
           )}
@@ -115,7 +115,7 @@ function EntryCard({
                   <span
                     key={item as string}
                     className="px-[7px] py-[2px] rounded-full text-[10px]"
-                    style={{ backgroundColor: accent + '16', border: `1px solid ${accent}33`, color: accent, fontFamily: "'WenQuanYi Zen Hei', sans-serif" }}
+                    style={{ backgroundColor: accent + '16', border: `1px solid ${accent}33`, color: accent, fontFamily: "'Noto Sans KR', sans-serif" }}
                   >
                     {item}
                   </span>
@@ -197,7 +197,7 @@ export default function NotebookPage() {
             style={{ backgroundColor: accent + '22', border: `2px solid ${accent}` }}
           >
             {isLoggedIn ? (
-              <span style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontSize: '20px', fontWeight: 700, color: accent }}>
+              <span style={{ fontFamily: "'Noto Sans KR', sans-serif", fontSize: '20px', fontWeight: 700, color: accent }}>
                 {userName.charAt(0)}
               </span>
             ) : (
@@ -208,10 +208,10 @@ export default function NotebookPage() {
             )}
           </div>
           <div className="flex flex-col gap-[2px]">
-            <span style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontSize: '16px', fontWeight: 900, color: titleColor }}>
+            <span style={{ fontFamily: "'Noto Sans KR', sans-serif", fontSize: '16px', fontWeight: 900, color: titleColor }}>
               {isLoggedIn ? userName : '비회원'}
             </span>
-            <span style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontSize: '12px', color: mutedColor }}>
+            <span style={{ fontFamily: "'Noto Sans KR', sans-serif", fontSize: '12px', color: mutedColor }}>
               {preferenceLabel}
             </span>
           </div>
@@ -248,10 +248,10 @@ export default function NotebookPage() {
               className="rounded-[12px] py-[10px] flex flex-col items-center gap-[2px]"
               style={{ backgroundColor: chipBg, border: `1px solid ${border}` }}
             >
-              <span style={{ fontFamily: "'Manrope', sans-serif", fontSize: '22px', fontWeight: 900, color: titleColor }}>
+              <span style={{ fontFamily: "'Noto Sans KR', sans-serif", fontSize: '22px', fontWeight: 900, color: titleColor }}>
                 {stat.value}
               </span>
-              <span style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontSize: '11px', color: mutedColor }}>
+              <span style={{ fontFamily: "'Noto Sans KR', sans-serif", fontSize: '11px', color: mutedColor }}>
                 {stat.label}
               </span>
             </div>
@@ -293,8 +293,8 @@ export default function NotebookPage() {
                   </svg>
                 </div>
                 <div className="flex flex-col gap-[6px]">
-                  <div className="text-[17px]" style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", color: titleColor }}>아직 기록이 없어요</div>
-                  <div className="text-[13px]" style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", color: mutedColor }}>가게 상세에서 수첩에 저장해보세요</div>
+                  <div className="text-[17px]" style={{ fontFamily: "'Noto Sans KR', sans-serif", color: titleColor }}>아직 기록이 없어요</div>
+                  <div className="text-[13px]" style={{ fontFamily: "'Noto Sans KR', sans-serif", color: mutedColor }}>가게 상세에서 수첩에 저장해보세요</div>
                 </div>
                 <AppButton
                   onClick={() => navigate('/')}
@@ -328,10 +328,10 @@ export default function NotebookPage() {
                               </svg>
                             </div>
                             <div>
-                              <div className="text-[16px] tracking-[-0.3px]" style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontWeight: 700, color: group.imageUrl ? '#fff' : titleColor }}>
+                              <div className="text-[16px] tracking-[-0.3px]" style={{ fontFamily: "'Noto Sans KR', sans-serif", fontWeight: 700, color: group.imageUrl ? '#fff' : titleColor }}>
                                 {group.shopName}
                               </div>
-                              <div className="text-[11px]" style={{ fontFamily: "'Manrope', sans-serif", color: group.imageUrl ? 'rgba(255,255,255,0.6)' : mutedColor }}>
+                              <div className="text-[11px]" style={{ fontFamily: "'Noto Sans KR', sans-serif", color: group.imageUrl ? 'rgba(255,255,255,0.6)' : mutedColor }}>
                                 총 {group.entries.length}번 방문 · 최근 {latestEntry.date}
                               </div>
                             </div>
@@ -407,7 +407,7 @@ export default function NotebookPage() {
                 <div className="h-[110px] rounded-[14px] overflow-hidden relative mt-[4px]">
                   <img alt="Atmosphere" className="w-full h-[180%] object-cover absolute top-[-40%] opacity-40" src={imgRamen} style={{ filter: 'saturate(0)' }} />
                   <div className="absolute inset-0 flex items-end p-[16px]" style={{ background: `linear-gradient(to bottom, transparent, ${pageBg}CC)` }}>
-                    <span className="text-[10px] tracking-[2px] uppercase" style={{ fontFamily: "'Manrope', sans-serif", color: mutedColor }}>
+                    <span className="text-[10px] tracking-[2px] uppercase" style={{ fontFamily: "'Noto Sans KR', sans-serif", color: mutedColor }}>
                       Authentic Investigation
                     </span>
                   </div>
@@ -422,30 +422,30 @@ export default function NotebookPage() {
           <div className="flex flex-col gap-[16px]">
             <div className="rounded-[14px] p-[16px]" style={{ backgroundColor: cardBg, border: `1px solid ${border}` }}>
               <div className="flex items-center justify-between mb-[14px]">
-                <span style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontSize: '14px', fontWeight: 900, color: titleColor }}>먹은 스타일 분포</span>
-                <span style={{ fontFamily: "'Manrope', sans-serif", fontSize: '11px', color: mutedColor }}>{notebookEntries.length}건 기준</span>
+                <span style={{ fontFamily: "'Noto Sans KR', sans-serif", fontSize: '14px', fontWeight: 900, color: titleColor }}>먹은 스타일 분포</span>
+                <span style={{ fontFamily: "'Noto Sans KR', sans-serif", fontSize: '11px', color: mutedColor }}>{notebookEntries.length}건 기준</span>
               </div>
 
               {brothDistribution.length === 0 ? (
                 <div className="py-[20px] text-center">
-                  <span style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontSize: '13px', color: mutedColor }}>기록이 쌓이면 분포가 나타나요</span>
+                  <span style={{ fontFamily: "'Noto Sans KR', sans-serif", fontSize: '13px', color: mutedColor }}>기록이 쌓이면 분포가 나타나요</span>
                 </div>
               ) : (
                 <div className="flex flex-col gap-[10px]">
                   {brothDistribution.map(({ name, pct }) => (
                     <div key={name} className="grid items-center gap-[8px]" style={{ gridTemplateColumns: '36px 1fr 32px' }}>
-                      <span style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontSize: '12px', color: subColor }}>{name}</span>
+                      <span style={{ fontFamily: "'Noto Sans KR', sans-serif", fontSize: '12px', color: subColor }}>{name}</span>
                       <div className="h-[7px] rounded-full overflow-hidden" style={{ backgroundColor: border }}>
                         <div className="h-full rounded-full transition-all duration-500" style={{ width: `${pct}%`, backgroundColor: accent }} />
                       </div>
-                      <span style={{ fontFamily: "'Manrope', sans-serif", fontSize: '11px', fontWeight: 700, color: titleColor, textAlign: 'right' }}>{pct}%</span>
+                      <span style={{ fontFamily: "'Noto Sans KR', sans-serif", fontSize: '11px', fontWeight: 700, color: titleColor, textAlign: 'right' }}>{pct}%</span>
                     </div>
                   ))}
                 </div>
               )}
               {structuredRecordCount > 0 && (
                 <div className="mt-[14px] pt-[12px]" style={{ borderTop: `1px solid ${border}` }}>
-                  <span style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontSize: '11px', color: mutedColor }}>
+                  <span style={{ fontFamily: "'Noto Sans KR', sans-serif", fontSize: '11px', color: mutedColor }}>
                     면 식감·국물·취향 일치를 입력한 구조화 기록 {structuredRecordCount}건
                   </span>
                 </div>
@@ -455,7 +455,7 @@ export default function NotebookPage() {
             {/* 최근 기록 */}
             <div>
               <div className="flex items-center justify-between mb-[10px]">
-                <span style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontSize: '14px', fontWeight: 900, color: titleColor }}>최근 기록</span>
+                <span style={{ fontFamily: "'Noto Sans KR', sans-serif", fontSize: '14px', fontWeight: 900, color: titleColor }}>최근 기록</span>
               </div>
               <div className="flex flex-col gap-[8px]">
                 {notebookEntries.slice(0, 3).map((entry) => {
@@ -470,9 +470,9 @@ export default function NotebookPage() {
                         {shop && <img src={shop.imageUrl} alt={shop.name} className="w-full h-full object-cover" />}
                       </div>
                       <div className="flex flex-col gap-[2px] flex-1 min-w-0">
-                        <span style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontSize: '13px', fontWeight: 700, color: titleColor }}>{entry.shopName}</span>
-                        <span style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontSize: '12px', color: subColor }}>{entry.menu}</span>
-                        <span style={{ fontFamily: "'Manrope', sans-serif", fontSize: '10px', color: mutedColor }}>{entry.date}</span>
+                        <span style={{ fontFamily: "'Noto Sans KR', sans-serif", fontSize: '13px', fontWeight: 700, color: titleColor }}>{entry.shopName}</span>
+                        <span style={{ fontFamily: "'Noto Sans KR', sans-serif", fontSize: '12px', color: subColor }}>{entry.menu}</span>
+                        <span style={{ fontFamily: "'Noto Sans KR', sans-serif", fontSize: '10px', color: mutedColor }}>{entry.date}</span>
                       </div>
                     </div>
                   );
@@ -493,8 +493,8 @@ export default function NotebookPage() {
                   </svg>
                 </div>
                 <div className="flex flex-col gap-[5px]">
-                  <div style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontSize: '16px', color: titleColor }}>즐겨찾기한 가게가 없어요</div>
-                  <div style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontSize: '13px', color: mutedColor }}>가게 상세에서 ♡를 눌러 저장하세요</div>
+                  <div style={{ fontFamily: "'Noto Sans KR', sans-serif", fontSize: '16px', color: titleColor }}>즐겨찾기한 가게가 없어요</div>
+                  <div style={{ fontFamily: "'Noto Sans KR', sans-serif", fontSize: '13px', color: mutedColor }}>가게 상세에서 ♡를 눌러 저장하세요</div>
                 </div>
                 <AppButton
                   onClick={() => navigate('/map')}
@@ -516,14 +516,14 @@ export default function NotebookPage() {
                     <img src={shop.imageUrl} alt={shop.name} className="w-full h-full object-cover" />
                   </div>
                   <div className="flex flex-col gap-[3px] flex-1 min-w-0">
-                    <span style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontSize: '14px', fontWeight: 700, color: titleColor }}>{shop.name}</span>
-                    <span style={{ fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontSize: '12px', color: subColor }}>{shop.description}</span>
+                    <span style={{ fontFamily: "'Noto Sans KR', sans-serif", fontSize: '14px', fontWeight: 700, color: titleColor }}>{shop.name}</span>
+                    <span style={{ fontFamily: "'Noto Sans KR', sans-serif", fontSize: '12px', color: subColor }}>{shop.description}</span>
                     <div className="flex gap-[4px] flex-wrap mt-[2px]">
                       {shop.broth.map((b) => (
-                        <span key={b} className="px-[6px] py-[1px] rounded-full" style={{ backgroundColor: chipBg, border: `1px solid ${border}`, fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontSize: '10px', color: subColor }}>{b}</span>
+                        <span key={b} className="px-[6px] py-[1px] rounded-full" style={{ backgroundColor: chipBg, border: `1px solid ${border}`, fontFamily: "'Noto Sans KR', sans-serif", fontSize: '10px', color: subColor }}>{b}</span>
                       ))}
                       {shop.signatureTags.slice(0, 1).map((t) => (
-                        <span key={t} className="px-[6px] py-[1px] rounded-full" style={{ backgroundColor: accent + '18', border: `1px solid ${accent}33`, fontFamily: "'WenQuanYi Zen Hei', sans-serif", fontSize: '10px', color: accent }}>{t}</span>
+                        <span key={t} className="px-[6px] py-[1px] rounded-full" style={{ backgroundColor: accent + '18', border: `1px solid ${accent}33`, fontFamily: "'Noto Sans KR', sans-serif", fontSize: '10px', color: accent }}>{t}</span>
                       ))}
                     </div>
                   </div>
